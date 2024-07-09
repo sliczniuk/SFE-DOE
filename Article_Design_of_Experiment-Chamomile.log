@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10.12) (preloaded format=xelatex 2024.5.24)  6 JUL 2024 19:54
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10.12) (preloaded format=xelatex 2024.5.24)  9 JUL 2024 12:18
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1677,27 +1677,31 @@ LaTeX Font Info:    Trying to load font information for TS1+stix on input line
 124.
  (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/latex/stix\ts1stix.fd
 File: ts1stix.fd 2015/04/17 v1.1.2-latex STIX TS1 font definitions
-) [7]
-Overfull \hbox (0.93547pt too wide) in paragraph at lines 222--223
-[]\T1/stix/m/n/10 Details on the pro-cess model can be found in $\LS1/stix/m/n/
-10 .[][]/$\T1/stix/m/n/10 .
- []
+) [7]) (Sections/Results_DOE.tex
+File: Figures/Results/scatter_T.png Graphic file (type bmp)
+<Figures/Results/scatter_T.png>
 
-) (Sections/Results_DOE.tex
-
-LaTeX Warning: Reference `EQ:Formulation' on page 8 undefined on input line 9.
-
-File: Figures/Results/scatter.png Graphic file (type bmp)
-<Figures/Results/scatter.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-File: Figures/Results/Profile.png Graphic file (type bmp)
-<Figures/Results/Profile.png>
+File: Figures/Results/Profile_T_1.png Graphic file (type bmp)
+<Figures/Results/Profile_T_1.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [8] (Article_Design_of_Experiment-Chamomile.bbl
+[8]
+File: Figures/Results/scatter_P.png Graphic file (type bmp)
+<Figures/Results/scatter_P.png>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: Figures/Results/Profile_P_1.png Graphic file (type bmp)
+<Figures/Results/Profile_P_1.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [9] (Article_Design_of_Experiment-Chamomile.bbl
 Missing character: There is no   in font t1-stixgeneral!
 Missing character: There is no   in font t1-stixgeneral!
 Missing character: There is no – in font t1-stixgeneral!
@@ -1706,21 +1710,20 @@ Underfull \hbox (badness 1859) in paragraph at lines 142--146
 []\T1/stix/m/n/8 J. Gmehling, M. Kleiber, B. Kolbe, and J. Rarey.  |   []
  []
 
-) [9] (Article_Design_of_Experiment-Chamomile.aux)
+) [10
 
-LaTeX Warning: There were undefined references.
-
+] (Article_Design_of_Experiment-Chamomile.aux)
 Package rerunfilecheck Info: File `Article_Design_of_Experiment-Chamomile.out' 
 has not changed.
 (rerunfilecheck)             Checksum: FD9F6E8484D66457C726302F70C55A9D;3923.
  ) 
 Here is how much of TeX's memory you used:
- 41881 strings out of 411223
- 891396 string characters out of 2829157
+ 41898 strings out of 411223
+ 891980 string characters out of 2829157
  1331086 words of memory out of 3000000
- 61592 multiletter control sequences out of 15000+600000
+ 61607 multiletter control sequences out of 15000+600000
  533159 words of font info for 178 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 94i,26n,131p,1312b,943s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 94i,26n,131p,1303b,943s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Article_Design_of_Experiment-Chamomile.pdf (9 pages).
+Output written on Article_Design_of_Experiment-Chamomile.pdf (10 pages).
