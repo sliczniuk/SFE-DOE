@@ -1,15 +1,17 @@
-startup;
-delete(gcp('nocreate'));
-% %p = Pushbullet(pushbullet_api);
+%startup;
+%delete(gcp('nocreate'));
+%p = Pushbullet(pushbullet_api);
+initParPool
 
-addpath('C:\Dev\casadi-3.6.3-windows64-matlab2018b');
+addpatch('casadi_folder')
+%addpath('C:\Dev\casadi-3.6.3-windows64-matlab2018b');
 %addpath('\\home.org.aalto.fi\sliczno1\data\Documents\casadi-3.6.3-windows64-matlab2018b');
 import casadi.*
 
 %% Create the solver
 tic
 Iteration_max               = 100;                                           % Maximum number of iterations for optimzer
-Time_max                    = 1;                                             % Maximum time of optimization in [h]
+Time_max                    = 12;                                             % Maximum time of optimization in [h]
 
 nlp_opts                    = struct;
 nlp_opts.ipopt.max_iter     = Iteration_max;
@@ -33,8 +35,8 @@ SAMPLE                  = LabResults(21:34,1);
 data_org                = LabResults(21:34,which_dataset+1)';
 
 %% Load paramters
-N_exp                   = 6;
-N_core                  = 6;
+N_exp                   = 12;
+N_core                  = 14;
 
 m_total                 = 3.0;
 
@@ -243,7 +245,7 @@ toc
 %}
 %%
 tic
-H = OPT_solver.to_function('H',{T0homog,Flow},{T0homog,Flow})
+H = OPT_solver.to_function('H',{T0homog,Flow},{T0homog,Flow});
 toc
 %%
 tic
@@ -257,20 +259,21 @@ toc
 
 %%
 tic
-[HH_map_1, HH_map_2] = H_map(T0, F0)
+[HH_map_1, HH_map_2] = full( H_map(T0, F0) );
 toc
 
 %%
 tic
-COST_0 = full( GG([T0, T0] ,  [F0, F0]  , cell2mat(Parameters(which_theta)) ));
+COST_0 = GG([T0, T0] ,  [F0, F0]  , cell2mat(Parameters(which_theta)) );
 toc
 tic 
-COST   = full( GG(HH_1, HH_2, cell2mat(Parameters(which_theta)) ));
+COST   = GG(HH_map_1, HH_map_2, cell2mat(Parameters(which_theta)) );
 toc 
 
-save DOE_P.mat
+save DOE_T.mat
 
 writematrix([COST_0; COST], 'COST.txt')
+writematrix([HH_map_1; HH_map_2], 'CONTROL.txt')
 
 
 
