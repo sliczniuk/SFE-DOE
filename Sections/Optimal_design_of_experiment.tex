@@ -178,14 +178,14 @@
 		j_L(\Xi) = \text{trace} \left[ Q^\top Q\mathcal{F}^{-1}(\Theta,\Xi) \right]
 	\end{equation} }
 	
-	and choosing $Q = \textbf{I}_{n_\Theta}$ corresponds to the A-optimality cost function. An A-optimal experiment minimizes the sum of the squares of the lengths of the axes of asymptotic confidence ellipsoids. When $Q$ diagonal, with $[Q]_{ii} = 1/\Theta_i$ this corresponds to C-optimality, which is associated with the relative precision of estimates. Selecting $Q$ as a row vector results in C-optimality. Setting $Q = \textbf{I}_{n_\Theta}$ and $k = \infty$ leads to E-optimality, where the design maximizes the smallest eigenvalues of the Fisher information matrix, thereby minimizing the length of the largest axis of the asymptotic confidence ellipsoids. The most commonly used optimality criterion involves $k = 0$, $Q = \textbf{I}_{n_\Theta}$, requiring the minimization of $\det \mathcal{F}^{-1}(\Theta, \Xi)$, or, equivalently, maximization of
+	and choosing $Q = \textbf{I}_{n_\Theta}$ corresponds to the A-optimality cost function. An A-optimal experiment minimizes the sum of the squares of the lengths of the axes of asymptotic confidence ellipsoids. When $Q$ diagonal, with $[Q]_{ii} = 1/\Theta_i$ this corresponds to C-optimality, which is associated with the relative precision of estimates. Selecting $Q$ as a row vector results in C-optimality. Setting $Q = \textbf{I}_{n_\Theta}$ and $k = \infty$ leads to E-optimality, where the design maximizes the smallest eigenvalues of the Fisher information matrix, thereby minimizing the length of the largest axis of the asymptotic confidence ellipsoids. The most commonly used criterion is the D-optimality that involves $k = 0$, $Q = \textbf{I}_{n_\Theta}$, requiring the minimization of $\det \mathcal{F}^{-1}(\Theta, \Xi)$, or, equivalently, maximization of
 	
 	{\footnotesize
 	\begin{equation}
 		j_D(\Xi) = \det \mathcal{F}(\Theta, \Xi)
 	\end{equation} }
-	
-	A D-optimal experiment minimizes the volume of the asymptotic confidence ellipsoids for the parameters. The graphical representation of the different optimality conditions is shown in Figure \ref{fig:score_fun}.
+
+	The D-optimality criterion originates from the geometric interpretation of the determinant. A two-dimensional matrix with real number entries can represent two linear maps: one mapping the standard basis vectors to the rows and the other to the columns. In both cases, the images of the basis vectors form a parallelogram that represents the image of the unit square under the mapping. The absolute value of the determinant is the area of this parallelogram, reflecting the scale factor by which the matrix transforms areas. The signed value of the determinant indicates the oriented area of the parallelogram, which is negative when the angle from the first to the second defining vector is clockwise. In the multi-dimensional case, the matrix maps the n-cube to an n-dimensional parallelotope. The determinant provides the signed n-dimensional volume of this parallelotope, describing the volume scaling factor of the linear transformation produced by the matrix. Based on this geometric interpretation, a D-optimal experiment minimizes the volume of the asymptotic confidence ellipsoids for the parameters. Figure \ref{fig:score_fun} illustrates the graphical representation of different optimality conditions.
 	
 	\begin{figure}[!h]
 		\centering

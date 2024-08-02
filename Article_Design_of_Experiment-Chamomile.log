@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10.12) (preloaded format=xelatex 2024.5.24)  9 JUL 2024 12:18
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10.12) (preloaded format=xelatex 2024.5.24)  30 JUL 2024 11:43
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1680,28 +1680,15 @@ File: ts1stix.fd 2015/04/17 v1.1.2-latex STIX TS1 font definitions
 ) [7]) (Sections/Results_DOE.tex
 File: Figures/Results/scatter_T.png Graphic file (type bmp)
 <Figures/Results/scatter_T.png>
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+ [8]
 File: Figures/Results/Profile_T_1.png Graphic file (type bmp)
 <Figures/Results/Profile_T_1.png>
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[8]
 File: Figures/Results/scatter_P.png Graphic file (type bmp)
 <Figures/Results/scatter_P.png>
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 File: Figures/Results/Profile_P_1.png Graphic file (type bmp)
 <Figures/Results/Profile_P_1.png>
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-) [9] (Article_Design_of_Experiment-Chamomile.bbl
+) [9]
+(Article_Design_of_Experiment-Chamomile.bbl
 Missing character: There is no   in font t1-stixgeneral!
 Missing character: There is no   in font t1-stixgeneral!
 Missing character: There is no – in font t1-stixgeneral!
@@ -1724,6 +1711,6 @@ Here is how much of TeX's memory you used:
  61607 multiletter control sequences out of 15000+600000
  533159 words of font info for 178 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 94i,26n,131p,1303b,943s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 94i,26n,131p,1328b,943s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on Article_Design_of_Experiment-Chamomile.pdf (10 pages).
