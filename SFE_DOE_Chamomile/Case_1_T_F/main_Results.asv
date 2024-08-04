@@ -55,7 +55,6 @@ for ii = 1:numel(PP)
     legend('P = 100 bar','P = 125 bar','P = 150 bar','P = 175 bar','P = 200 bar', 'Location','best','NumColumns',5)
     legend box off
     axis square
-    set(gca,'FontSize',16)
     
     subplot(1,2,2)
     hold on
@@ -64,8 +63,9 @@ for ii = 1:numel(PP)
     ylabel('Mass flow rate $\times 10^{-5}$ [$kg/s$]')
     xlabel('Time [min]')
     axis square
-    set(gca,'FontSize',16)
 end
+
+set(gca,'FontSize',12)
 
 %exportgraphics(figure(1), ['Profile_',num2str(ii),'.png'], "Resolution",300);
 

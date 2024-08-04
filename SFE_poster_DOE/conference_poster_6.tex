@@ -52,7 +52,7 @@
 \begin{minipage}[b]{0.75\linewidth}
 \veryHuge \color{NavyBlue} \textbf{Optimal design of experiment:} \color{Black}\\ % Title
 \Huge\textit{supercritical fluid extraction case}\\[2cm] % Subtitle
-\huge \textbf{Oliwer Sliczniuk \& Pekka Oinas}\\[0.5cm] % Author(s)
+\huge \textbf{Oliwer Sliczniuk, Pekka Oinas}\\[0.5cm] % Author(s)
 \huge School of Chemical Engineering, Aalto University, Finland\\[0.4cm] % University/organization
 %\Large \texttt{john@LaTeXTemplates.com} --- 1 (000) 111 1111\\
 \end{minipage}
@@ -88,7 +88,7 @@
 \begin{tcolorbox}[width=\linewidth, boxrule=0mm, sharp corners=all, colback=white]
 	{\LARGE Introduction\\}
 
-This study investigates the extraction of valuable components from biomass using supercritical carbon dioxide as a solvent. The interest is in essential oils extracted from chamomile flowers in cylindrical extractors operated in a semi-batch mode. The extraction process is described by a distributed-parameter model, and set of empirical correlations. This work aims \underline{to validate the empirical correlations by designing a new experiment} with dynamically changing operating conditions. %The process model includes empirical correlations, which describe the relation between the extraction kinetics parameters and the operating conditions. 
+This study investigates the extraction of valuable components from biomass using supercritical carbon dioxide as a solvent. The interest is in essential oils extracted from chamomile flowers in cylindrical extractors operated in a semi-batch mode. The process is described by a distributed-parameter model, and set of empirical correlations. This work aims \underline{to validate empirical} \underline{correlations by designing a new experiment with dynamically changing operating conditions}. %The process model includes empirical correlations, which describe the relation between the extraction kinetics parameters and the operating conditions. 
 \end{tcolorbox}
 
 %----------------------------------------------------------------------------------------
@@ -120,12 +120,13 @@ This study investigates the extraction of valuable components from biomass using
 
 %------------------------------------------------
 
-%\vspace{0.1cm}
 %\section*{Process Model}
 \begin{tcolorbox}[width=\linewidth, boxrule=0mm, sharp corners=all, colback=white]
 	{\LARGE Process Model\\}
 
-\begin{minipage}[b]{0.45\linewidth}
+\vspace{0.5cm}
+
+\begin{minipage}[b]{0.5\linewidth}
 	\begin{itemize}
 		\item One-dimensional
 		\item Plug flow
@@ -134,9 +135,9 @@ This study investigates the extraction of valuable components from biomass using
 	\end{itemize}
 \end{minipage}
 \hfill
-\begin{minipage}[b]{0.45\linewidth}
+\begin{minipage}[b]{0.5\linewidth}
 	\begin{itemize}
-		\item Based on the two-film theory for a single component
+		\item Two-film theory for a single component
 		\item Peng-Robinson equation of state
 		\item Decaying extraction kinetic
 		\item Empirical correlations
@@ -167,7 +168,7 @@ This study investigates the extraction of valuable components from biomass using
 	\end{bmatrix}
 	=
 \underbrace{\begin{bmatrix}
-		-\frac{1}{\phi} \frac{\partial \left( c_f u\right)}{\partial z} + \frac{1-\phi}{\phi} \cfrac{\partial c_s}{\partial t} + \frac{1}{\phi} \frac{\partial}{\partial z} \left( D^M_e \frac{\partial c_f}{\partial z} \right) \\
+		-\frac{1}{\phi} \frac{\partial \left( c_f u\right)}{\partial z} - \frac{1-\phi}{\phi} \cfrac{\partial c_s}{\partial t} + \frac{1}{\phi} \frac{\partial}{\partial z} \left( D^M_e \frac{\partial c_f}{\partial z} \right) \\
 		-\cfrac{ D_i^R \exp \left( \Upsilon \left( 1-\cfrac{ c_s }{c_{s0}} \right) \right) }{ \mu l^2 } \left( c_s  - \cfrac{\rho_s c_f }{ k_m \rho_f }  \right) \\
 		- \cfrac{\partial \left( \rho_f h A_f {\color{red}v} \right)}{\partial z} + \cfrac{\partial \left(P A_f\right)}{\partial t} + \cfrac{\partial}{\partial z} \left( k \cfrac{\partial T}{\partial z} \right) \\
 		\cfrac{F}{\rho_f} c_f \biggr\rvert_{z=L}
@@ -176,31 +177,33 @@ This study investigates the extraction of valuable components from biomass using
 
 \begin{minipage}[h!]{0.5\linewidth}
 	\begin{align*}
-		c_f &- \text{Soluts concentration in the fluid phase}\\
-		c_s &- \text{Soluts concentration in the solid phase}\\
+		c_f &- \text{Solutes concentration in the fluid phase}\\
+		c_s &- \text{Solutes concentration in the solid phase}\\
 		h~  &- \text{Enthalpy}\\
 		y~ &- \text{Extraction yield}\\
 		\rho_f &- \text{Density of fluid}\\
 		A_f &- \text{Cross-section of the bed}\\
 		u~~ &- \text{Darcy velocity}\\
-		\phi~~ &- \text{Void fraction}
+		\phi~~ &- \text{Void fraction}\\
+		D_i^R &- \text{Internal mass diffusivity}
 	\end{align*}
 \end{minipage}
 %
 \begin{minipage}[h!]{0.5\linewidth}
 	\begin{align*}
 		D_e^M &- \text{Axial mass diffusivity}\\
-		D_i^R &- \text{Internal mass diffusivity}\\
-		\Upsilon~~ &- \text{Decaying factor}\\
-		\rho_s~ &- \text{Bulky density of solid bed}\\
-		~k_m &- \text{Partition factor}\\
-		P~~ &- \text{Pressure}\\
-		T~~ &- \text{Temperature}\\
-		F~~ &- \text{Mass flow rate}
+		\mu~ &- \text{Particle shape coefficient}\\
+		l~ &- \text{Particle length}\\
+		\Upsilon~ &- \text{Decaying factor}\\
+		\rho_s &- \text{Bulk density of solid bed}\\
+		k_m &- \text{Partition factor}\\
+		P~ &- \text{Pressure}\\
+		T~ &- \text{Temperature}\\
+		F~ &- \text{Mass flow rate}
 	\end{align*}
 \end{minipage}
 
-\begin{center}%\vspace{1cm}
+\begin{center}\vspace{0.5cm}
 	\includegraphics[width=0.49\linewidth]{Di_Re_F_1.png}
 	\includegraphics[width=0.49\linewidth]{Gamma_Re_F_1.png}
 	\captionof{figure}{Empirical correlations}
@@ -216,14 +219,14 @@ This study investigates the extraction of valuable components from biomass using
 	{\LARGE Model-based optimal design of experiment\\}
 \end{tcolorbox}
 
-\underline{Fisher information $\mathcal{F}$ measures the amount of information} that an observable random variable carries about an unknown parameter of a distribution that models the random variable. $\mathcal{F}$ is defined as Hessian of the log-likelihood function with respect to the parameters $\Theta$, given the covariance matrix $\Sigma$. %Based on the Cramer-Rao inequality, $\mathcal{F}$ can used to calculate the covariance matrices associated with maximum-likelihood estimates.
+\underline{Fisher information $\mathcal{F}$ measures the amount of information} that an observable random variable carries about an unknown parameter of a distribution that models the random variable. $\mathcal{F}$ is defined as Hessian of the likelihood function with respect to parameters $\Theta$, given the covariance matrix $\Sigma$. %Based on the Cramer-Rao inequality, $\mathcal{F}$ can used to calculate the covariance matrices associated with maximum-likelihood estimates.
 
 \begin{equation*}
 	%\Sigma^{-1} \geq
 	\mathcal{F}(t,\Theta; \Xi) = \frac{\partial y(t, \Theta; \Xi)}{\partial \Theta} \Sigma \frac{\partial y(t, \Theta; \Xi)}{\partial \Theta^\top}
 \end{equation*}
 
-The optimal design of experiments is a concept that refers to planning an experiment, which allow parameters to be estimated without bias and with minimum variance. The D-optimality criterion is selected as the objective function, which leads to \underline{the minimisation of the volume of the ellipsoidal confidence region of parameter estimates} given the experimental condition $\Xi$. 
+The optimal design of experiments is a concept that refers to planning an experiment, which allow parameters to be estimated without bias and with minimum variance. The D-optimality criterion is selected as the objective function, which leads to \underline{the minimisation of the volume} \underline{of the ellipsoidal confidence region of parameter estimates} given the experimental condition $\Xi$. 
 
 \begin{equation*}
 	\begin{aligned} 
@@ -247,16 +250,15 @@ The optimal design of experiments is a concept that refers to planning an experi
 
 	To identify the global solution, the optimization problem is solved multiple times, each starting from a random initial solution. Figure 2 compares the initial and final values of the cost function across multiple optimization runs for different cases of pressure value.
 	
-	\begin{center}%\vspace{1cm}
+	\begin{center}\vspace{0.5cm}
 		\includegraphics[width=\linewidth]{scatter.png}
 		\captionof{figure}{Values of the objective function}
 	\end{center}%\vspace{1cm}
 	
 	The optimal profiles of the inlet temperature and flow rates for each case are showed in Figure 3
 	
-	\begin{center}%\vspace{1cm}
-		\includegraphics[width=0.49\linewidth]{Profile_T.png}
-		\includegraphics[width=0.49\linewidth]{Profile_F.png}
+	\begin{center}\vspace{0.5cm}
+		\includegraphics[width=\linewidth]{Profiles.png}
 		\captionof{figure}{Optimal profiles}
 	\end{center}%\vspace{1cm}
 	
@@ -266,18 +268,16 @@ The optimal design of experiments is a concept that refers to planning an experi
 %	CONCLUSIONS
 %----------------------------------------------------------------------------------------
 
-\color{SaddleBrown} % SaddleBrown color for the conclusions to make them stand out
+\begin{tcolorbox}[width=\linewidth, boxrule=0mm, sharp corners=all, colback=white]
+	{\LARGE Conclusions\\}
 
-\section*{Conclusions}
+	\begin{itemize}
+		\item The optimal profiles of controls are similar for all the cases
+		\item Low values of the objective are obtained at pressures close to supercritical point, where the variation in the inlet temperature cause large deviation in the physical properties of CO$_2$ and Reynolds number
+		\item The mass flow rate is used as main control variable, which suggest that the system is more sensitive to the mass flow rate than the inlet temperature
+	\end{itemize}
 
-\begin{itemize}
-\item Pellentesque eget orci eros. Fusce ultricies, tellus et pellentesque fringilla, ante massa luctus libero, quis tristique purus urna nec nibh. Phasellus fermentum rutrum elementum. Nam quis justo lectus.
-\item Vestibulum sem ante, hendrerit a gravida ac, blandit quis magna.
-\item Donec sem metus, facilisis at condimentum eget, vehicula ut massa. Morbi consequat, diam sed convallis tincidunt, arcu nunc.
-\item Nunc at convallis urna. isus ante. Pellentesque condimentum dui. Etiam sagittis purus non tellus tempor volutpat. Donec et dui non massa tristique adipiscing.
-\end{itemize}
-
-\color{DarkSlateGray} % Set the color back to DarkSlateGray for the rest of the content
+\end{tcolorbox}
 
 %----------------------------------------------------------------------------------------
 %	FORTHCOMING RESEARCH
