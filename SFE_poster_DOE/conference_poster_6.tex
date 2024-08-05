@@ -33,7 +33,7 @@
 \graphicspath{{figures/}} % Location of the graphics files
 \usepackage{booktabs} % Top and bottom rules for table
 \usepackage[font=small,labelfont=bf]{caption} % Required for specifying captions to tables and figures
-\usepackage{amsfonts, amsmath, amsthm, amssymb} % For math fonts, symbols and environments
+\usepackage{amsfonts, amsmath, amsthm, amssymb, enumitem} % For math fonts, symbols and environments
 \usepackage{wrapfig} % Allows wrapping text around tables and figures
 
 \usepackage{tcolorbox}
@@ -88,7 +88,7 @@
 \begin{tcolorbox}[width=\linewidth, boxrule=0mm, sharp corners=all, colback=white]
 	{\LARGE Introduction\\}
 
-This study investigates the extraction of valuable components from biomass using supercritical carbon dioxide as a solvent. The interest is in essential oils extracted from chamomile flowers in cylindrical extractors operated in a semi-batch mode. The process is described by a distributed-parameter model, and set of empirical correlations. This work aims \underline{to validate empirical} \underline{correlations by designing a new experiment with dynamically changing operating conditions}. %The process model includes empirical correlations, which describe the relation between the extraction kinetics parameters and the operating conditions. 
+This study investigates the extraction of essential oils from chamomile flowers using supercritical carbon dioxide as a solvent in a semi-batch mode. The process is described by a mathematical model incorporating empirical correlations. The goal of this work is to \underline{improve the precision of the} \underline{model parameters by designing a new experiment} and validating the model against it.
 \end{tcolorbox}
 
 %----------------------------------------------------------------------------------------
@@ -123,8 +123,8 @@ This study investigates the extraction of valuable components from biomass using
 %\section*{Process Model}
 \begin{tcolorbox}[width=\linewidth, boxrule=0mm, sharp corners=all, colback=white]
 	{\LARGE Process Model\\}
-
-\vspace{0.5cm}
+	
+	The process is described by a first-principle distributed-parameter model [1,2] with a set of empirical correlations [2]. The model assumptions are \\
 
 \begin{minipage}[b]{0.5\linewidth}
 	\begin{itemize}
@@ -175,7 +175,7 @@ This study investigates the extraction of valuable components from biomass using
 	\end{bmatrix}}_{G(x,t,\Theta;\Xi)}
 \end{align*}
 
-\begin{minipage}[h!]{0.5\linewidth}
+\begin{minipage}[h!]{0.33\linewidth}
 	\begin{align*}
 		c_f &- \text{Solutes concentration in the fluid phase}\\
 		c_s &- \text{Solutes concentration in the solid phase}\\
@@ -185,13 +185,13 @@ This study investigates the extraction of valuable components from biomass using
 		A_f &- \text{Cross-section of the bed}\\
 		u~~ &- \text{Darcy velocity}\\
 		\phi~~ &- \text{Void fraction}\\
+		D_e^M &- \text{Axial mass diffusivity}\\
 		D_i^R &- \text{Internal mass diffusivity}
 	\end{align*}
 \end{minipage}
 %
-\begin{minipage}[h!]{0.5\linewidth}
+\begin{minipage}[h!]{0.33\linewidth}
 	\begin{align*}
-		D_e^M &- \text{Axial mass diffusivity}\\
 		\mu~ &- \text{Particle shape coefficient}\\
 		l~ &- \text{Particle length}\\
 		\Upsilon~ &- \text{Decaying factor}\\
@@ -199,7 +199,9 @@ This study investigates the extraction of valuable components from biomass using
 		k_m &- \text{Partition factor}\\
 		P~ &- \text{Pressure}\\
 		T~ &- \text{Temperature}\\
-		F~ &- \text{Mass flow rate}
+		F~ &- \text{Mass flow rate} \\
+		\Sigma~ &- \text{Covariance matrix} \\
+		\Theta~ &- \text{Vector of parameters}
 	\end{align*}
 \end{minipage}
 
@@ -219,14 +221,15 @@ This study investigates the extraction of valuable components from biomass using
 	{\LARGE Model-based optimal design of experiment\\}
 \end{tcolorbox}
 
-\underline{Fisher information $\mathcal{F}$ measures the amount of information} that an observable random variable carries about an unknown parameter of a distribution that models the random variable. $\mathcal{F}$ is defined as Hessian of the likelihood function with respect to parameters $\Theta$, given the covariance matrix $\Sigma$. %Based on the Cramer-Rao inequality, $\mathcal{F}$ can used to calculate the covariance matrices associated with maximum-likelihood estimates.
+\underline{Fisher information $\mathcal{F}$ (Hessian of the likelihood function) measurs the amount of information} observable random variables carry about a parameters of a distribution that models these variables[3]:
 
 \begin{equation*}
 	%\Sigma^{-1} \geq
 	\mathcal{F}(t,\Theta; \Xi) = \frac{\partial y(t, \Theta; \Xi)}{\partial \Theta} \Sigma \frac{\partial y(t, \Theta; \Xi)}{\partial \Theta^\top}
 \end{equation*}
 
-The optimal design of experiments is a concept that refers to planning an experiment, which allow parameters to be estimated without bias and with minimum variance. The D-optimality criterion is selected as the objective function, which leads to \underline{the minimisation of the volume} \underline{of the ellipsoidal confidence region of parameter estimates} given the experimental condition $\Xi$. 
+%The optimal design of experiments involves planning an experiment in such a way that parameters can be estimated without bias and with minimal variance. 
+The D-optimality criterion is chosen as the objective function, aiming to \underline{minimize the volume} \underline{of the ellipsoidal confidence region of parameter estimates} under the experimental conditions $\Xi$.
 
 \begin{equation*}
 	\begin{aligned} 
@@ -240,15 +243,19 @@ The optimal design of experiments is a concept that refers to planning an experi
 	\end{aligned}
 \end{equation*}
 
-\underline{This work aims to design a dynamic experiment to improve precision of correlation for $D_i^R$}. The system is assumed to run for 300 min, with sampling time of 10 min. The set of decision variables consists of $T^{in}$ and $F$, and each of them is manipulated every 15 min. Each of five analysed cases assumes that P is kept constant at 100, 125, 150, 175 and 200 bar, respectively.
+This work aims \underline{to improve the precision of the correlation for $D_i^R$} by designing an experiment with dynamically changing operating conditions (\underline{$F$ and $T^{in}$)}. \\
+
+The method of lines is employed to transform the process model equations into a set of ODEs. The first- and second-order derivatives are approximated using the backward and central difference schemes, respectively. The time integral and all time-dependent functions are discretized using the single-shooting approach with piecewise-constant controls to obtain a static non-linear program.
 \end{tcolorbox}
+
+
 %----------------------------------------------------------------------------------------
 %	RESULTS 
 %----------------------------------------------------------------------------------------
 \begin{tcolorbox}[width=\linewidth, boxrule=0mm, sharp corners=all, colback=white]
 	{\LARGE Results\\}
-
-	To identify the global solution, the optimization problem is solved multiple times, each starting from a random initial solution. Figure 2 compares the initial and final values of the cost function across multiple optimization runs for different cases of pressure value.
+	
+	The system operates for 300 minutes, with a sampling interval of 10 minutes and decision variables adjusted every 15 minutes. Each of the five analysed cases assumes a constant pressure, set at 100, 125, 150, 175, and 200 bar. To identify the global solution, the optimization problem is solved multiple times, each starting from a random initial solution sampled from a uniform distribution. %Figure 2 compares the initial and final values of the cost function across multiple optimization runs for different cases of pressure value.
 	
 	\begin{center}\vspace{0.5cm}
 		\includegraphics[width=\linewidth]{scatter.png}
@@ -272,9 +279,9 @@ The optimal design of experiments is a concept that refers to planning an experi
 	{\LARGE Conclusions\\}
 
 	\begin{itemize}
-		\item The optimal profiles of controls are similar for all the cases
-		\item Low values of the objective are obtained at pressures close to supercritical point, where the variation in the inlet temperature cause large deviation in the physical properties of CO$_2$ and Reynolds number
-		\item The mass flow rate is used as main control variable, which suggest that the system is more sensitive to the mass flow rate than the inlet temperature
+		\item The optimal control profiles are similar across all cases.
+		\item Low objective values are achieved at pressures near the supercritical point, where variations in the inlet temperature cause significant deviations in the physical properties of CO$_2$ and consequently in the Reynolds number
+		\item The mass flow rate is the primary control variable, indicating that the system is more sensitive to mass flow rate changes than to inlet temperature variations.
 	\end{itemize}
 
 \end{tcolorbox}
@@ -283,25 +290,28 @@ The optimal design of experiments is a concept that refers to planning an experi
 %	FORTHCOMING RESEARCH
 %----------------------------------------------------------------------------------------
 
-\section*{Forthcoming Research}
+%\section*{Forthcoming Research}
 
-Vivamus molestie, risus tempor vehicula mattis, libero arcu volutpat purus, sed blandit sem nibh eget turpis. Maecenas rutrum dui blandit lorem vulputate gravida. Praesent venenatis mi vel lorem tempor at varius diam sagittis. Nam eu leo id turpis interdum luctus a sed augue. Nam tellus.
+%Vivamus molestie, risus tempor vehicula mattis, libero arcu volutpat purus, sed blandit sem nibh eget turpis. Maecenas rutrum dui blandit lorem vulputate gravida. Praesent venenatis mi vel lorem tempor at varius diam sagittis. Nam eu leo id turpis interdum luctus a sed augue. Nam tellus.
 
  %----------------------------------------------------------------------------------------
 %	REFERENCES
 %----------------------------------------------------------------------------------------
-
-\nocite{*} % Print all references regardless of whether they were cited in the poster or not
-\bibliographystyle{plain} % Plain referencing style
-\bibliography{sample} % Use the example bibliography file sample.bib
-
+\begin{tcolorbox}[width=\linewidth, boxrule=0mm, sharp corners=all, colback=white]
+	{\LARGE References\\}
+	\begin{enumerate}[label={[\arabic*]}]
+		\item E. Reverchon. Mathematical modeling of supercritical extraction of sage oil. AIChE Journal, 42(6):1765–1771, June 1996. ISSN 1547-5905. doi: 10.1002/aic.690420627.
+		\item O. Sliczniuk and P. Oinas. Supercritical fluid extraction of essential oil from chamomile flowers: modelling and parameter estimation. CJCE Journal. June 2024. Under review.
+		\item E. Walter and L. Pronzato. Identification of parametric models from experimental data. Communications and control engineering. Springer, London, 2010. ISBN 9781849969963
+	\end{enumerate}
+\end{tcolorbox}
 %----------------------------------------------------------------------------------------
 %	ACKNOWLEDGEMENTS
 %----------------------------------------------------------------------------------------
 
-\section*{Acknowledgements}
+%\section*{Acknowledgements}
 
-Etiam fermentum, arcu ut gravida fringilla, dolor arcu laoreet justo, ut imperdiet urna arcu a arcu. Donec nec ante a dui tempus consectetur. Cras nisi turpis, dapibus sit amet mattis sed, laoreet.
+%Etiam fermentum, arcu ut gravida fringilla, dolor arcu laoreet justo, ut imperdiet urna arcu a arcu. Donec nec ante a dui tempus consectetur. Cras nisi turpis, dapibus sit amet mattis sed, laoreet.
 
 %----------------------------------------------------------------------------------------
 
