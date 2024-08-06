@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10.12) (preloaded format=xelatex 2024.5.24)  5 AUG 2024 17:13
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10.12) (preloaded format=xelatex 2024.5.24)  6 AUG 2024 16:11
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
-**./conference_poster_6.tex
-(conference_poster_6.tex
+**./CHISA_2024_Sliczniuk.tex
+(CHISA_2024_Sliczniuk.tex
 LaTeX2e <2021-06-01> patch level 1
 L3 programming layer <2021-10-18> (a0poster.cls
 Document Class: a0poster 1997/05/07 v1.21b a0poster class (GK, MW)
@@ -603,8 +603,8 @@ File: l3backend-xetex.def 2021-10-18 L3 backend support: XeTeX
 \g__pdf_backend_object_int=\count308
 \g__pdf_backend_annotation_int=\count309
 \g__pdf_backend_link_int=\count310
-) (conference_poster_6.aux)
-\openout1 = `conference_poster_6.aux'.
+) (CHISA_2024_Sliczniuk.aux)
+\openout1 = `CHISA_2024_Sliczniuk.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
 LaTeX Font Info:    ... okay on input line 41.
@@ -687,63 +687,62 @@ Underfull \hbox (badness 10000) in paragraph at lines 127--128
 
  []
 
+File: figures//Di_Re_F.png Graphic file (type bmp)
+<figures//Di_Re_F.png>
+File: figures//Gamma_Re_F.png Graphic file (type bmp)
+<figures//Gamma_Re_F.png>
 
-Overfull \hbox (5.00917pt too wide) in paragraph at lines 129--146
-[][]  [] 
+Underfull \hbox (badness 10000) in paragraph at lines 194--195
+
  []
 
 
-Overfull \hbox (147.412pt too wide) detected at line 190
+Underfull \hbox (badness 10000) in paragraph at lines 222--223
+
+ []
+
+
+Overfull \hbox (6.21695pt too wide) detected at line 244
 []
  []
 
-File: figures//Di_Re_F_1.png Graphic file (type bmp)
-<figures//Di_Re_F_1.png>
-File: figures//Gamma_Re_F_1.png Graphic file (type bmp)
-<figures//Gamma_Re_F_1.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 221--222
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 246--247
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 256--257
+Underfull \hbox (badness 10000) in paragraph at lines 268--269
 
  []
 
 File: figures//scatter.png Graphic file (type bmp)
 <figures//scatter.png>
-File: figures//Profiles.png Graphic file (type bmp)
-<figures//Profiles.png>
+File: figures//Profiles_all.png Graphic file (type bmp)
+<figures//Profiles_all.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 279--280
+Underfull \hbox (badness 10000) in paragraph at lines 291--292
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 315--316
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 301--302
+Overfull \vbox (0.74426pt too high) has occurred while \output is active []
 
- []
 
 [1
 
-] (conference_poster_6.aux)
+] (CHISA_2024_Sliczniuk.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 14187 strings out of 411223
- 278003 string characters out of 2829157
- 647485 words of memory out of 3000000
- 34432 multiletter control sequences out of 15000+600000
+ 14188 strings out of 411223
+ 278021 string characters out of 2829157
+ 645486 words of memory out of 3000000
+ 34433 multiletter control sequences out of 15000+600000
  408131 words of font info for 53 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 83i,29n,83p,897b,847s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 83i,29n,83p,898b,584s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on conference_poster_6.pdf (1 page).
+Output written on CHISA_2024_Sliczniuk.pdf (1 page).

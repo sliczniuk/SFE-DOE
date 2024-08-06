@@ -3,8 +3,8 @@ delete(gcp('nocreate'));
 
 %%
 AA = xlsread('Regression.xlsx');
-DI = [0.701472275, 1.331443055, 2.239307889, 2.711813187, 1.32629228, 1.485504345, 1.73827467, 2.59502961, 0.48656241, 1.363499511, 0.72227, 0.756214019];
-GG = [4.274825704, 2.189390368, 2.552240039, 1.365163176, 2.830760407, 2.573487374, 1.642279591, 1.906200052, 4.287215235, 2.723682117, 3.82240, 3.35589348];
+DI = [0.71383013	1.076801997	2.179470155	2.475532632	1.390707877	1.336111172	1.882954204	2.457886055	0.564935512	1.542106938	0.835725102	0.87349666];
+GG = [4.229739602	3.091520556	2.359538225	1.132795818	2.204975712	2.739220425	1.868538631	1.69935869	3.452308202	1.995905641	3.012676539	2.596460037];
 RE = [0.4632, 0.3783, 0.3029, 0.2619, 0.3579, 0.3140, 0.2635, 0.2323, 0.1787, 0.1160, 0.1889, 0.1512];
 TT = [313, 313, 313, 313, 303, 303, 303, 303, 303, 303, 313, 313];
 Tr = TT ./ 304;
@@ -80,72 +80,50 @@ ylabel('$D_i^R \gamma(\Upsilon, C_s) [m^2/s] $')
 xlabel('Normalized $C_s [kg/m^3]$')
 set(gca,'FontSize',42)
 %exportgraphics(figure(1), ['Gamma_function.png'], "Resolution",300);
-%close all
+close all
 %}
 
 %% Fit a surface in RE and F space
-
+%{\
 figure()
-[ml3, sf3] = fit([RHO', FF'],DI','poly11');
-h3 = plot(ml3, [RHO', FF'],DI');
+tiledlayout(1,2)
+
+pbaspect([2 1 1])
+[ml3, sf3] = fit([RE', FF'],DI','poly11');
+h3 = plot(ml3, [RE', FF'],DI');
 set(h3,'linestyle','none');
 alpha(.5)
 
 p3 = coeffvalues(ml3);
-text(-0.25, 2.7, 0.1, sprintf('$D_i^R = %.3f %.3f \\cdot Re + %.3f \\cdot F$ \n $R^2 = %.3f $',[p3, sf3.rsquare]))
-xlabel('Re[-]',Position=[0.12, 0.5, 0.7])
-ylabel('$F \times 10^{-5}$[kg/s]',Position=[0, 4.5, -1.7])
-zlabel('$D_i^R \times 10^{-13} [m^2/s]$')
-
-exportgraphics(figure(1), ['Di_Re_F.png'], "Resolution",300);
-close all
+title(sprintf('$D_i^R = %.3f %.3f \\cdot Re + %.3f \\cdot F$ \n $R^2 = %.3f $',[p3, sf3.rsquare]))
+xlabel('Re[-]', 'rotation', 15)
+ylabel('$F \cdot 10^{-5}$ kg/s', 'rotation',-25, 'Position', [-0.1 3.0])
+zlabel('$D_i^R \cdot 10^{-13}~ m^2/s$')
+axis tight
+grid off
+view([-37.5 30]);
+set(gca,'FontSize',20)
+exportgraphics(figure(1), ['Di_Re_F.png'], "Resolution",300); close all
 
 figure()
-[ml4, sf4] = fit([RHO', FF'],GG','poly11');
-h4 = plot(ml4, [RHO', FF'],GG');
+tiledlayout(1,2)
+
+pbaspect([2 1 1])
+[ml4, sf4] = fit([RE', FF'],GG','poly11');
+h4 = plot(ml4, [RE', FF'],GG');
 set(h4,'linestyle','none');
 alpha(.5)
 
 p4 = coeffvalues(ml4);
-text(-0.18, 3.8, 1, sprintf('$\\Upsilon ~~= %.3f + %.3f \\cdot Re %.3f \\cdot F$ \n $R^2 = %.3f $',[p4, sf4.rsquare]))
-xlabel('Re[-]', Position=[0.3, 3, -0.57])
-ylabel('$F \times 10^{-5}$[kg/s]',Position=[0, 4.5, 0.35])
+title(sprintf('$\\Upsilon ~~= %.3f + %.3f \\cdot Re %.3f \\cdot F$ \n $R^2 = %.3f $',[p4, sf4.rsquare]))
+xlabel('Re[-]', 'rotation', 15)
+ylabel('$F \cdot 10^{-5}$ kg/s', 'rotation',-25, 'Position', [0 4.5])
 zlabel('$\Upsilon[-]$')
-
-exportgraphics(figure(1), ['Gamma_Re_F.png'], "Resolution",300);
-close all
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+axis tight
+grid off
+view([-37.5 30]);
+set(gca,'FontSize',20)
+exportgraphics(figure(1), ['Gamma_Re_F.png'], "Resolution",300); close all
 
 
 
