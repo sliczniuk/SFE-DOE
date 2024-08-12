@@ -1,0 +1,75 @@
+startup;
+delete(gcp('nocreate'));
+
+%addpath('C:\Dev\casadi-3.6.3-windows64-matlab2018b');
+addpath('\\home.org.aalto.fi\sliczno1\data\Documents\casadi-3.6.3-windows64-matlab2018b');
+import casadi.*
+
+%%
+% Define the sine wave dataset
+x_data = linspace(0, 5*pi, 100)';
+y_data = sin(x_data);
+
+% Number of RBF kernels specified by the user
+N = 5; % For example, you can change this to any number of RBF kernels
+
+% Create an Opti instance
+opti = Opti();
+
+% Parameters for N RBFs
+c = opti.variable(N, 1); % Centers of the RBFs
+w = opti.variable(N, 1); % Weights of the RBFs
+s = opti.variable(N, 1); % Widths of the RBFs (standard deviations)
+b = opti.variable();     % Bias term
+
+% RBF function
+rbf = @(x, c, s) exp(-((x - c).^2) / (2 * s^2));
+
+% Model prediction
+y_pred = @(x) b + sum(w' .* rbf(x, c, s), 1)';
+
+% Objective: minimize the mean squared error
+mse = sum((y_pred(x_data) - y_data).^2) / length(x_data);
+opti.minimize(mse);
+
+% Set initial guesses
+initial_c = linspace(0, 5*pi, N)';
+initial_w = rand(N, 1);
+initial_s = rand(N, 1);
+
+opti.set_initial(c, initial_c);
+opti.set_initial(w, initial_w);
+opti.set_initial(s, initial_s);
+opti.set_initial(b, 0);
+
+% Solver options
+opts = struct;
+opts.ipopt.print_level = 5;
+opti.solver('ipopt', opts);
+
+% Solve the problem
+sol = opti.solve();
+
+% Extract the optimal parameters
+c_opt = sol.value(c);
+w_opt = sol.value(w);
+s_opt = sol.value(s);
+b_opt = sol.value(b);
+
+% Display the optimal parameters
+disp('Optimal parameters:');
+disp(['c = ', num2str(c_opt')]);
+disp(['w = ', num2str(w_opt')]);
+disp(['s = ', num2str(s_opt')]);
+disp(['b = ', num2str(b_opt)]);
+
+% Plot the results
+figure;
+plot(x_data, y_data, 'b', 'LineWidth', 2);
+hold on;
+plot(x_data, sol.value(y_pred(x_data)), 'r--', 'LineWidth', 2);
+legend('Original Data', 'RBF Approximation');
+xlabel('x');
+ylabel('y');
+title(['RBF Approximation of Sine Wave with ', num2str(N), ' Kernels']);
+grid on;
