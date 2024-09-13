@@ -219,9 +219,9 @@
 	
 	\subsubsection{Problem formulation}
 	
-	Details on the process model can be found in [article 1]. The model's empirical correlations are derived based on laboratory experiments conducted under various constant operating conditions: $30 - 40^\circ C$, $100 - 200$ bar, and $3.33-6.67 \cdot 10^{-5}$ kg/s. This study employs a model-based design of experiments technique to design an experiment with dynamically changing conditions to improve the precision of the correlation for $D_i$. The decision variables are adjusted every 10 minutes and are kept constant within each interval (piecewise constant controls). These controls have lower and upper bounds that match the validated range of the process model detailed in [article 1]. The sampling time is set to 5 minutes, and the total extraction time is 300 minutes. The standard deviation $\sigma^2$ was estimated to be 0.12. The analysed correlations consist of two independent variables: Reynolds number and mass flow rate. The Reynolds number is a function of fluid thermodynamic properties and velocity, and the fluid density can be affected by temperature or pressure changes. In this work, both cases are solved and compared.
+	Details on the process model can be found in [article 1]. The model's empirical correlations are derived based on laboratory experiments conducted under various but constant operating conditions: $30 - 40^\circ C$, $100 - 200$ bar, and $3.33-6.67 \cdot 10^{-5}$ kg/s. This study employs a model-based design of experiments technique to design an experiment with dynamically changing conditions to improve the precision of the correlation for $D_i$. The decision variables are adjusted every 10 minutes and are kept constant within each interval (piecewise constant controls). These controls have lower and upper bounds that match the validated range of the process model detailed in [article 1]. The sampling time is set to 5 minutes, and the total extraction time is 300 minutes. The standard deviation $\sigma^2$ was estimated to be 0.10. The analysed correlations consist of two independent variables: Reynolds number and mass flow rate. The Reynolds number is a function of fluid thermodynamic properties and velocity, and the fluid density can be affected by temperature or pressure changes. In this work, the decision variables are the inlet temperature $(T^{in})$ and mass flow rate $(F)$, while the pressure is assumed to remain constant. The initial state is considered isothermal, so $T^0 = T^{in}(t=0)$. The optimal design of experiment problem is solved for multiple values of pressure, namely 100, 125, 150, 175 and 200 bar. %The problem formulation is given by Equation \ref{EQ:Formulation_1}.
 	
-	In the first case, the decision variables are the inlet temperature $(T^{in})$ and mass flow rate $(F)$. Throughout the experiment, the pressure is assumed to remain constant at 150 bar (the middle of the validated range). The initial state is considered isothermal, so $T^0 = T^{in}(t=0)$. The problem formulation for Case 1 is given by Equation \ref{EQ:Formulation_1}.
+	\begin{comment}
 	
 	{\footnotesize
 	\begin{equation}
@@ -232,31 +232,43 @@
 			&& t_0&=0\quad~\text{min} \\
 			&& t_f&=300~\text{min} \\
 			&& T^{0} &= T^{in}(t=0) \\
-			&& P(t) &= 150~\text{bar} \\
+			&& P(t) & \in \{100, 125, 150, 175, 200\}~\text{bar} \\
 			%&& \dot{y} = g(x(t)) \\
 			&& 30^\circ C \leq &T^{in}(t) \leq 40^\circ C \\
 			&& 3.33 \cdot 10^{-5} \leq &F(t) \leq 6.67 \cdot 10^{-5}
 		\end{aligned} \label{EQ:Formulation_1}
 	\end{equation} } 
-	
-	In the second case, the pressure and mass flow rate are treated as decision variables, while the inlet temperature is kept constant at $35^\circ C$. Similar to the first case, the extractor is assumed to be isothermal at the beginning of the operation. Unlike the previous case, changes in pressure affect the temperature inside the extractor. Any temperature deviation caused by pressure changes will eventually be mitigated by the inflow of fresh fluid at the constant temperature of $35^\circ C$. The problem formulation for Case 2 is given by Equation \ref{EQ:Formulation_2}.
 
+	\end{comment}
+
+	%The analysed correlation depends on the mass flow-rate and the Reynolds number, which suggest that using a mass-flow rate as an decision variable allow to investigate the whole correlation. Following the general formulation of many control problems such as Linear Quadratic Regulator, a quadratic penalty term is introduced to the cost function to avoid overuse of the mass-flow rate. The penalty term increase the value of the objective function in case of rapid changes of the mass flow-rate. 
+
+	In a real system, the mass flow rate and inlet temperature cannot be changed instantaneously, as they depend on the dynamics of the pump and heat exchanger, respectively. To prevent bang-bang-like control between the lower and upper bounds of the decision variables, a penalty term is introduced. Similar to many control problems, such as the Linear Quadratic Regulator, a quadratic penalty term is added to the cost function. This penalty increases the cost function value when there are rapid changes in the decision variables. The matrix $R$ represents the control cost matrix, with its entries chosen so that the control costs are one order of magnitude lower than $-\ln j_D$. The problem formulation is given by Equation \ref{EQ:Formulation_2}.
+	
 	{\footnotesize
 		\begin{equation}
 			\begin{aligned} 
-				&\Xi^* &= \arg &\min_{ P, F \in \Xi} \int_{t_0}^{t_f} - \ln j_D(\Xi,\dot{x}) dt  \\
+				&\Xi^* &= \arg &\min_{ T^{in}, F \in \Xi} \int_{t_0}^{t_f} - \ln j_D(\Xi,\dot{x}) + u(t) R u(t)^\top dt  \\
 				&\text{subject to}
 				& \dot{x} &= G(x,t,\Theta;\Xi) \\
 				&& t_0&=0\quad~\text{min} \\
 				&& t_f&=300~\text{min} \\
-				&& T^{0} &= T^{in}(t) = 35^\circ C \\
-				%&& P(t) &= 150~\text{bar} \\
+				&& T^{0} &= T^{in}(t=0) \\
+				&& P(t) & \in \{100, 125, 150, 175, 200\}~\text{bar} \\
+				&& R &= \begin{bmatrix}
+						10^{-1} & 0  \\
+						0 & 10^{-2}
+					\end{bmatrix}  \\
+				&& u(t) &= \begin{bmatrix}
+					\frac{dF(t)}{dt}  \\
+					\frac{dT^{in}(t)}{dt} 
+				\end{bmatrix}  \\
 				%&& \dot{y} = g(x(t)) \\
-				&& 100^\circ C \leq &P(t) \leq 200^\circ C \\
+				&& 30^\circ C \leq &T^{in}(t) \leq 40^\circ C \\
 				&& 3.33 \cdot 10^{-5} \leq &F(t) \leq 6.67 \cdot 10^{-5}
 			\end{aligned} \label{EQ:Formulation_2}
 	\end{equation} } 
-		
+
 \end{document}
 
 

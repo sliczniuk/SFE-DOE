@@ -2,6 +2,8 @@
 \graphicspath{{\subfix{../Figures/}}}
 \begin{document}
 	
+	\begin{comment}
+		
 	\label{CH: Results}
 	
 	To identify the global solution of Equations \ref{EQ:Formulation_1}, the optimization problem is solved multiple times, each starting from a random initial solution. Figure \ref{fig:scatter_T} compares the initial and final values of the cost function across multiple optimization runs. The shaded area spans from the smallest to the third smallest final values of the objective function. The black curves on the left and below the scatter plot represent the distributions of the initial and final cost function values, respectively. From Figure \ref{fig:scatter_T}, it can be observed that multiple local solutions exist for Case 1. The solution with the lowest cost function value is considered the global solution.
@@ -40,4 +42,64 @@
 		\label{fig:profile_P}
 	\end{figure}
 	
+	\end{comment}
+	
+	To identify the global solution of Equations \ref{EQ:Formulation_2},  the optimization problem is solved multiple times, with each run starting from a random initial solution sampled from a uniform distribution. Figure \ref{fig:scatter_T} compares the initial and final values of the cost function across multiple optimization runs for all cases. The solution with the lowest cost function value is considered the global solution for each case.
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=\columnwidth]{Figures/Results/scatter.png}	
+		\caption{Initial vs final values of the cost function}
+		\label{fig:scatter_T}
+	\end{figure}
+	
+	From Figure \ref{fig:scatter_T}, multiple local solutions are present. The closer the pressure is to the critical point, the greater the deviation in the physical properties of CO$_2$ caused by changes in the inlet temperature, and consequently, the greater the deviation in the Reynolds number, which is one of the independent variables in the analyzed correlation. By examining the clusters visible in Figure \ref{fig:scatter_T}, it can be concluded that experiments conducted at pressures near the supercritical point provide more informative results about the correlation than those performed at pressures farther from it.
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=\columnwidth]{Figures/Results/Profiles_all.png}	
+		\caption{Optimal profiles}
+		\label{fig:profiles}
+	\end{figure}
+	
 \end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

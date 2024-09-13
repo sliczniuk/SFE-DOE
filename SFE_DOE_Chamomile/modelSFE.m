@@ -8,7 +8,7 @@ function xdot = modelSFE(x, p, mask, dt)
     %% Load Paramters
     T_u           =     p{1};
     P_u           =     p{2};
-    F_u           =     p{3} * 10^(-5);
+    F_u           =     p{3};
 
     parameters    =     p(4:end);
 
@@ -51,7 +51,7 @@ function xdot = modelSFE(x, p, mask, dt)
     %VELOCITY      =     Velocity(F_u, mean([RHO(2:25:end)]), parameters);
     VELOCITY      =     Velocity(F_u, RHO(2), parameters);
 
-    RE            =     dp .* RHO .* VELOCITY ./ MU;
+    RE            =     dp .* RHO .* VELOCITY ./ MU .* 1.3;
     
     %% Thermal Properties
     CP            =     SpecificHeatComp(TEMP, PRESSURE, Z, RHO,                 parameters);            % [kJ/kg/K]
