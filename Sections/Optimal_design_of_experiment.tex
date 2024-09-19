@@ -67,9 +67,9 @@
 		\frac{\partial}{\partial \Theta} \ln (\pi_y (Y|\Theta)) =  \sum_{i=1}^{n_t}  \left[ \left( \frac{Y(t_i) - y(t_i, \Theta)}{\sigma_{t_i}^2} \right) \frac{\partial y(t_i, \Theta)}{\partial \Theta} \right]
 	\end{equation} }
 	
-	\subsubsection{Fisher information}
+	\subsubsection{Fisher Information}
 	
-	The Fisher information is a way of measuring the amount of information that an observable random variable carries about an unknown parameter of a distribution that models the random variable. The Fisher information is related to the second derivative (or the curvature) of the log-likelihood function with respect to the parameter. This relationship provides a measure of how "sensitive" the likelihood is to changes in the parameter value. The Fisher information matrix $\mathcal{F}$ can be calculated as follow.
+	The Fisher Information is a way of measuring the amount of information that an observable random variable carries about an unknown parameter of a distribution that models the random variable. The Fisher Information is related to the second derivative (or the curvature) of the log-likelihood function with respect to the parameter. This relationship provides a measure of how "sensitive" the likelihood is to changes in the parameter value. The Fisher Information matrix $\mathcal{F}$ can be calculated as follow.
 	
 	{\scriptsize
 	\begin{equation}
@@ -96,7 +96,7 @@
 		\mathcal{F}(\Theta) = \sum_{i=1}^{n_t} \left( \frac{1}{\sigma_{t_i}^2} \frac{\partial y(t_i, \Theta)}{\partial \Theta} \frac{\partial y(t_i, \Theta)}{\partial \Theta^\top} \right)
 	\end{equation} }
 	
-	If every experiment at time $t_i$ is independent and characterized by its own $\sigma_{t_i}$, then the Fisher information matrix can be presented in the more compact way:
+	If every experiment at time $t_i$ is independent and characterized by its own $\sigma_{t_i}$, then the Fisher Information matrix can be presented in the more compact way:
 	
 	{\footnotesize
 	\begin{equation}
@@ -133,11 +133,11 @@
 		\Sigma \geq \mathcal{F}^{-1}(\Theta^*)
 	\end{equation} }
 	
-	In other words, the precision to which we can estimate $\Theta$ is limited by the Fisher information of the likelihood function. Based on the Cramer-Rao inequality, the Fisher information matrix can used to calculate the covariance matrices associated with maximum-likelihood estimates.
+	In other words, the precision to which we can estimate $\Theta$ is limited by the Fisher Information of the likelihood function. Based on the Cramer-Rao inequality, the Fisher Information matrix can used to calculate the covariance matrices associated with maximum-likelihood estimates.
 	
 	\subsubsection{Optimal experimental design}
 	
-	The optimal design of experiments (DOE) is a statistical concept that refers to the process of planning an experiment, which allow parameters to be estimated without bias and with minimum variance. Optimal design ensures that the experiment can provide the most informative data possible. This often involves balancing the study of main effects and interactions between factors. Moreover, by efficiently planning experiments, optimal design aims to reduce the overall resources required, such as time, materials, and manpower.
+	The optimal design of experiments is a statistical concept that refers to the process of planning an experiment, which allow parameters to be estimated without bias and with minimum variance. Optimal design ensures that the experiment can provide the most informative data possible. This often involves balancing the study of main effects and interactions between factors. Moreover, by efficiently planning experiments, optimal design aims to reduce the overall resources required, such as time, materials, and manpower.
 	
 	The methodology for data to estimate the parameters of a specific model is influenced by a series of qualitative decisions made throughout the experimental and modelling process, such as: a model structure, a location of sensors or an equipment. Once these choices have been made, the experimenter still has some freedom to specify the quantitative experimental conditions (such as temperature, pressure, sampling times, etc.). Experiment design aims to determine experimental conditions adapted to the final purpose of the modelling. 
 	
@@ -154,7 +154,7 @@
 		\Xi^* = \arg~\underset{\Xi \in \bar{\Xi}}{\text{opt}}~j\left(\Xi\right)
 	\end{equation} }
 	
-	The cost function should describe the amount of information from an experiment. For that purpose it can be assumed a function $\kappa$ can be related to the Fisher information obtained an arbitrary operating conditions.
+	The cost function should describe the amount of information from an experiment. For that purpose it can be assumed a function $\kappa$ can be related to the Fisher Information obtained an arbitrary operating conditions.
 	
 	{\footnotesize
 	\begin{equation}
@@ -178,7 +178,7 @@
 		j_L(\Xi) = \text{trace} \left[ Q^\top Q\mathcal{F}^{-1}(\Theta,\Xi) \right]
 	\end{equation} }
 	
-	and choosing $Q = \textbf{I}_{n_\Theta}$ corresponds to the A-optimality cost function. An A-optimal experiment minimizes the sum of the squares of the lengths of the axes of asymptotic confidence ellipsoids. When $Q$ diagonal, with $[Q]_{ii} = 1/\Theta_i$ this corresponds to C-optimality, which is associated with the relative precision of estimates. Selecting $Q$ as a row vector results in C-optimality. Setting $Q = \textbf{I}_{n_\Theta}$ and $k = \infty$ leads to E-optimality, where the design maximizes the smallest eigenvalues of the Fisher information matrix, thereby minimizing the length of the largest axis of the asymptotic confidence ellipsoids. The most commonly used criterion is the D-optimality that involves $k = 0$, $Q = \textbf{I}_{n_\Theta}$, requiring the minimization of $\det \mathcal{F}^{-1}(\Theta, \Xi)$, or, equivalently, maximization of
+	and choosing $Q = \textbf{I}_{n_\Theta}$ corresponds to the A-optimality cost function. An A-optimal experiment minimizes the sum of the squares of the lengths of the axes of asymptotic confidence ellipsoids. When $Q$ diagonal, with $[Q]_{ii} = 1/\Theta_i$ this corresponds to C-optimality, which is associated with the relative precision of estimates. Selecting $Q$ as a row vector results in C-optimality. Setting $Q = \textbf{I}_{n_\Theta}$ and $k = \infty$ leads to E-optimality, where the design maximizes the smallest eigenvalues of the Fisher Information matrix, thereby minimizing the length of the largest axis of the asymptotic confidence ellipsoids. The most commonly used criterion is the D-optimality that involves $k = 0$, $Q = \textbf{I}_{n_\Theta}$, requiring the minimization of $\det \mathcal{F}^{-1}(\Theta, \Xi)$, or, equivalently, maximization of
 	
 	{\footnotesize
 	\begin{equation}

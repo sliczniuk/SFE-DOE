@@ -20,10 +20,10 @@ function [Yield] = Yield_Plot(feedPress, T0homog, Flow)
     
     % Set time of the simulation
     PreparationTime         = 0;
-    ExtractionTime          = 300;
+    ExtractionTime          = 600;
     timeStep                = 5;                                                 % Minutes
-    SamplingTime            = 10;                                                % Minutes
-    OP_change_Time          = 15;                                                % Minutes
+    SamplingTime            = 5;                                                % Minutes
+    OP_change_Time          = 10;                                                % Minutes
     
     simulationTime          = PreparationTime + ExtractionTime;
     

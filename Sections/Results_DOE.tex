@@ -44,22 +44,42 @@
 	
 	\end{comment}
 	
-	To identify the global solution of Equations \ref{EQ:Formulation_2},  the optimization problem is solved multiple times, with each run starting from a random initial solution sampled from a uniform distribution. Figure \ref{fig:scatter_T} compares the initial and final values of the cost function across multiple optimization runs for all cases. The solution with the lowest cost function value is considered the global solution for each case.
+	To identify the global solution for Equations \ref{EQ:Formulation_2}, the optimization problem is solved multiple times, each run starting from a random initial solution sampled from a uniform distribution. Figure \ref{fig:scatter} compares the initial and final cost function values across multiple optimization runs for all cases. The solution with the lowest cost function value is considered the global solution for each case.
 	
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=\columnwidth]{Figures/Results/scatter.png}	
 		\caption{Initial vs final values of the cost function}
-		\label{fig:scatter_T}
+		\label{fig:scatter}
 	\end{figure}
 	
-	From Figure \ref{fig:scatter_T}, multiple local solutions are present. The closer the pressure is to the critical point, the greater the deviation in the physical properties of CO$_2$ caused by changes in the inlet temperature, and consequently, the greater the deviation in the Reynolds number, which is one of the independent variables in the analyzed correlation. By examining the clusters visible in Figure \ref{fig:scatter_T}, it can be concluded that experiments conducted at pressures near the supercritical point provide more informative results about the correlation than those performed at pressures farther from it.
+	From Figure \ref{fig:scatter}, it is evident that multiple local solutions exist. By analyzing locations of the clusters in Figure \ref{fig:scatter}, it can be concluded that experiments conducted near the critical point provide more information regarding the correlation than those conducted farther from it. The closer the pressure is to the critical point, the larger the deviations in the physical properties of $CO_2$ caused by changes in the controls, leading to greater variation in the Reynolds number, and consequently to more informative experiments.
+	
+	For each pressure case, the profiles with the lowest value of the objective function are further analysed. As shown in Figure \ref{fig:profiles_T}, all the inlet temperature profiles follow the same pattern. Initally, the system starts from the highest temperature (upper control bound) and gradually decreasing to lowest temperatures (lower control bound).
+
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=\columnwidth]{Figures/Results/Profile_T.png}	
+		\caption{Optimal inlet temperature profile}
+		\label{fig:profiles_T}
+	\end{figure}
+	
+	As presented in Figure \ref{fig:profiles_F}, in four out of five analysed cases, the corresponding mass flow rate profiles initially start at low values and gradually increase, reaching their maximum when the inlet temperature reaches its minimum. Later, the mass flow rates decrease to minimum values, and eventually, they rise again to reach their maximums at the final time. The only solution, which has different mass flow rate profile corresponds to pressure of 100 bar. The mass flow rate profile make the U-shape pattern, which starts the maximum value, then diminish to minimum and increases to the maximum value.
 	
 	\begin{figure}[h!]
 		\centering
-		\includegraphics[width=\columnwidth]{Figures/Results/Profiles_all.png}	
-		\caption{Optimal profiles}
-		\label{fig:profiles}
+		\includegraphics[width=\columnwidth]{Figures/Results/Profile_F.png}	
+		\caption{Optimal mass flow rate profiles}
+		\label{fig:profiles_F}
+	\end{figure}
+	
+	Figure \ref{fig:profiles_y} shows the predicted yield curves. The yield and scatter plots show that the most informative experiments do not necessarily correspond to those with the highest yield. This is because the variation in $CO_2$'s physical properties differs depending on the system's pressure. At higher pressures, the extraction rates are high enough that the amount of collected oils becomes almost the same, which makes it difficult to distinguish between experiments. The optimal yield profiles are characterized by a wavy pattern rather than the smooth exponential-like pattern observed under steady conditions. This behaviour is expected, as the determinant of the Hessian matrix, when evaluated at a critical point of a function, is equal to the Gaussian curvature of the function considered as a manifold. When the sum of the Hessian determinants is maximized, the number of critical points increases, leading to the wavy pattern observed in the yield curves.
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=\columnwidth]{Figures/Results/yield.png}	
+		\caption{Optimal yield profiles}
+		\label{fig:profiles_y}
 	\end{figure}
 	
 \end{document}
