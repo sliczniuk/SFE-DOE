@@ -219,7 +219,7 @@
 	
 	\subsubsection{Problem formulation}
 	
-	Details on the process model can be found in [article 1]. The model's empirical correlations are derived based on laboratory experiments conducted under various but constant operating conditions: $30 - 40^\circ C$, $100 - 200$ bar, and $3.33-6.67 \cdot 10^{-5}$ kg/s. This study employs a model-based design of experiments technique to design an experiment with dynamically changing conditions to improve the precision of the correlation for $D_i$. The decision variables are adjusted every 10 minutes and are kept constant within each interval (piecewise constant controls). These controls have lower and upper bounds that match the validated range of the process model detailed in [article 1]. The sampling time is set to 5 minutes, and the total extraction time is 300 minutes. The standard deviation $\sigma^2$ was estimated to be 0.10. The analysed correlations consist of two independent variables: Reynolds number and mass flow rate. The Reynolds number is a function of fluid thermodynamic properties and velocity, and the fluid density can be affected by temperature or pressure changes. In this work, the decision variables are the inlet temperature $(T^{in})$ and mass flow rate $(F)$, while the pressure is assumed to remain constant. The initial state is considered isothermal, so $T^0 = T^{in}(t=0)$. The optimal design of experiment problem is solved for multiple values of pressure, namely 100, 125, 150, 175 and 200 bar. %The problem formulation is given by Equation \ref{EQ:Formulation_1}.
+	Details on the process model can be found in [article 1]. The model's empirical correlations are derived based on laboratory experiments conducted under various but constant operating conditions: $30 - 40^\circ C$, $100 - 200$ bar, and $3.33-6.67 \cdot 10^{-5}$ kg/s. This study employs a model-based design of experiments technique to design an experiment with dynamically changing conditions to improve the precision of the correlation for $D_i$. The decision variables are adjusted every 10 minutes and are kept constant within each interval (piecewise constant controls). These controls have lower and upper bounds that match the validated range of the process model detailed in [article 1]. The sampling time is set to 5 minutes, and the total extraction time is 600 minutes. The standard deviation $\sigma^2$ was estimated to be 0.10. The analysed correlations consist of two independent variables: Reynolds number and mass flow rate. The Reynolds number is a function of fluid thermodynamic properties and velocity, and the fluid density can be affected by temperature or pressure changes. In this work, the decision variables are the inlet temperature $(T^{in})$ and mass flow rate $(F)$, while the pressure is assumed to remain constant. The initial state is considered isothermal, so $T^0 = T^{in}(t=0)$. The optimal design of experiment problem is solved for multiple values of pressure, namely 100, 125, 150, 175 and 200 bar. %The problem formulation is given by Equation \ref{EQ:Formulation_1}.
 	
 	\begin{comment}
 	
@@ -252,7 +252,7 @@
 				&\text{subject to}
 				& \dot{x} &= G(x,t,\Theta;\Xi) \\
 				&& t_0&=0\quad~\text{min} \\
-				&& t_f&=300~\text{min} \\
+				&& t_f&=600~\text{min} \\
 				&& T^{0} &= T^{in}(t=0) \\
 				&& P(t) & \in \{100, 125, 150, 175, 200\}~\text{bar} \\
 				&& R &= \begin{bmatrix}
