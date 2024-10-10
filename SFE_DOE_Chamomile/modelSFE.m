@@ -48,8 +48,7 @@ function xdot = modelSFE(x, p, mask, dt)
     RHO           =     rhoPB_Comp(     TEMP, PRESSURE, Z, parameters);   
     MU            =     Viscosity(TEMP,RHO);
 
-    %VELOCITY      =     Velocity(F_u, mean([RHO(2:25:end)]), parameters);
-    VELOCITY      =     Velocity(F_u, RHO(2), parameters);
+    VELOCITY      =     Velocity(F_u, mean([RHO(2:25:end)]), parameters);
 
     RE            =     dp .* RHO .* VELOCITY ./ MU .* 1.3;
     
