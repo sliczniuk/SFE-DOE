@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2024.1.12)  27 SEP 2024 21:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2024.1.12)  30 OCT 2024 16:54
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1630,7 +1630,7 @@ Overfull \hbox (123.62721pt too wide) detected at line 133
  []
 
 (Article_Design_of_Experiment-Chamomile.abs)
-<thumbnails/cas-email.jpeg, id=98, 225.84375pt x 225.84375pt>
+<thumbnails/cas-email.jpeg, id=94, 225.84375pt x 225.84375pt>
 File: thumbnails/cas-email.jpeg Graphic file (type jpg)
 <use thumbnails/cas-email.jpeg>
 Package pdftex.def Info: thumbnails/cas-email.jpeg  used on input line 133.
@@ -1661,11 +1661,6 @@ File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 {C:/Users/sliczno1/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/inconsolata/i4
 -t1-0.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/cm-super/cm-super-t1.enc} <.
 /thumbnails/cas-email.jpeg>]
-Overfull \hbox (2.88551pt too wide) in paragraph at lines 19--20
-[]\T1/stix/m/n/10 Sovova [][][] pro-posed The Broken-and-Intact Cell (BIC)
- []
-
-
 Underfull \hbox (badness 1320) in paragraph at lines 25--26
 \T1/stix/m/n/10 chamomile oil ex-trac-tion pro-cess. This model aims for
  []
@@ -1679,106 +1674,106 @@ Underfull \hbox (badness 1924) in paragraph at lines 25--26
 
 pdfTeX warning: pdflatex (file ./Figures/PFD.drawio.pdf): PDF inclusion: found 
 PDF version <1.7>, but at most version <1.5> allowed
-<Figures/PFD.drawio.pdf, id=149, 871.33525pt x 336.29637pt>
+<Figures/PFD.drawio.pdf, id=144, 871.33525pt x 336.29637pt>
 File: Figures/PFD.drawio.pdf Graphic file (type pdf)
 <use Figures/PFD.drawio.pdf>
 Package pdftex.def Info: Figures/PFD.drawio.pdf  used on input line 29.
 (pdftex.def)             Requested size: 238.25444pt x 91.95581pt.
 ) (Sections/Literature_Review.tex [2 <./Figures/PFD.drawio.pdf>])
 (Sections/Model.tex [3]
-<Figures/SFE_PFD.drawio.png, id=217, 8222.72pt x 4626.28375pt>
+Overfull \hbox (8.60632pt too wide) in paragraph at lines 93--94
+[]\T1/stix/m/n/10 As the sol-vent flows through the fixed bed, CO$[]$ molecules
+
+ []
+
+<Figures/SFE_PFD.drawio.png, id=210, 8222.72pt x 4626.28375pt>
 File: Figures/SFE_PFD.drawio.png Graphic file (type png)
 <use Figures/SFE_PFD.drawio.png>
 Package pdftex.def Info: Figures/SFE_PFD.drawio.png  used on input line 97.
 (pdftex.def)             Requested size: 202.51772pt x 156.9374pt.
- [4 <./Figures/SFE_PFD.drawio.png>]
-(Sections/Saturation.tex
-<Figures///Di_Re_F_1.png, id=248, 373.8768pt x 273.1806pt>
-File: Figures///Di_Re_F_1.png Graphic file (type png)
-<use Figures///Di_Re_F_1.png>
-Package pdftex.def Info: Figures///Di_Re_F_1.png  used on input line 32.
-(pdftex.def)             Requested size: 238.25444pt x 174.08466pt.
-<Figures///Gamma_Re_F_1.png, id=250, 370.5042pt x 291.489pt>
-File: Figures///Gamma_Re_F_1.png Graphic file (type png)
-<use Figures///Gamma_Re_F_1.png>
-Package pdftex.def Info: Figures///Gamma_Re_F_1.png  used on input line 39.
-(pdftex.def)             Requested size: 238.25444pt x 187.44186pt.
-) [5 <./Figures///Di_Re_F_1.png> <./Figures///Gamma_Re_F_1.png>]) (Sections/Opt
-imal_design_of_experiment.tex [6]
-Overfull \hbox (1.40794pt too wide) in paragraph at lines 42--43
-[]\T1/stix/m/n/10 For the true value of the pa-ram-e-ters, it sat-is-fies $\LS1
-/stix/m/it/10 e[]\LS1/stix/m/n/10 .\LS1/stix/m/it/10 t[]; \LS1/stix/m/n/10 ^^B[
-]/[] 
+[4 <./Figures/SFE_PFD.drawio.png>] (Sections/Saturation.tex
+<Figures///Di.png, id=244, 386.6445pt x 311.0019pt>
+File: Figures///Di.png Graphic file (type png)
+<use Figures///Di.png>
+Package pdftex.def Info: Figures///Di.png  used on input line 34.
+(pdftex.def)             Requested size: 238.25444pt x 191.6423pt.
+<Figures///Gamma.png, id=246, 368.8179pt x 309.7974pt>
+File: Figures///Gamma.png Graphic file (type png)
+<use Figures///Gamma.png>
+Package pdftex.def Info: Figures///Gamma.png  used on input line 41.
+(pdftex.def)             Requested size: 238.25444pt x 200.12741pt.
+) [5 <./Figures///Di.png (PNG copy)> <./Figures///Gamma.png (PNG copy)>] [6]) (
+Sections/DOE.tex
+Overfull \hbox (41.84886pt too wide) detected at line 39
+[]
  []
 
 
-Overfull \hbox (10.03629pt too wide) in paragraph at lines 42--43
-\LS1/stix/m/n/10 = \LS1/stix/m/it/10 ^^O[]$\T1/stix/m/n/10 . and, since $\LS1/s
-tix/m/it/10 y$ \T1/stix/m/n/10 is de-ter-min-is-tic, $\LS1/stix/m/it/10 ^^Y[]\L
-S1/stix/m/n/10 .\LS1/stix/m/it/10 Y\LS1/stix/m/n/10 .\LS1/stix/m/it/10 t[]\LS1/
-stix/m/n/10 /\LS2/stixex/m/n/10 ð\LS1/stix/m/n/10 ^^B/ = \LS1/stix/m/it/10 ^^Y[
-]\LS1/stix/m/n/10 .\LS1/stix/m/it/10 e[]\LS1/stix/m/n/10 .\LS1/stix/m/it/10 t[]
-\LS1/stix/m/n/10 /\LS1/stix/m/it/10 ; \LS1/stix/m/n/10 ^^B/$\T1/stix/m/n/10 .
+Overfull \hbox (37.12527pt too wide) detected at line 47
+[]
+ []
+
+[7]
+Overfull \hbox (0.27231pt too wide) detected at line 123
+[]
  []
 
 
-Overfull \hbox (7.25708pt too wide) in paragraph at lines 85--86
-\T1/stix/m/n/10 pec-ta-tion $[][]$ as $[][] [] [] 
+Underfull \hbox (badness 1297) in paragraph at lines 137--138
+[]\T1/stix/m/n/10 Since $[] \LS1/stix/m/it/10 A\LS1/stix/m/n/10 .\LS1/stix/m/it
+/10 ^^R; \LS1/stix/m/n/10 ^^D/ = 1_ [] \LS1/stix/m/it/10 A[]\LS1/stix/m/n/10 .\
+LS1/stix/m/it/10 ^^R; \LS1/stix/m/n/10 ^^D/$\T1/stix/m/n/10 , max-i-miz-ing
  []
 
-LaTeX Font Info:    Trying to load font information for TS1+stix on input line 
-124.
-(C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/latex/stix\ts1stix.fd
-File: ts1stix.fd 2015/04/17 v1.1.2-latex STIX TS1 font definitions
-)
-[7
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.31
-}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.141 	
-       {C:/Users/sliczno1/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix/st
-ix-ts1.enc}] [8]) (Sections/Results_DOE.tex
-<Figures/Results/scatter.png, id=326, 421.575pt x 316.18124pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[8]
+Underfull \hbox (badness 1661) in paragraph at lines 175--176
+[]\T1/stix/m/n/10 The an-a-lyzed cor-re-la-tions con-sist of two in-de-pen-
+ []
+
+) (Sections/Results_DOE.tex
+<Figures/Results/scatter.png, id=319, 421.575pt x 316.18124pt>
 File: Figures/Results/scatter.png Graphic file (type png)
 <use Figures/Results/scatter.png>
 Package pdftex.def Info: Figures/Results/scatter.png  used on input line 51.
 (pdftex.def)             Requested size: 238.25444pt x 178.69098pt.
-<Figures/Results/Profile_T.png, id=330, 421.575pt x 316.18124pt>
+<Figures/Results/Profile_T.png, id=323, 421.575pt x 316.18124pt>
 File: Figures/Results/Profile_T.png Graphic file (type png)
 <use Figures/Results/Profile_T.png>
 Package pdftex.def Info: Figures/Results/Profile_T.png  used on input line 62.
-(pdftex.def)             Requested size: 238.25444pt x 178.69098pt.
- [9 <./Figures/Results/scatter.png (PNG copy)> <./Figures/Results/Profile_T.png
- (PNG copy)>]
-<Figures/Results/Profile_F.png, id=339, 421.575pt x 316.18124pt>
-File: Figures/Results/Profile_F.png Graphic file (type png)
-<use Figures/Results/Profile_F.png>
-Package pdftex.def Info: Figures/Results/Profile_F.png  used on input line 71.
-(pdftex.def)             Requested size: 238.25444pt x 178.69098pt.
-<Figures/Results/yield.png, id=341, 421.575pt x 316.18124pt>
-File: Figures/Results/yield.png Graphic file (type png)
-<use Figures/Results/yield.png>
-Package pdftex.def Info: Figures/Results/yield.png  used on input line 80.
 (pdftex.def)             Requested size: 238.25444pt x 178.69098pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [10 <./Figures/Results/Profile_F.png (PNG copy)> <./Figures/Results/yield.png
- (PNG copy)>] (Article_Design_of_Experiment-Chamomile.bbl
-Underfull \hbox (badness 1117) in paragraph at lines 30--38
+[9 <./Figures/Results/scatter.png (PNG copy)>]
+<Figures/Results/Profile_F.png, id=333, 421.575pt x 316.18124pt>
+File: Figures/Results/Profile_F.png Graphic file (type png)
+<use Figures/Results/Profile_F.png>
+Package pdftex.def Info: Figures/Results/Profile_F.png  used on input line 71.
+(pdftex.def)             Requested size: 238.25444pt x 178.69098pt.
+<Figures/Results/yield.png, id=335, 421.575pt x 316.18124pt>
+File: Figures/Results/yield.png Graphic file (type png)
+<use Figures/Results/yield.png>
+Package pdftex.def Info: Figures/Results/yield.png  used on input line 80.
+(pdftex.def)             Requested size: 238.25444pt x 178.69098pt.
+) [10 <./Figures/Results/Profile_T.png (PNG copy)> <./Figures/Results/Profile_F
+.png (PNG copy)> <./Figures/Results/yield.png (PNG copy)>] (Article_Design_of_E
+xperiment-Chamomile.bbl
+Underfull \hbox (badness 1117) in paragraph at lines 54--62
 \T1/stix/m/n/8 Ex-per-i-men-tal study of ke-to-cona-zole im-preg-na-tion into p
 olyvinyl
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--67
+Underfull \hbox (badness 10000) in paragraph at lines 85--91
 []\T1/stix/m/n/8 Nedasadat Saa-dati Ardestani, Gho-lamhos-sein Sode-ifian, and
  []
 
 
-Underfull \hbox (badness 3601) in paragraph at lines 70--76
+Underfull \hbox (badness 3601) in paragraph at lines 94--100
 []\T1/stix/m/n/8 Gholamhossein Sode-ifian, Seyed Ali Sa-ja-dian, and Reza De-r-
 
  []
@@ -1789,25 +1784,30 @@ Underfull \hbox (badness 1107) in paragraph at lines 150--157
   |   []   |   []
  []
 
-
-Underfull \hbox (badness 1859) in paragraph at lines 244--248
+LaTeX Font Info:    Trying to load font information for TS1+stix on input line 
+222.
+(C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/latex/stix\ts1stix.fd
+File: ts1stix.fd 2015/04/17 v1.1.2-latex STIX TS1 font definitions
+)
+Underfull \hbox (badness 1859) in paragraph at lines 250--254
 []\T1/stix/m/n/8 J. Gmehling, M. Kleiber, B. Kolbe, and J. Rarey.  |   []
  []
 
-) [11] (Article_Design_of_Experiment-Chamomile.nls) [12]
+) [11{C:/Users/sliczno1/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix/stix
+-ts1.enc}] (Article_Design_of_Experiment-Chamomile.nls) [12]
 (Article_Design_of_Experiment-Chamomile.aux)
 Package rerunfilecheck Info: File `Article_Design_of_Experiment-Chamomile.out' 
 has not changed.
-(rerunfilecheck)             Checksum: 5473F42EB0D27113CC32C51CA2CDCC37;3923.
+(rerunfilecheck)             Checksum: 4A6D10E0A0FC7E4E8344773B479CE42F;3752.
  ) 
 Here is how much of TeX's memory you used:
- 43130 strings out of 478848
- 936177 string characters out of 2848485
- 1391927 words of memory out of 3000000
- 60047 multiletter control sequences out of 15000+600000
- 527317 words of font info for 177 fonts, out of 8000000 for 9000
+ 43126 strings out of 478848
+ 935897 string characters out of 2848485
+ 1395927 words of memory out of 3000000
+ 60046 multiletter control sequences out of 15000+600000
+ 521528 words of font info for 174 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 110i,26n,131p,1622b,964s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 110i,26n,131p,1303b,951s stack positions out of 5000i,500n,10000p,200000b,80000s
 <C:/Users/sliczno1/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsola
 ta/Inconsolata-zi4r.pfb><C:/Users/sliczno1/AppData/Local/Programs/MiKTeX/fonts/
 type1/public/stix/STIXGeneral-Bold.pfb><C:/Users/sliczno1/AppData/Local/Program
@@ -1821,13 +1821,14 @@ sliczno1/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathbb.pfb>
 athcal.pfb><C:/Users/sliczno1/AppData/Local/Programs/MiKTeX/fonts/type1/public/
 stix/stix-mathex.pfb><C:/Users/sliczno1/AppData/Local/Programs/MiKTeX/fonts/typ
 e1/public/stix/stix-mathit.pfb><C:/Users/sliczno1/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/stix/stix-mathrm.pfb><C:/Users/sliczno1/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb><C:/Users/sliczno1/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathsf.pfb>
-Output written on Article_Design_of_Experiment-Chamomile.pdf (12 pages, 2057486
+/fonts/type1/public/stix/stix-mathrm-bold.pfb><C:/Users/sliczno1/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/stix/stix-mathrm.pfb><C:/Users/sliczno1/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb><C:/Users/sl
+iczno1/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathsf.pfb>
+Output written on Article_Design_of_Experiment-Chamomile.pdf (12 pages, 2211043
  bytes).
 PDF statistics:
- 449 PDF objects out of 1000 (max. 8388607)
- 120 named destinations out of 1000 (max. 500000)
- 260 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 447 PDF objects out of 1000 (max. 8388607)
+ 118 named destinations out of 1000 (max. 500000)
+ 252 words of extra memory for PDF output out of 10000 (max. 10000000)
 
