@@ -140,7 +140,7 @@
 	
 	\begin{figure}[!h]
 		\centering
-		\resizebox{0.4\textwidth}{!}{%
+		\resizebox{0.8\columnwidth}{!}{%
 			\begin{tikzpicture}
 				% Ellipse parameters
 				\def\ellipsecenter{(3,3)}
@@ -178,16 +178,16 @@
 	
 	{\footnotesize 
 		\begin{equation} 
-			\begin{aligned} \Xi^* &= \arg \min_{ T^{\text{in}}(t), F(t) } \int_{t_0}^{t_f} \left[ - \ln j_D(\Xi, \dot{x}) + u(t)^\top R u(t) \right] dt \\ 
+			\begin{aligned} \Xi^* &= \arg \min_{ T^{\text{in}}(t), F(t) } \int_{t_0}^{t_f} \left[ - \ln j_D(\Xi, \dot{x}) + \frac{du(t)}{dt}^\top R \frac{du(t)}{dt} \right] dt \\ 
 				\text{subject to} \quad & \dot{x} = G(x, t, \theta; \Xi), \\ 
 				& t_0 = 0 \text{min} \\ 
 				& t_f = 600 \text{min} \\ 
 				& T^{0} = T^{\text{in}}(t=0), \\ 
 				& P(t) \in \left\{100, 125, 150, 175, 200\right\} \text{bar}, \\ 
-				%& R = \begin{bmatrix} 10^{-1} & 0 \ 0 & 10^{-2} \end{bmatrix}, \\ 
-				%& u(t) = \begin{bmatrix} \dfrac{dF(t)}{dt} \ \dfrac{dT^{\text{in}}(t)}{dt} \end{bmatrix}, \\
 				& 30^\circ\text{C} \leq T^{\text{in}}(t) \leq 40^\circ\text{C}, \\ 
-				& 3.33 \cdot 10^{-5} \leq F(t) \leq 6.67 \cdot 10^{-5} 
+				& 3.33 \cdot 10^{-5} \leq F(t) \leq 6.67 \cdot 10^{-5} \\
+				& R = \begin{bmatrix} 0.1 & 0 \\ 0 & 0.01 \end{bmatrix} \\ 
+				& \frac{du(t)}{dt} = \begin{bmatrix} \dfrac{dF(t)}{dt} \\ \dfrac{dT^{\text{in}}(t)}{dt} \end{bmatrix}
 				\end{aligned} 
 				\label{EQ:Formulation_2} 
 			\end{equation} }

@@ -12,11 +12,11 @@ function [] = MD(P, N_exp, N_core)
     N                       = 5;
     
     %% Create the solver
-    Iteration_max               = 200;                                         % Maximum number of iterations for optimzer
-    %Time_max                    = 3;                                           % Maximum time of optimization in [h]
+    %Iteration_max               = 200;                                         % Maximum number of iterations for optimzer
+    Time_max                    = 24;                                           % Maximum time of optimization in [h]
     
     nlp_opts                    = struct;
-    nlp_opts.ipopt.max_iter     = Iteration_max;
+    %nlp_opts.ipopt.max_iter     = Iteration_max;
     %nlp_opts.ipopt.max_cpu_time = Time_max*3600;
     nlp_opts.ipopt.hessian_approximation ='limited-memory';
     
@@ -211,7 +211,7 @@ function [] = MD(P, N_exp, N_core)
     COST_0  = full(GG(T0, F0 ));
     COST    = full(GG(HH_1, HH_2 ));
   
-    FY_FP   = Function('FY_FP',{T0homog, Flow},{XX_FP(end,:)});
+    FY_FP   = Function('FY_FP',{T0homog, Flow},{yy_FP});
     Y_FP_0  = full(FY_FP(T0, F0));
     Y_FP    = full(FY_FP(HH_1, HH_2));
 

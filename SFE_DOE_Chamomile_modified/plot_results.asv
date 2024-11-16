@@ -96,52 +96,46 @@ for ii = 1:numel(PP)
 
     figure(3)
     %subplot(5,1,ii)
-    %nexttile
+    nexttile
     hold on
     %plot(Time, YY_RBF(:,ii), 'LineWidth',3, 'Color', 'r', 'LineStyle',':');
-    plot(Time, YY_FP( :,ii), 'LineWidth',3, 'Color', COLORS(ii), 'LineStyle','-');
+    plot(Time, YY_FP( :,ii), 'LineWidth',3, 'Color', 'r', 'LineStyle','-');
     %plot(Time, YY_RBF_0(:,ii), 'LineWidth',3, 'Color', 'b', 'LineStyle',':');
-    %plot(Time, YY_FP_0( :,ii), 'LineWidth',3, 'Color', 'b', 'LineStyle','-');
+    plot(Time, YY_FP_0( :,ii), 'LineWidth',3, 'Color', 'b', 'LineStyle','-');
     hold off
     xlabel('Time min')
     ylabel('y gram')
     %ylim([0 2.8])
-    %title(['P =',num2str(round(PRES)),' bar'])
+    title(['P =',num2str(round(PRES)),' bar'])
     set(gca,'FontSize',16);
 
     figure(4)
-    %subplot(5,1,ii)
+    %subplot(2,1,1)
     %nexttile
     hold on
-    plot(Time(1:end-1), diff(YY_FP(:,ii)), 'LineWidth',3, 'Color', COLORS(ii),'LineStyle','-');
-    %plot(Time(1:end-1), diff(YY_RBF(:,ii)), 'LineWidth',3, 'Color', 'r','LineStyle',':');
-    %plot(Time(1:end-1), diff(YY_FP(:,ii)), 'LineWidth',3, 'Color', 'r','LineStyle','-');
+    plot(Time(1:end-1), diff(YY_FP(:,ii)), 'LineWidth',3, 'Color', 'r','LineStyle','-');
+    hold off
+    subplot(1,1,1)
     %plot(Time(1:end-1), diff(YY_RBF_0(:,ii)), 'LineWidth',3, 'Color', 'b','LineStyle',':');
-    %plot(Time(1:end-1), diff(YY_FP_0(:,ii)), 'LineWidth',3, 'Color', 'b','LineStyle','-');
+    plot(Time(1:end-1), diff(YY_FP_0(:,ii)), 'LineWidth',3, 'Color', 'b','LineStyle','-');
     hold off
     xlabel('Time min')
     ylabel('$\frac{dy}{dt}$ gram/s')
     %ylim([0 0.13])
-    %title(['P =',num2str(round(PRES)),' bar'])
+    title(['P =',num2str(round(PRES)),' bar'])
     set(gca,'FontSize',16);
 %}
 
 end
-figure(1); legend({'100 bar','125 bar','150 bar','175 bar','200 bar'}, 'Location', 'southwest' ); legend('boxoff')
-exportgraphics(figure(1), ['Profile_T.png'], "Resolution",300); 
-
-figure(2); legend({'100 bar','125 bar','150 bar','175 bar','200 bar'}, 'Location', 'southeast' ); legend('boxoff')
-exportgraphics(figure(2), ['Profile_F.png'], "Resolution",300); 
-
-figure(3); legend({'100 bar','125 bar','150 bar','175 bar','200 bar'}, 'Location', 'northwest' ); legend('boxoff')
-exportgraphics(figure(3), ['yield.png'], "Resolution",300); 
-
-figure(4); legend({'100 bar','125 bar','150 bar','175 bar','200 bar'}, 'Location', 'northeast' ); legend('boxoff')
-exportgraphics(figure(4), ['diff_yield.png'], "Resolution",300); 
+%exportgraphics(figure(1), ['Profile_T.png'], "Resolution",300); 
+%exportgraphics(figure(2), ['Profile_F.png'], "Resolution",300); 
+figure(3)
+%set(gcf,'PaperOrientation','portrait'); print(figure(3),['Profiles_Y.png'],'-dpng')
+%exportgraphics(figure(3), ['Profiles_Y.png'], "Resolution",300); 
 
 %%
 %{\
-figure(5)
+figure(4)
 s = scatterhist(COST_F, COST_I, 'Group', GROUP, 'Kernel', 'on', 'LineWidth',3, 'MarkerSize',6, 'Color',COLORS, 'LineStyle',{'-','-','-','-','-','-'} );
 %s = scatter(COST_F, COST_I, 'Group', GROUP, 'LineWidth',3, 'MarkerSize',6, 'Color',COLORS, 'LineStyle',{'-','-','-','-','-','-'} );
 s(1).Children(5).MarkerFaceColor = 'b';
@@ -156,7 +150,7 @@ ylabel('Inital value of $-\ln j_D$ [-]');
 xlabel('Final value of $-\ln j_D$ [-]');
 set(gca,'FontSize',16);
 
-%exportgraphics(figure(5), ['scatter.png'], "Resolution",300);
+%exportgraphics(figure(4), ['scatter.png'], "Resolution",300);
 %close all
 
 %}

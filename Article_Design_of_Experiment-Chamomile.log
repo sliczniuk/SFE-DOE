@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2024.1.12)  30 OCT 2024 16:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2024.1.12)  16 NOV 2024 15:51
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1734,34 +1734,37 @@ Underfull \hbox (badness 1661) in paragraph at lines 175--176
  []
 
 ) (Sections/Results_DOE.tex
-<Figures/Results/scatter.png, id=319, 421.575pt x 316.18124pt>
+<Figures/Results/scatter.png, id=319, 372.9132pt x 283.0575pt>
 File: Figures/Results/scatter.png Graphic file (type png)
 <use Figures/Results/scatter.png>
 Package pdftex.def Info: Figures/Results/scatter.png  used on input line 51.
-(pdftex.def)             Requested size: 238.25444pt x 178.69098pt.
-<Figures/Results/Profile_T.png, id=323, 421.575pt x 316.18124pt>
+(pdftex.def)             Requested size: 238.25444pt x 180.84518pt.
+ [9 <./Figures/Results/scatter.png (PNG copy)>]
+<Figures/Results/Profile_T.png, id=330, 384.4764pt x 294.6207pt>
 File: Figures/Results/Profile_T.png Graphic file (type png)
 <use Figures/Results/Profile_T.png>
 Package pdftex.def Info: Figures/Results/Profile_T.png  used on input line 62.
-(pdftex.def)             Requested size: 238.25444pt x 178.69098pt.
+(pdftex.def)             Requested size: 238.25444pt x 182.57303pt.
+<Figures/Results/Profile_F.png, id=332, 375.0813pt x 306.9066pt>
+File: Figures/Results/Profile_F.png Graphic file (type png)
+<use Figures/Results/Profile_F.png>
+Package pdftex.def Info: Figures/Results/Profile_F.png  used on input line 71.
+(pdftex.def)             Requested size: 238.25444pt x 194.94908pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[9 <./Figures/Results/scatter.png (PNG copy)>]
-<Figures/Results/Profile_F.png, id=333, 421.575pt x 316.18124pt>
-File: Figures/Results/Profile_F.png Graphic file (type png)
-<use Figures/Results/Profile_F.png>
-Package pdftex.def Info: Figures/Results/Profile_F.png  used on input line 71.
-(pdftex.def)             Requested size: 238.25444pt x 178.69098pt.
-<Figures/Results/yield.png, id=335, 421.575pt x 316.18124pt>
+<Figures/Results/yield.png, id=334, 382.3083pt x 294.6207pt>
 File: Figures/Results/yield.png Graphic file (type png)
 <use Figures/Results/yield.png>
 Package pdftex.def Info: Figures/Results/yield.png  used on input line 80.
-(pdftex.def)             Requested size: 238.25444pt x 178.69098pt.
+(pdftex.def)             Requested size: 238.25444pt x 183.6115pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 ) [10 <./Figures/Results/Profile_T.png (PNG copy)> <./Figures/Results/Profile_F
-.png (PNG copy)> <./Figures/Results/yield.png (PNG copy)>] (Article_Design_of_E
-xperiment-Chamomile.bbl
+.png (PNG copy)> <./Figures/Results/yield.png (PNG copy)>]
+(Article_Design_of_Experiment-Chamomile.bbl
 Underfull \hbox (badness 1117) in paragraph at lines 54--62
 \T1/stix/m/n/8 Ex-per-i-men-tal study of ke-to-cona-zole im-preg-na-tion into p
 olyvinyl
@@ -1778,7 +1781,7 @@ Underfull \hbox (badness 3601) in paragraph at lines 94--100
 
  []
 
-
+[11]
 Underfull \hbox (badness 1107) in paragraph at lines 150--157
 \T1/stix/m/n/8 dy-namic ex-trac-tion us-ing a su-per-crit-i-cal fluid.  |   [] 
   |   []   |   []
@@ -1789,21 +1792,23 @@ LaTeX Font Info:    Trying to load font information for TS1+stix on input line
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/latex/stix\ts1stix.fd
 File: ts1stix.fd 2015/04/17 v1.1.2-latex STIX TS1 font definitions
 )
-Underfull \hbox (badness 1859) in paragraph at lines 250--254
+Underfull \hbox (badness 1859) in paragraph at lines 251--255
 []\T1/stix/m/n/8 J. Gmehling, M. Kleiber, B. Kolbe, and J. Rarey.  |   []
  []
 
-) [11{C:/Users/sliczno1/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix/stix
--ts1.enc}] (Article_Design_of_Experiment-Chamomile.nls) [12]
+) (Article_Design_of_Experiment-Chamomile.nls [12{C:/Users/sliczno1/AppData/Loc
+al/Programs/MiKTeX/fonts/enc/dvips/stix/stix-ts1.enc}]) [13
+
+]
 (Article_Design_of_Experiment-Chamomile.aux)
 Package rerunfilecheck Info: File `Article_Design_of_Experiment-Chamomile.out' 
 has not changed.
 (rerunfilecheck)             Checksum: 4A6D10E0A0FC7E4E8344773B479CE42F;3752.
  ) 
 Here is how much of TeX's memory you used:
- 43126 strings out of 478848
- 935897 string characters out of 2848485
- 1395927 words of memory out of 3000000
+ 43127 strings out of 478848
+ 935904 string characters out of 2848485
+ 1383927 words of memory out of 3000000
  60046 multiletter control sequences out of 15000+600000
  521528 words of font info for 174 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1825,10 +1830,10 @@ e1/public/stix/stix-mathit.pfb><C:/Users/sliczno1/AppData/Local/Programs/MiKTeX
 Programs/MiKTeX/fonts/type1/public/stix/stix-mathrm.pfb><C:/Users/sliczno1/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb><C:/Users/sl
 iczno1/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathsf.pfb>
-Output written on Article_Design_of_Experiment-Chamomile.pdf (12 pages, 2211043
+Output written on Article_Design_of_Experiment-Chamomile.pdf (13 pages, 1740423
  bytes).
 PDF statistics:
- 447 PDF objects out of 1000 (max. 8388607)
- 118 named destinations out of 1000 (max. 500000)
+ 452 PDF objects out of 1000 (max. 8388607)
+ 119 named destinations out of 1000 (max. 500000)
  252 words of extra memory for PDF output out of 10000 (max. 10000000)
 
