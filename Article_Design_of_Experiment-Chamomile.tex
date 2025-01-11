@@ -159,14 +159,17 @@ Supercritical extraction \sep Optimal design of experiment \sep Mathematical mod
 \subfile{Sections/Results_DOE}
 
 \section{Conclusions} \label{CH: Conclusion}
-This paper introduces the D-optimal experimental design (D-OED) as a model-based method for finding an experimental procedure in chemical engineering problems. D-OED forms the objective function, which can be interpreted as minimising the volume of uncertainty ellipsoid. Compared to the classical formulation of D-OED, a penalty term was introduced to the cost function to prevent infeasibly rapid changes in operating conditions or bang-bang type control. The method is demonstrated through a case study on supercritical extraction. This work aims to design an experiment to improve the precision of the correlation for $D_i$. While the original experiments were conducted under constant operating conditions, this work looks for an experimental procedure with dynamically changing operating conditions. In such a case, the D-OED solution can also be used for model validation.
+This paper introduce the D-optimal experimental design (D-OED) as a model-based method for determining optimal experimental procedures in chemical engineering problems. D-OED optimizes an objective function, which can be geometrically interpreted as minimizing the volume of the uncertainty ellipsoid, thereby maximizing the precision of parameter estimates. Compared to the classical formulation of D-OED, this work introduces a penalty term to the cost function to prevent unrealistic rapid changes in operating conditions, ensuring practical feasibility in experimental implementation. The method is demonstrated through a case study on supercritical extraction, focusing on designing experiments to improve the precision of the correlation for the diffusivity coefficient $D_i$. While the original experiments were conducted under constant operating conditions, this study explores dynamically changing operating conditions, highlighting the potential of D-OED solutions for both parameter estimation and model validation.
 
-The analysis was repeated for multiple pressure values, and the obtained optimal profiles of inlet temperature and mass flow rate were similar across all cases. The resulting yield curves exhibit wavy patterns due to the relationship between the Hessian and the curvature of a multi-variable function. The analysis of the yield curves and scatter plots reveals that applying the same experimental strategy at different operating conditions results in varying amounts of information being collected. Consequently, it is concluded that the operating conditions should always be carefully chosen to conduct the most informative experiments. This is because the physical properties of CO$_2$ vary less at pressures far from the critical point, meaning that the same set of controls has less impact on the system at high pressures than at low pressures. 
+The analysis was conducted for multiple pressure cases, and the optimal mass flow rate profiles were similar across all instances. The inlet temperature profiles show different patterns, but all of them start with high temperature and decrease in the second half of the batch. The resulting yield curves exhibit distinct wavy patterns, which can be explained through the relationship between the Hessian matrix and the Gaussian curvature of a multi-variable function. The determinant of the Fisher information matrix, central to the D-optimality criterion, is proportional to the Gaussian curvature of the parameter manifold. This curvature reflects the system's sensitivity to parameter changes and is maximized by the D-OED method. The observed wavy behavior of the yield curves is thus a manifestation of the high-curvature regions identified by the optimization, where the system's response to experimental conditions is most informative.
+
+Further analysis of the yield curves and scatter plots reveals that the informativeness of experiments varies significantly across different operating conditions. This variation depends on the physical properties of CO$_2$, which strongly change around the critical point. Consequently, it is concluded that operating conditions must be carefully selected to the specific regime of interest to maximize the information gained. This observation emphasizes the importance of aligning experimental strategies with the system's underlying physical properties and model structure.
 
 % ===================================================
 % Bibliography
 % ===================================================
 %% Loading bibliography style file
+\clearpage
 \newpage
 %\bibliographystyle{model1-num-names}
 \bibliographystyle{unsrtnat}
@@ -178,6 +181,7 @@ The analysis was repeated for multiple pressure values, and the obtained optimal
 %\subsection{Cardano's Formula} \label{CH: Cardano}
 %\subfile{Sections/Cardano}
 
+\clearpage
 \newpage
 
 \nomenclature[A]{\(P\)}{Pressure}

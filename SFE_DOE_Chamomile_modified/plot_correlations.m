@@ -35,9 +35,12 @@ hold off
 
 colormap turbo 
 c = colorbar;
+c.Label.String = '$D^R_i~[m^2/s]$';
+c.Label.Interpreter = 'latex';
+c.Label.FontSize = 12;
 set(c,'TickLabelInterpreter','latex');
 
-title('$D^R_i = \max(0, 0.190 -  8.188 \cdot Re + 0.620 \cdot F) \cdot 10^{-13} $')
+title('$D^R_i~[m^2/s] = \max(0, 0.190 -  8.188 \cdot Re + 0.620 \cdot F) \cdot 10^{-13} $')
 subtitle('$R^2 = 0.868$')
 xlabel('Re [-]')
 ylabel('F $\cdot 10^{-5}$ [kg/s]')
@@ -70,9 +73,12 @@ hold off
 
 colormap turbo 
 c = colorbar;
+c.Label.String = '$\Upsilon~[-]$';
+c.Label.Interpreter = 'latex';
+c.Label.FontSize = 12;
 set(c,'TickLabelInterpreter','latex');
 
-title('$\Upsilon = \max(0, 3.158 - 11.922 \cdot Re + 0.686 \cdot F) $')
+title('$\Upsilon~[-] = \max(0, 3.158 - 11.922 \cdot Re + 0.686 \cdot F) $')
 subtitle('$R^2 = 0.823$')
 xlabel('Re [-]')
 ylabel('F $\cdot 10^{-5}$ [kg/s]')

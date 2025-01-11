@@ -64,7 +64,7 @@ for ii = 1:numel(PP)
 
     % Plots of controls
     selected_exp  = sort(FinaCost);
-    ind      = find( FinaCost == selected_exp(1) );
+    ind      = find( FinaCost == selected_exp(end) );
     
     %{\
     %subplot(3,1,1)
@@ -127,6 +127,7 @@ for ii = 1:numel(PP)
 %}
 
 end
+%{
 figure(1); legend({'100 bar','125 bar','150 bar','175 bar','200 bar'}, 'Location', 'southwest' ); legend('boxoff')
 exportgraphics(figure(1), ['Profile_T.png'], "Resolution",300); 
 
@@ -138,7 +139,7 @@ exportgraphics(figure(3), ['yield.png'], "Resolution",300);
 
 figure(4); legend({'100 bar','125 bar','150 bar','175 bar','200 bar'}, 'Location', 'northeast' ); legend('boxoff')
 exportgraphics(figure(4), ['diff_yield.png'], "Resolution",300); 
-
+%}
 %%
 %{\
 figure(5)

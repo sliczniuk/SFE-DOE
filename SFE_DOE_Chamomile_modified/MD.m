@@ -1,9 +1,9 @@
 function [] = MD(P, N_exp, N_core)
-    %initParPool
+    initParPool
 
     %addpath('C:\Dev\casadi-3.6.3-windows64-matlab2018b');
-    addpath('\\home.org.aalto.fi\sliczno1\data\Documents\casadi-3.6.3-windows64-matlab2018b');
-    %addpath('casadi_folder')
+    %addpath('\\home.org.aalto.fi\sliczno1\data\Documents\casadi-3.6.3-windows64-matlab2018b');
+    addpath('casadi_folder')
     import casadi.*
 
     %%
@@ -12,11 +12,11 @@ function [] = MD(P, N_exp, N_core)
     N                       = 5;
     
     %% Create the solver
-    %Iteration_max               = 200;                                         % Maximum number of iterations for optimzer
-    Time_max                    = 24;                                           % Maximum time of optimization in [h]
+    Iteration_max               = 300;                                         % Maximum number of iterations for optimzer
+    %Time_max                    = 3;                                           % Maximum time of optimization in [h]
     
     nlp_opts                    = struct;
-    %nlp_opts.ipopt.max_iter     = Iteration_max;
+    nlp_opts.ipopt.max_iter     = Iteration_max;
     %nlp_opts.ipopt.max_cpu_time = Time_max*3600;
     nlp_opts.ipopt.hessian_approximation ='limited-memory';
     
@@ -179,7 +179,7 @@ function [] = MD(P, N_exp, N_core)
     [xx_F]                 = simulateSystem(F_corr , [], x0_FP, Parameters_init_time );
     
     %%
-    sigma = 0.01;
+    sigma = 0.03;
     
     Q_FP_1 = readmatrix('Q_FP_1.txt');
     Q_FP_1 = Q_FP_1(1:3,1:3);
@@ -189,13 +189,17 @@ function [] = MD(P, N_exp, N_core)
     S_FP     = XX_FP(2:end,N_Sample) ;
     
     SS = S_FP * S_FP' ;
-    JJ = -log(myDet(SS./sigma + pinv( Q_FP_1 ) ));
+    Fisher_Cost = -log(myDet(SS./sigma + pinv( Q_FP_1 ) ));
+	
+	%ControlEffort_P = diff(Flow)    * (diag(ones(1,numel(diff(Flow))))    .* 1e-1) * diff(Flow)'   ;
+    %ControlEffort_T = diff(T0homog) * (diag(ones(1,numel(diff(T0homog)))) .* 1e-2) * diff(T0homog)';
     
     %% Defin intial guesses
     T0 = ( (40-30).*rand(1,numel(T0homog)*N_exp) + 30 ) + 273;
     F0 = ( (6.67-3.33).*rand(1,numel(Flow)*N_exp) + 3.33 );
     
     %% Solve the optimization problem
+	JJ = Fisher_Cost;% + ControlEffort_P + ControlEffort_T;
     OPT_solver.minimize(JJ);
 
     H = OPT_solver.to_function('H',{T0homog,Flow},{T0homog,Flow});
@@ -207,16 +211,16 @@ function [] = MD(P, N_exp, N_core)
     HH_1 = full(HH_1);
     HH_2 = full(HH_2);
 
-    GG      = Function('GG',{T0homog,Flow}, {JJ} );
+    GG      = Function('GG',{T0homog,Flow}, {Fisher_Cost} );
     COST_0  = full(GG(T0, F0 ));
     COST    = full(GG(HH_1, HH_2 ));
   
-    FY_FP   = Function('FY_FP',{T0homog, Flow},{yy_FP});
+    FY_FP   = Function('FY_FP',{T0homog, Flow},{xx_F(3*nstages+2,:)});
     Y_FP_0  = full(FY_FP(T0, F0));
     Y_FP    = full(FY_FP(HH_1, HH_2));
 
-    writematrix([COST_0; COST]  , ['COST_',num2str(feedPress(1)),'.txt'])
-    writematrix([HH_1; HH_2]    , ['CONTROL_',num2str(feedPress(1)),'.txt'])
-    writematrix([Y_FP_0; Y_FP]  , ['FP_',num2str(feedPress(1)),'.txt'])
+    writematrix([COST_0; COST]  , ['COST_',num2str(feedPress(1)),'_n.txt'])
+    writematrix([HH_1; HH_2]    , ['CONTROL_',num2str(feedPress(1)),'_n.txt'])
+    writematrix([Y_FP_0; Y_FP]  , ['FP_',num2str(feedPress(1)),'_n.txt'])
         
 end
