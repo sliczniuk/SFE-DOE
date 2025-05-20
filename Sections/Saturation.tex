@@ -8,7 +8,7 @@
 	
 	{\footnotesize
 		\begin{equation}
-			D_i = D_i^R \gamma(c_s) = D_i^R \exp \left( \Upsilon \left( 1-\cfrac{ c_s }{c_{s0}} \right) \right) \label{EQ: C_sat_function}
+			D_i = D_i^R \gamma(c_s) = D_i^R \exp \left( - \Upsilon \left( 1-\cfrac{ c_s }{c_{s0}} \right) \right) \label{EQ: C_sat_function}
 	\end{equation} }
 	
 	where  ${\color{black}\Upsilon}$ describes the curvature of the decay function. Equation \ref{Model_kinetic} describes the final form of the kinetic term:
@@ -16,7 +16,7 @@
 	{\footnotesize
 		\begin{equation}
 			\label{Model_kinetic}
-			r_e = -\cfrac{D_i^R \gamma }{ \mu l^2 } \left( c_s  - \cfrac{\rho_s c_f }{ k_m \rho_f }  \right)
+			r_e = \cfrac{D_i^R \gamma }{ \mu l^2 } \left( c_s  - \cfrac{\rho_s c_f }{ k_m \rho_f }  \right)
 	\end{equation} }
 	
 	The $\gamma$ function limits the solute's availability in the solid phase. Similarly to the BIC model, the solute is assumed to be contained in the cells, some of which are open because the cell walls were broken by grinding, with the rest remaining intact. The diffusion of the solute from a particle's core takes more time than the diffusion of the solute close to the outer surface. The same idea can be represented by the decaying internal diffusion coefficient, where the decreasing term is a function of the solute concentration in the solid. 
@@ -31,14 +31,14 @@
 	
 	\begin{figure}[!ht]
 		\centering
-		\includegraphics[trim = 0.0cm 0.0cm 0.0cm 0.0cm,clip,width=\columnwidth]{/Di.png}
+		\includegraphics[trim = 0.0cm 0.0cm 0.0cm 0.0cm,clip,width=0.9\columnwidth]{/Di_1.png}
 		\caption{Multiple linear regression $D_i^R = f(Re, F)$}
 		\label{fig:Correlation_Di}
 	\end{figure}
 	
 	\begin{figure}[!ht]
 		\centering
-		\includegraphics[trim = 0.0cm 0.0cm 0.0cm 0.0cm,clip,width=\columnwidth]{/Gamma.png}
+		\includegraphics[trim = 0.0cm 0.0cm 0.0cm 0.0cm,clip,width=0.9\columnwidth]{/Gamma_1.png}
 		\caption{Multiple linear regression $\Upsilon = f(Re, F)$}
 		\label{fig:Correlation_Gamma}
 	\end{figure}

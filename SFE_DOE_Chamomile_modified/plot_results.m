@@ -34,6 +34,7 @@ N_exp                   = 32;
 COLORS                  = ['b','r','k','m','g'];
 COST_I   = []; COST_F   = []; GROUP    = []; Yield      = [];
 PP                      = [100, 125, 150, 175, 200];
+%PP                      = [150, 175];
 
 figure(3)
 tiledlayout(numel(PP),2)
@@ -58,13 +59,13 @@ for ii = 1:numel(PP)
 
     Y_FP     = readlines(['FP_',num2str(PRES),'.txt']);
     YY_FP_0  = reshape(str2num(Y_FP(1,:)),[],N_exp);
-    YY_FP    = reshape(str2num(Y_FP(2,:)),[],N_exp);
+    YY_FP    = reshape(str2num(Y_FP(2,:)),[],N_exp); YY_FP(end,:)
 
     Time     = linspace(0,600,size(TempCont,1)+1);
 
     % Plots of controls
     selected_exp  = sort(FinaCost);
-    ind      = find( FinaCost == selected_exp(end) );
+    ind      = find( FinaCost == selected_exp(1) );
     
     %{\
     %subplot(3,1,1)
@@ -99,7 +100,7 @@ for ii = 1:numel(PP)
     %nexttile
     hold on
     %plot(Time, YY_RBF(:,ii), 'LineWidth',3, 'Color', 'r', 'LineStyle',':');
-    plot(Time, YY_FP( :,ii), 'LineWidth',3, 'Color', COLORS(ii), 'LineStyle','-');
+    plot(Time, YY_FP( :,ind), 'LineWidth',3, 'Color', COLORS(ii), 'LineStyle','-');
     %plot(Time, YY_RBF_0(:,ii), 'LineWidth',3, 'Color', 'b', 'LineStyle',':');
     %plot(Time, YY_FP_0( :,ii), 'LineWidth',3, 'Color', 'b', 'LineStyle','-');
     hold off
@@ -113,7 +114,7 @@ for ii = 1:numel(PP)
     %subplot(5,1,ii)
     %nexttile
     hold on
-    plot(Time(1:end-1), diff(YY_FP(:,ii)), 'LineWidth',3, 'Color', COLORS(ii),'LineStyle','-');
+    plot(Time(1:end-1), diff(YY_FP(:,ind)), 'LineWidth',3, 'Color', COLORS(ii),'LineStyle','-');
     %plot(Time(1:end-1), diff(YY_RBF(:,ii)), 'LineWidth',3, 'Color', 'r','LineStyle',':');
     %plot(Time(1:end-1), diff(YY_FP(:,ii)), 'LineWidth',3, 'Color', 'r','LineStyle','-');
     %plot(Time(1:end-1), diff(YY_RBF_0(:,ii)), 'LineWidth',3, 'Color', 'b','LineStyle',':');
@@ -127,7 +128,7 @@ for ii = 1:numel(PP)
 %}
 
 end
-%{
+%{\
 figure(1); legend({'100 bar','125 bar','150 bar','175 bar','200 bar'}, 'Location', 'southwest' ); legend('boxoff')
 exportgraphics(figure(1), ['Profile_T.png'], "Resolution",300); 
 
@@ -157,7 +158,7 @@ ylabel('Inital value of $-\ln j_D$ [-]');
 xlabel('Final value of $-\ln j_D$ [-]');
 set(gca,'FontSize',16);
 
-%exportgraphics(figure(5), ['scatter.png'], "Resolution",300);
-%close all
+exportgraphics(figure(5), ['scatter.png'], "Resolution",300);
+close all
 
 %}

@@ -27,13 +27,14 @@
 \usepackage{etoolbox}
 \renewcommand\nomgroup[1]{%
 	\item[\bfseries
-	\ifstrequal{#1}{A}{Latin symbols}{%
+	\ifstrequal{#1}{A}{}{%
 		\ifstrequal{#1}{B}{Greek symbols}{%
 			\ifstrequal{#1}{C}{Abberivations}{
 	}}}%
 	]}
+\newcommand{\nomunit}[1]{%
+	\renewcommand{\nomentryend}{\hspace*{\fill}#1}}
 
-\usepackage{csvsimple}
 
 % TODO package
 \usepackage[bordercolor=gray!20,backgroundcolor=blue!10,linecolor=black,textsize=footnotesize,textwidth=1in]{todonotes}
@@ -119,7 +120,7 @@
 % ABSTRACT
 % ===================================================
 \begin{abstract}
-This study investigates the process of chamomile oil extraction from flowers. A parameter-distributed model consisting of a set of partial differential equations is used to describe the governing mass transfer phenomena in a solid-fluid environment under supercritical conditions using carbon dioxide as a solvent. The concept of quasi-one-dimensional flow is applied to reduce the number of spatial dimensions. The flow is assumed to be uniform across any cross-section, although the area available for the fluid phase can vary along the extractor. The physical properties of the solvent are estimated from the Peng-Robinson equation of state. The empirical correlations used in the model are based on the set of laboratory experiments performed under multiple constant operating conditions: $30 - 40^\circ C$, $100 - 200$ bar, and $3.33-6.67 \cdot 10^{-5}$ kg/s. A model-based design of experiments with D-optimality criterion is applied to improve the precision of the correlation parameters by designing a new dynamic experiment. The mass flow rate and inlet temperature are used as decision variables to maximize the Fisher Information embedded in the yield curve with respect to the empirical correlations. 
+This study investigates the process of chamomile oil extraction from flowers. A parameter-distributed model consisting of a set of partial differential equations is used to describe the governing mass transfer phenomena in a{ \color{blue}cylindrical packed bed with solid chamomile particles} under supercritical conditions using carbon dioxide as a solvent. The concept of quasi-one-dimensional flow is applied to reduce the number of spatial dimensions. The flow is assumed to be uniform across any cross-section, although the area available for the fluid phase can vary along the extractor. The physical properties of the solvent are estimated from the Peng-Robinson equation of state. The empirical correlations used in the model are based on the set of laboratory experiments performed under multiple constant operating conditions: ${\color{blue}31} - 40~^\circ$C, $100 - 200$ bar, and $3.33-6.67 \cdot 10^{-5}$ kg/s. A model-based design of experiments with D-optimality criterion is applied to improve the precision of the correlation parameters by designing a new dynamic experiment. The mass flow rate and inlet temperature are used as decision variables to maximize the Fisher Information embedded in the yield curve with respect to the empirical correlations. 
 
 \end{abstract}
 
@@ -169,8 +170,8 @@ Further analysis of the yield curves and scatter plots reveals that the informat
 % Bibliography
 % ===================================================
 %% Loading bibliography style file
-\clearpage
-\newpage
+%\clearpage
+%\newpage
 %\bibliographystyle{model1-num-names}
 \bibliographystyle{unsrtnat}
 \bibliography{mybibfile}
@@ -184,72 +185,72 @@ Further analysis of the yield curves and scatter plots reveals that the informat
 \clearpage
 \newpage
 
-\nomenclature[A]{\(P\)}{Pressure}
-\nomenclature[A]{\(T\)}{Temperature}
-\nomenclature[A]{\(T^{in}\)}{Inlet temperature}
-\nomenclature[A]{\(T^{out}\)}{Outlet temperature}
-\nomenclature[A]{\(F\)}{Mass flow rate}
-\nomenclature[A]{\(u\)}{Superfical velocity}
-\nomenclature[A]{\(v\)}{Linear velocity}
-\nomenclature[A]{\(z\)}{Spatial direction}
-\nomenclature[A]{\(e\)}{Internal energy}
-\nomenclature[A]{\(e^y\)}{Output error}
-\nomenclature[A]{\(h\)}{Enthalpy}
-\nomenclature[A]{\(t\)}{Time}
-\nomenclature[A]{\(t_f\)}{Total extraction time}
-\nomenclature[A]{\(t_0\)}{Inital extraction time}
-\nomenclature[A]{\(A\)}{Total cross section of the bed}
-\nomenclature[A]{\(A_f\)}{Cross section of the bed accupied by the fluid}
-\nomenclature[A]{\(c_f\)}{Concentration of solute in fluid phase}
-\nomenclature[A]{\(c_{f0}\)}{Inital concentration of solute in fluid phase}
-\nomenclature[A]{\(c_f^*\)}{Concentration of solute at the solid-fluid interface}
-\nomenclature[A]{\(c_s\)}{Concentration of solute in solid phase}
-\nomenclature[A]{\(c_{s0}\)}{Inital concentration of solute in solid phase}
-\nomenclature[A]{\(c_s^*\)}{Concentration of solute at the solid-fluid interface}
-\nomenclature[A]{\(c_p\)}{Concentration of solute in the core of a pore}
-\nomenclature[A]{\(c_{pf}\)}{Concentration of solute in the pore opening}
-\nomenclature[A]{\(D_e^M\)}{Axial diffusion coefficeint}
-\nomenclature[A]{\(r_e\)}{Mass transfer kinetic term}
-\nomenclature[A]{\(L\)}{Length of fixed bed}
-\nomenclature[A]{\(j\)}{Objective function}
-\nomenclature[A]{\(j_{ml}\)}{Maximum Likelihood}
-\nomenclature[A]{\(S\)}{Sensitivity equations}
-\nomenclature[A]{\(Q\)}{Weighting matrix}
-\nomenclature[A]{\(R\)}{Control cost matrix}
+\nomenclature[A]{\(P\)}{Pressure \nomunit{bar}}
+\nomenclature[A]{\(T\)}{Temperature \nomunit{K}}
+\nomenclature[A]{\(T_{in}\)}{Inlet temperature \nomunit{K}}
+\nomenclature[A]{\(T_{out}\)}{Outlet temperature \nomunit{K}}
+\nomenclature[A]{\(F\)}{Mass flow rate \nomunit{kg/s}}
+\nomenclature[A]{\(u\)}{Superficial velocity \nomunit{m/s}}
+\nomenclature[A]{\(v\)}{Linear velocity \nomunit{m/s}}
+\nomenclature[A]{\(z\)}{Spatial direction \nomunit{m}}
+\nomenclature[A]{\(e\)}{Internal energy \nomunit{J/kg}}
+%\nomenclature[A]{\(e^y\)}{Output error}
+\nomenclature[A]{\(h\)}{Enthalpy \nomunit{kJ/kg}}
+\nomenclature[A]{\(t\)}{Time \nomunit{s}}
+\nomenclature[A]{\(t_f\)}{Total extraction time \nomunit{s}}
+\nomenclature[A]{\(t_0\)}{Initial extraction time \nomunit{s}}
+\nomenclature[A]{\(A\)}{Total cross-section of the bed \nomunit{m$^2$}}
+\nomenclature[A]{\(A_f\)}{Cross-section of the bed occupied by the fluid \nomunit{m$^2$}}
+\nomenclature[A]{\(c_f\)}{Concentration of solute in the fluid phase \nomunit{kg/m$^3$}}
+\nomenclature[A]{\(c_{f0}\)}{Initial concentration of solute in the fluid phase \nomunit{kg/m$^3$}}
+\nomenclature[A]{\(c_f^*\)}{Concentration of solute at the solid-fluid interface \nomunit{kg/m$^3$}}
+\nomenclature[A]{\(c_s\)}{Concentration of solute in the solid phase \nomunit{kg/m$^3$}}
+\nomenclature[A]{\(c_{s0}\)}{Initial concentration of solute in the solid phase \nomunit{kg/m$^3$}}
+\nomenclature[A]{\(c_s^*\)}{Concentration of solute at the solid-fluid interface \nomunit{kg/m$^3$}}
+\nomenclature[A]{\(c_p\)}{Concentration of solute in the core of a pore \nomunit{kg/m$^3$}}
+\nomenclature[A]{\(c_{pf}\)}{Concentration of solute at the pore opening \nomunit{kg/m$^3$}}
+\nomenclature[A]{\(D_e^M\)}{Axial diffusion coefficient \nomunit{m$^2$/s}}
+\nomenclature[A]{\(r_e\)}{Mass transfer kinetic term \nomunit{kg/m$^3$/s}}
+\nomenclature[A]{\(L\)}{Length of the fixed bed \nomunit{m}}
+\nomenclature[A]{\(j\)}{Objective function \nomunit{-}}
+\nomenclature[A]{\(j_{ml}\)}{Maximum Likelihood \nomunit{-}}
+\nomenclature[A]{\(S\)}{Sensitivity equations \nomunit{-}}
+\nomenclature[A]{\(Q\)}{Weighting matrix \nomunit{-}}
+\nomenclature[A]{\(R\)}{Control cost matrix \nomunit{-}}
 %\nomenclature[A]{\(\textbf{G}\)}{Augumented system}
 %\nomenclature[A]{\(\dot{S}\)}{Time derivative of sensitivity equations}
 %\nomenclature[A]{\(\bar{S}\)}{Sensitivity matrix}
 %\nomenclature[A]{\(\bar{J}_x\)}{Jacobian matrix with respect to the state space}
 %\nomenclature[A]{\(\bar{J}_\Theta\)}{Jacobian matrix with respect to the paramters}
 %\nomenclature[A]{\(\mathcal{L}\)}{Log-likelihood function}
-\nomenclature[A]{\(l\)}{Characterisitic diemsinon of particles}
-\nomenclature[A]{\(D_i\)}{Interanl diffusion coefficient}
-\nomenclature[A]{\(D_i^R\)}{Reference value of interanl diffusion coefficient}
-\nomenclature[A]{\(r\)}{Particle radius}
-\nomenclature[A]{\(k_p\)}{Volumetric partition coefficient}
-\nomenclature[A]{\(k_m\)}{Mass partition coefficient}
-\nomenclature[A]{\(y\)}{Extraction yield}
-\nomenclature[A]{\(Y\)}{Yield measurment}
+\nomenclature[A]{\(l\)}{Characteristic dimension of particles \nomunit{m}}
+\nomenclature[A]{\(D_i\)}{Internal diffusion coefficient \nomunit{m$^2$/s}}
+\nomenclature[A]{\(D_i^R\)}{Reference value of internal diffusion coefficient \nomunit{m$^2$/s}}
+\nomenclature[A]{\(r\)}{Particle radius \nomunit{m}}
+\nomenclature[A]{\(k_p\)}{Volumetric partition coefficient \nomunit{-}}
+\nomenclature[A]{\(k_m\)}{Mass partition coefficient \nomunit{-}}
+\nomenclature[A]{\(y\)}{Extraction yield \nomunit{g}}
+%\nomenclature[A]{\(Y\)}{Yield measurement \nomunit{g}}
 \nomenclature[A]{\(x\)}{State vector}
 \nomenclature[A]{\(G\)}{Vector of discretized differential equations}
 \nomenclature[A]{\(p\)}{Probaility disribution model}
 \nomenclature[A]{\(R_e\)}{Reynolds number}
 \nomenclature[A]{\(\mathcal{F}\)}{Fisher information}
 
-\nomenclature[B]{\(\rho_f\)}{Fluid density}
-\nomenclature[B]{\(\Phi\)}{Bed porosity}
-\nomenclature[B]{\(\rho_s\)}{Bulk density of solid}
-\nomenclature[B]{\(\mu\)}{Sphericity coefficient}
-\nomenclature[B]{\(\pi\)}{Probability desnsity}
-\nomenclature[B]{\(\gamma\)}{Decaying function}
-\nomenclature[B]{\(\Upsilon\)}{Decay coefficient}
-\nomenclature[B]{\(\Theta\)}{Paramter space}
-\nomenclature[B]{\(\theta\)}{vector of unknown parameters}
-\nomenclature[B]{\(\epsilon\)}{Unobervable error}
-\nomenclature[B]{\(\sigma\)}{Standard deviation}
-\nomenclature[B]{\(\Sigma\)}{Covariance matrix}
-\nomenclature[B]{\(\xi\)}{Vector of experimental condtions}
-\nomenclature[B]{\(\Xi\)}{Matrix of experimental condtions}
+\nomenclature[B]{\(\rho_f\)}{Fluid density\nomunit{kg/m$^3$}}
+\nomenclature[B]{\(\Phi\)}{Bed porosity \nomunit{-}}
+\nomenclature[B]{\(\rho_s\)}{Bulk density of solid\nomunit{kg/m$^3$}}
+\nomenclature[B]{\(\mu\)}{Sphericity coefficient \nomunit{-}}
+\nomenclature[B]{\(\pi\)}{Probability desnsity \nomunit{-}}
+\nomenclature[B]{\(\gamma\)}{Decaying function \nomunit{-}}
+\nomenclature[B]{\(\Upsilon\)}{Decay coefficient \nomunit{-}}
+\nomenclature[B]{\(\Theta\)}{Paramter space \nomunit{-}}
+\nomenclature[B]{\(\theta\)}{vector of unknown parameters \nomunit{-}}
+\nomenclature[B]{\(\epsilon\)}{Unobervable error \nomunit{-}}
+\nomenclature[B]{\(\sigma\)}{Standard deviation \nomunit{-}}
+\nomenclature[B]{\(\Sigma\)}{Covariance matrix \nomunit{-}}
+\nomenclature[B]{\(\xi\)}{Vector of experimental condtions \nomunit{-}}
+\nomenclature[B]{\(\Xi\)}{Matrix of experimental condtions \nomunit{-}}
 
 \nomenclature[C]{BIC}{Broke-and-Intact Cell model}
 %\nomenclature[C]{MLE}{Maximum Likelihood Estimation}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2024.1.12)  30 NOV 2024 13:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.3.8)  30 MAR 2025 18:41
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -7,7 +7,7 @@ entering extended mode
 LaTeX2e <2021-06-01> patch level 1
 L3 programming layer <2021-10-18>
 (C:\Program Files\MiKTeX\tex/latex/els-cas-templates\cas-dc.cls
-Document Class: cas-dc 2021/05/11, 2.3: Formatting class for CAS double column 
+Document Class: cas-dc 2024/05/04, 2.4: Formatting class for CAS double column 
 articles
 \c@blind=\count182
 \@bls=\dimen138
@@ -763,25 +763,34 @@ Package: nomencl 2021/11/10 v5.6 Nomenclature package
 Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 )
 (C:\Program Files\MiKTeX\tex/latex/koma-script\tocbasic.sty
-Package: tocbasic 2023/07/07 v3.41 KOMA-Script package (handling toc-files)
+Package: tocbasic 2024/10/24 v3.43 KOMA-Script package (handling toc-files)
+
+
+Package tocbasic Warning: LaTeX kernel too old!
+(tocbasic)                For full functionality the package needs at least
+(tocbasic)                LaTeX 2022-06-01.
+(tocbasic)                You are using an older LaTeX version.
+(tocbasic)                So the functionality will be limited.
+(tocbasic)                Note that this also can result in error messages,
+(tocbasic)                that would not raise with an up-to-date LaTeX.
 
 (C:\Program Files\MiKTeX\tex/latex/koma-script\scrbase.sty
-Package: scrbase 2023/07/07 v3.41 KOMA-Script package (KOMA-Script-independent 
+Package: scrbase 2024/10/24 v3.43 KOMA-Script package (KOMA-Script-independent 
 basics and keyval usage)
 
 (C:\Program Files\MiKTeX\tex/latex/koma-script\scrlfile.sty
-Package: scrlfile 2023/07/07 v3.41 KOMA-Script package (file load hooks)
+Package: scrlfile 2024/10/24 v3.43 KOMA-Script package (file load hooks)
 
 (C:\Program Files\MiKTeX\tex/latex/koma-script\scrlfile-hook-3.34.sty
-Package: scrlfile-hook-3.34 2023/07/07 v3.41 KOMA-Script package (using LaTeX h
+Package: scrlfile-hook-3.34 2024/10/24 v3.43 KOMA-Script package (using LaTeX h
 ooks)
 
 (C:\Program Files\MiKTeX\tex/latex/koma-script\scrlogo.sty
-Package: scrlogo 2023/07/07 v3.41 KOMA-Script package (logo)
+Package: scrlogo 2024/10/24 v3.43 KOMA-Script package (logo)
 )))
-Applying: [2021/05/01] Usage of raw or classic option list on input line 252.
+Applying: [2021/05/01] Usage of raw or classic option list on input line 254.
 Already applied: [0000/00/00] Usage of raw or classic option list on input line
- 368.
+ 370.
 )
 \scr@dte@tocline@numberwidth=\skip69
 \scr@dte@tocline@numbox=\box68
@@ -800,16 +809,14 @@ Package tocbasic Info: omitting babel extension for `nls'
 Package nomencl Info: Writing nomenclature file Article_Design_of_Experiment-Ch
 amomile.nlo on input line 25.
 
-(C:\Program Files\MiKTeX\tex/latex/csvsimple\csvsimple.sty
-(C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\
-l3keys2e.sty
-Package: l3keys2e 2021-08-27 LaTeX2e option processing using LaTeX3 keys
-)
-Package: csvsimple 2023/10/16 v2.5.0 LaTeX CSV file processing
-)
-(C:\Program Files\MiKTeX\tex/latex/csvsimple\csvsimple-legacy.sty
-Package: csvsimple-legacy 2023/10/16 version 2.5.0 LaTeX2e CSV file processing
+(C:\Program Files\MiKTeX\tex/latex/todonotes\todonotes.sty
+Package: todonotes 2024/01/05 v1.1.7 Todonotes source and documentation.
+Package: todonotes 2024/01/05
 
+(C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\ti
+kz.sty
+(C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.s
+ty
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs
 .sty
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfu
@@ -830,34 +837,6 @@ cs.code.tex
 ex)
 Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
 ))
-(C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkey
-s.sty
-(C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfk
-eys.code.tex
-\pgfkeys@pathtoks=\toks37
-\pgfkeys@temptoks=\toks38
-
-(C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfk
-eysfiltered.code.tex
-\pgfkeys@tmptoks=\toks39
-)))
-(C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/latex/tools\shellesc.sty
-Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
-Package shellesc Info: Unrestricted shell escape enabled on input line 75.
-)
-\csv@file=\read3
-\c@csvinputline=\count334
-\c@csvrow=\count335
-\c@csvcol=\count336
-\csv@out=\write4
-) (C:\Program Files\MiKTeX\tex/latex/todonotes\todonotes.sty
-Package: todonotes 2023/01/31 v1.1.6 Todonotes source and documentation.
-Package: todonotes 2023/01/31
-
-(C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\ti
-kz.sty
-(C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.s
-ty
 Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
 
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfco
@@ -869,7 +848,14 @@ fsys.code.tex
 Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
 
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfk
-eys.code.tex)
+eys.code.tex
+\pgfkeys@pathtoks=\toks37
+\pgfkeys@temptoks=\toks38
+
+(C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfk
+eysfiltered.code.tex
+\pgfkeys@tmptoks=\toks39
+))
 \pgf@x=\dimen287
 \pgf@y=\dimen288
 \pgf@xa=\dimen289
@@ -880,16 +866,16 @@ eys.code.tex)
 \pgf@yc=\dimen294
 \pgf@xd=\dimen295
 \pgf@yd=\dimen296
-\w@pgf@writea=\write5
-\r@pgf@reada=\read4
-\c@pgf@counta=\count337
-\c@pgf@countb=\count338
-\c@pgf@countc=\count339
-\c@pgf@countd=\count340
+\w@pgf@writea=\write4
+\r@pgf@reada=\read3
+\c@pgf@counta=\count334
+\c@pgf@countb=\count335
+\c@pgf@countc=\count336
+\c@pgf@countd=\count337
 \t@pgf@toka=\toks40
 \t@pgf@tokb=\toks41
 \t@pgf@tokc=\toks42
-\pgf@sys@id@count=\count341
+\pgf@sys@id@count=\count338
 
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pg
 f.cfg
@@ -908,8 +894,8 @@ File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pg
 fsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfsyssoftpath@smallbuffer@items=\count342
-\pgfsyssoftpath@bigbuffer@items=\count343
+\pgfsyssoftpath@smallbuffer@items=\count339
+\pgfsyssoftpath@bigbuffer@items=\count340
 )
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pg
 fsysprotocol.code.tex
@@ -928,7 +914,7 @@ il.code.tex)
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathpa
 rser.code.tex
 \pgfmath@dimen=\dimen297
-\pgfmath@count=\count344
+\pgfmath@count=\count341
 \pgfmath@box=\box70
 \pgfmath@toks=\toks43
 \pgfmath@stack@operand=\toks44
@@ -954,7 +940,7 @@ nctions.misc.code.tex)
 nctions.integerarithmetics.code.tex)))
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfl
 oat.code.tex
-\c@pgfmathroundto@lastzeros=\count345
+\c@pgfmathroundto@lastzeros=\count342
 ))
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.co
 de.tex)
@@ -994,7 +980,7 @@ File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfpic=\box71
 \pgf@hbox=\box72
 \pgf@layerbox@main=\box73
-\pgf@picture@serial@count=\count346
+\pgf@picture@serial@count=\count343
 )
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgf
 coregraphicstate.code.tex
@@ -1029,8 +1015,8 @@ File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 coreshade.code.tex
 File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@max=\dimen321
-\pgf@sys@shading@range@num=\count347
-\pgf@shadingcount=\count348
+\pgf@sys@shading@range@num=\count344
+\pgf@shadingcount=\count345
 )
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgf
 coreimage.code.tex
@@ -1078,6 +1064,10 @@ Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
 ))
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor
 .sty
+(C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkey
+s.sty
+(C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfk
+eys.code.tex))
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
 
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.c
@@ -1100,7 +1090,7 @@ Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgfl
 ibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@plot@mark@count=\count349
+\pgf@plot@mark@count=\count346
 \pgfplotmarksize=\dimen326
 )
 \tikz@lastx=\dimen327
@@ -1115,19 +1105,19 @@ File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \tikz@figbox@bg=\box77
 \tikz@tempbox=\box78
 \tikz@tempbox@bg=\box79
-\tikztreelevel=\count350
-\tikznumberofchildren=\count351
-\tikznumberofcurrentchild=\count352
-\tikz@fig@count=\count353
+\tikztreelevel=\count347
+\tikznumberofchildren=\count348
+\tikznumberofcurrentchild=\count349
+\tikz@fig@count=\count350
 
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmod
 ulematrix.code.tex
 File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfmatrixcurrentrow=\count354
-\pgfmatrixcurrentcolumn=\count355
-\pgf@matrix@numberofcolumns=\count356
+\pgfmatrixcurrentrow=\count351
+\pgfmatrixcurrentcolumn=\count352
+\pgf@matrix@numberofcolumns=\count353
 )
-\tikz@expandcount=\count357
+\tikz@expandcount=\count354
 
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/
 tikz/libraries\tikzlibrarytopaths.code.tex
@@ -1139,25 +1129,25 @@ File: tikzlibrarypositioning.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count358
-\calc@Bcount=\count359
+\calc@Acount=\count355
+\calc@Bcount=\count356
 \calc@Adimen=\dimen335
 \calc@Bdimen=\dimen336
 \calc@Askip=\skip71
 \calc@Bskip=\skip72
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count360
+\calc@Ccount=\count357
 \calc@Cskip=\skip73
 )
-\c@@todonotes@numberoftodonotes=\count361
+\c@@todonotes@numberoftodonotes=\count358
 )
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip74
 \bibsep=\skip75
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count362
+\c@NAT@ctr=\count359
 )
 (C:\Program Files\MiKTeX\tex/latex/setspace\setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
@@ -1215,7 +1205,7 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
-\g_MT_multlinerow_int=\count363
+\g_MT_multlinerow_int=\count360
 \l_MT_multwidth_dim=\dimen339
 \origjot=\skip79
 \l_MT_shortvdotswithinadjustabove_dim=\dimen340
@@ -1236,7 +1226,7 @@ Package bigints Info: This is Bigints by Merciadri Luca. on input line 5.
 \UL@skip=\skip80
 \UL@hook=\toks54
 \UL@height=\dimen347
-\UL@pe=\count364
+\UL@pe=\count361
 \UL@pixel=\dimen348
 \ULC@box=\box84
 Package: ulem 2019/11/18
@@ -1256,8 +1246,8 @@ ore.code.tex
 \t@pgfplots@tokb=\toks56
 \t@pgfplots@tokc=\toks57
 \pgfplots@tmpa=\dimen350
-\c@pgfplots@coordindex=\count365
-\c@pgfplots@scanlineindex=\count366
+\c@pgfplots@coordindex=\count362
+\c@pgfplots@scanlineindex=\count363
 
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgfpl
 otssysgeneric.code.tex))
@@ -1275,13 +1265,13 @@ ture\pgfplotsliststructure.code.tex)
 ture\pgfplotsliststructureext.code.tex)
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststruc
 ture\pgfplotsarray.code.tex
-\c@pgfplotsarray@tmp=\count367
+\c@pgfplotsarray@tmp=\count364
 )
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststruc
 ture\pgfplotsmatrix.code.tex)
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/numtable\
 pgfplotstableshared.code.tex
-\c@pgfplotstable@counta=\count368
+\c@pgfplotstable@counta=\count365
 \t@pgfplotstable@a=\toks58
 )
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststruc
@@ -1294,7 +1284,7 @@ lotsbinary.data.code.tex))
 lotsutil.verb.code.tex)
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgfl
 ibrarypgfplots.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count369
+\c@pgfplotslibrarysurf@no=\count366
 
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgfli
 brarypgfplots.surfshading.pgfsys-pdftex.def)))
@@ -1331,7 +1321,7 @@ uledecorations.code.tex
 \pgfdecoratedinputsegmentcompleteddistance=\dimen353
 \pgfdecoratedinputsegmentremainingdistance=\dimen354
 \pgf@decorate@distancetomove=\dimen355
-\pgf@decorate@repeatstate=\count370
+\pgf@decorate@repeatstate=\count367
 \pgfdecorationsegmentamplitude=\dimen356
 \pgfdecorationsegmentlength=\dimen357
 )
@@ -1347,7 +1337,7 @@ tikz/libraries\tikzlibrarydecorations.pathreplacing.code.tex
 rations\pgflibrarydecorations.pathreplacing.code.tex))
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikz
 librarypgfplots.contourlua.code.tex)
-\pgfplots@numplots=\count371
+\pgfplots@numplots=\count368
 \pgfplots@xmin@reg=\dimen358
 \pgfplots@xmax@reg=\dimen359
 \pgfplots@ymin@reg=\dimen360
@@ -1387,7 +1377,7 @@ File: tikzlibrarycalc.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 Package: placeins 2005/04/18  v 2.2
 )
 (C:\Program Files\MiKTeX\tex/latex/pdfpages\pdfpages.sty
-Package: pdfpages 2022/12/19 v0.5x Insert pages of external PDF documents (AM)
+Package: pdfpages 2025/01/30 v0.6e Insert pages of external PDF documents (AM)
 
 (C:\Program Files\MiKTeX\tex/latex/eso-pic\eso-pic.sty
 Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
@@ -1399,77 +1389,77 @@ Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
 \AM@fboxrule=\dimen368
 
 (C:\Program Files\MiKTeX\tex/latex/pdfpages\pppdftex.def
-File: pppdftex.def 2022/12/19 v0.5x Pdfpages driver for pdfTeX (AM)
+File: pppdftex.def 2025/01/30 v0.6e Pdfpages driver for pdfTeX (AM)
 )
-\pdfpages@includegraphics@status=\count372
+\pdfpages@includegraphics@status=\count369
 \AM@pagebox=\box86
 \AM@global@opts=\toks59
-\AM@pagecnt=\count373
+\AM@pagecnt=\count370
 \AM@toc@title=\toks60
 \AM@lof@heading=\toks61
-\c@AM@survey=\count374
+\c@AM@survey=\count371
 \AM@templatesizebox=\box87
 )
 (C:\Program Files\MiKTeX\tex/latex/enumitem\enumitem.sty
-Package: enumitem 2019/06/20 v3.9 Customized lists
+Package: enumitem 2025/02/06 v3.11 Customized lists
 \labelindent=\skip81
 \enit@outerparindent=\dimen369
 \enit@toks=\toks62
 \enit@inbox=\box88
-\enit@count@id=\count375
-\enitdp@description=\count376
+\enit@count@id=\count372
+\enitdp@description=\count373
 )
 (Article_Design_of_Experiment-Chamomile.aux)
 \openout1 = `Article_Design_of_Experiment-Chamomile.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for LS1/stix/m/n on input line 91.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for LS1/stix/m/n on input line 92.
 LaTeX Font Info:    Trying to load font information for LS1+stix on input line 
-91.
+92.
 
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls1stix.fd
 File: ls1stix.fd 2015/04/17 v1.1.2-latex STIX LS1 font definitions
 )
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for LS2/stix/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for LS2/stix/m/n on input line 92.
 LaTeX Font Info:    Trying to load font information for LS2+stix on input line 
-91.
+92.
 
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls2stix.fd
 File: ls2stix.fd 2015/04/17 v1.1.2-latex STIX LS2 font definitions
 )
-LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    ... okay on input line 92.
 
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf
 .mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count377
+\scratchcounter=\count374
 \scratchdimen=\dimen370
 \scratchbox=\box89
-\nofMPsegments=\count378
-\nofMParguments=\count379
+\nofMPsegments=\count375
+\nofMParguments=\count376
 \everyMPshowfont=\toks63
-\MPscratchCnt=\count380
+\MPscratchCnt=\count377
 \MPscratchDim=\dimen371
-\MPnumerator=\count381
-\makeMPintoPDFobject=\count382
+\MPnumerator=\count378
+\makeMPintoPDFobject=\count379
 \everyMPtoPDFconversion=\toks64
 )
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopd
@@ -1482,7 +1472,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 s.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring ON on input line 91.
+Package hyperref Info: Link coloring ON on input line 92.
 
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -1495,15 +1485,15 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 titlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count383
+\c@section@level=\count380
 )
-LaTeX Info: Redefining \ref on input line 91.
-LaTeX Info: Redefining \pageref on input line 91.
-LaTeX Info: Redefining \nameref on input line 91.
+LaTeX Info: Redefining \ref on input line 92.
+LaTeX Info: Redefining \pageref on input line 92.
+LaTeX Info: Redefining \nameref on input line 92.
  (Article_Design_of_Experiment-Chamomile.out)
 (Article_Design_of_Experiment-Chamomile.out)
-\@outlinefile=\write6
-\openout6 = `Article_Design_of_Experiment-Chamomile.out'.
+\@outlinefile=\write5
+\openout5 = `Article_Design_of_Experiment-Chamomile.out'.
 
 
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/latex/upquote\upquote.sty
@@ -1550,7 +1540,7 @@ Package caption Info: End \AtBeginDocument code.
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into 
 your preamble.
- on input line 91.
+ on input line 92.
 
 (C:\Program Files\MiKTeX\tex/latex/pdflscape\pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
@@ -1564,68 +1554,68 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-\verbatim@out=\write7
-\openout7 = `Article_Design_of_Experiment-Chamomile.abs'.
+\verbatim@out=\write6
+\openout6 = `Article_Design_of_Experiment-Chamomile.abs'.
 
 LaTeX Font Info:    Trying to load font information for LS1+stixscr on input li
-ne 133.
+ne 134.
 
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls1stixscr.fd
 File: ls1stixscr.fd 2015/04/17 v1.1.2-latex STIX script LS1 font definitions
 )
 LaTeX Font Info:    Trying to load font information for LS2+stixex on input lin
-e 133.
+e 134.
 
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls2stixex.fd
 File: ls2stixex.fd 2015/04/17 v1.1.2-latex STIX extentions LS2 font definitions
 
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 133
+LaTeX Font Info:    Trying to load font information for U+msa on input line 134
 .
 
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 133
+LaTeX Font Info:    Trying to load font information for U+msb on input line 134
 .
 
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for LS1+stixfrak on input l
-ine 133.
+ine 134.
 
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls1stixfrak.fd
 File: ls1stixfrak.fd 2015/04/17 v1.1.2-latex STIX fraktur LS1 font definitions
 )
 LaTeX Font Info:    Trying to load font information for LS1+stixbb on input lin
-e 133.
+e 134.
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls1stixbb.fd
 File: ls1stixbb.fd 2015/04/17 v1.1.2-latex STIX blackboard LS1 font definitions
 
 )
 LaTeX Font Info:    Trying to load font information for LS2+stixcal on input li
-ne 133.
+ne 134.
 
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls2stixcal.fd
 File: ls2stixcal.fd 2015/04/17 v1.1.2-latex STIX calligraphic LS2 font definiti
 ons
 )
 LaTeX Font Info:    Trying to load font information for LS1+stixsf on input lin
-e 133.
+e 134.
 
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls1stixsf.fd
 File: ls1stixsf.fd 2015/04/17 v1.1.2-latex STIX sans-serif LS1 font definitions
 
 )
 LaTeX Font Info:    Trying to load font information for LS2+stixtt on input lin
-e 133.
+e 134.
 
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/latex/stix\ls2stixtt.fd
 File: ls2stixtt.fd 2015/04/17 v1.1.2-latex STIX typewriter LS2 font definitions
 
 )
-Overfull \hbox (123.62721pt too wide) detected at line 133
+Overfull \hbox (123.62721pt too wide) detected at line 134
 []
  []
 
@@ -1633,24 +1623,38 @@ Overfull \hbox (123.62721pt too wide) detected at line 133
 <thumbnails/cas-email.jpeg, id=94, 225.84375pt x 225.84375pt>
 File: thumbnails/cas-email.jpeg Graphic file (type jpg)
 <use thumbnails/cas-email.jpeg>
-Package pdftex.def Info: thumbnails/cas-email.jpeg  used on input line 133.
+Package pdftex.def Info: thumbnails/cas-email.jpeg  used on input line 134.
 (pdftex.def)             Requested size: 7.99838pt x 8.0pt.
 LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 13
-3.
+4.
 
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/latex/inconsolata\t1zi4.fd
 File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 6.80005pt on input line 133.
+(Font)              scaled to size 6.80005pt on input line 134.
  (Sections/introduction_imp.tex
-Overfull \hbox (1.75552pt too wide) in paragraph at lines 15--16
-\T1/stix/m/n/10 de-scribe the ex-trac-tion of valu-able com-pounds from biomass
-.
+Underfull \hbox (badness 2073) in paragraph at lines 12--16
+\T1/stix/m/n/10 carbon-dioxide-assisted tech-nolo-gies en-able the pro-duc-
+ []
+
+
+Underfull \hbox (badness 1796) in paragraph at lines 12--16
+\T1/stix/m/n/10 ad-van-tages over tech-niques con-ven-tion-ally em-ployed to
+ []
+
+
+Underfull \hbox (badness 1048) in paragraph at lines 12--16
+\T1/stix/m/n/10 The re-searchers em-ployed the gas an-ti-sol-vent tech-nique
+ []
+
+
+Underfull \hbox (badness 2165) in paragraph at lines 12--16
+\T1/stix/m/n/10 hy-drochlo-ride nanopar-ti-cles us-ing an ultrasonic-assisted
  []
 
 LaTeX Font Info:    Trying to load font information for T1+cmss on input line 1
-8.
+6.
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmss.fd
 File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
@@ -1661,49 +1665,56 @@ File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 {C:/Users/sliczno1/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/inconsolata/i4
 -t1-0.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/cm-super/cm-super-t1.enc} <.
 /thumbnails/cas-email.jpeg>]
-Underfull \hbox (badness 1320) in paragraph at lines 25--26
-\T1/stix/m/n/10 chamomile oil ex-trac-tion pro-cess. This model aims for
+Overfull \hbox (1.75552pt too wide) in paragraph at lines 19--20
+\T1/stix/m/n/10 de-scribe the ex-trac-tion of valu-able com-pounds from biomass
+.
+ []
+
+[2]
+Overfull \hbox (2.63051pt too wide) in paragraph at lines 33--34
+\T1/stix/m/n/10 chamomile oil ex-trac-tion pro-cess. This model aims at control
+-
  []
 
 
-Underfull \hbox (badness 1924) in paragraph at lines 25--26
-\T1/stix/m/n/10 control-oriented sim-plic-ity, as-sum-ing a semi-continuous
+Underfull \hbox (badness 1281) in paragraph at lines 33--34
+\T1/stix/m/n/10 oriented sim-plic-ity, as-sum-ing semi-continuous op-er-a-tion
  []
 
 
 
 pdfTeX warning: pdflatex (file ./Figures/PFD.drawio.pdf): PDF inclusion: found 
 PDF version <1.7>, but at most version <1.5> allowed
-<Figures/PFD.drawio.pdf, id=144, 871.33525pt x 334.3692pt>
+<Figures/PFD.drawio.pdf, id=165, 871.33525pt x 334.3692pt>
 File: Figures/PFD.drawio.pdf Graphic file (type pdf)
 <use Figures/PFD.drawio.pdf>
-Package pdftex.def Info: Figures/PFD.drawio.pdf  used on input line 29.
+Package pdftex.def Info: Figures/PFD.drawio.pdf  used on input line 37.
 (pdftex.def)             Requested size: 238.25444pt x 91.42885pt.
-) (Sections/Literature_Review.tex [2 <./Figures/PFD.drawio.pdf>])
-(Sections/Model.tex [3]
+) (Sections/Literature_Review.tex [3 <./Figures/PFD.drawio.pdf>])
+(Sections/Model.tex
 Overfull \hbox (8.60632pt too wide) in paragraph at lines 93--94
 []\T1/stix/m/n/10 As the sol-vent flows through the fixed bed, CO$[]$ molecules
 
  []
 
-<Figures/SFE_PFD.drawio.png, id=212, 8222.72pt x 4626.28375pt>
+[4]
+<Figures/SFE_PFD.drawio.png, id=236, 8222.72pt x 4626.28375pt>
 File: Figures/SFE_PFD.drawio.png Graphic file (type png)
 <use Figures/SFE_PFD.drawio.png>
 Package pdftex.def Info: Figures/SFE_PFD.drawio.png  used on input line 97.
 (pdftex.def)             Requested size: 202.51772pt x 156.9374pt.
-[4 <./Figures/SFE_PFD.drawio.png>] (Sections/Saturation.tex
-<Figures///Di.png, id=246, 386.1627pt x 311.0019pt>
-File: Figures///Di.png Graphic file (type png)
-<use Figures///Di.png>
-Package pdftex.def Info: Figures///Di.png  used on input line 34.
-(pdftex.def)             Requested size: 238.25444pt x 191.88432pt.
-<Figures///Gamma.png, id=248, 384.9582pt x 309.7974pt>
-File: Figures///Gamma.png Graphic file (type png)
-<use Figures///Gamma.png>
-Package pdftex.def Info: Figures///Gamma.png  used on input line 41.
-(pdftex.def)             Requested size: 238.25444pt x 191.73677pt.
-) [5 <./Figures///Di.png (PNG copy)> <./Figures///Gamma.png (PNG copy)>] [6]) (
-Sections/DOE.tex
+ (Sections/Saturation.tex [5 <./Figures/SFE_PFD.drawio.png>]
+<Figures///Di_1.png, id=268, 386.1627pt x 311.0019pt>
+File: Figures///Di_1.png Graphic file (type png)
+<use Figures///Di_1.png>
+Package pdftex.def Info: Figures///Di_1.png  used on input line 34.
+(pdftex.def)             Requested size: 214.42754pt x 172.69351pt.
+<Figures///Gamma_1.png, id=270, 384.9582pt x 309.7974pt>
+File: Figures///Gamma_1.png Graphic file (type png)
+<use Figures///Gamma_1.png>
+Package pdftex.def Info: Figures///Gamma_1.png  used on input line 41.
+(pdftex.def)             Requested size: 214.42754pt x 172.56357pt.
+) [6 <./Figures///Di_1.png> <./Figures///Gamma_1.png>]) (Sections/DOE.tex
 Overfull \hbox (41.84886pt too wide) detected at line 39
 []
  []
@@ -1713,11 +1724,7 @@ Overfull \hbox (37.12527pt too wide) detected at line 47
 []
  []
 
-[7]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
+[7] [8]
 Overfull \hbox (0.27231pt too wide) detected at line 143
 []
  []
@@ -1729,66 +1736,66 @@ Underfull \hbox (badness 1297) in paragraph at lines 157--158
 LS1/stix/m/it/10 ^^R; \LS1/stix/m/n/10 ^^D/$\T1/stix/m/n/10 , max-i-miz-ing
  []
 
-[8]) (Sections/Results_DOE.tex
-<Figures/Results/scatter.png, id=324, 373.1541pt x 283.0575pt>
+[9]) (Sections/Results_DOE.tex
+<Figures/Results/scatter.png, id=345, 373.1541pt x 283.0575pt>
 File: Figures/Results/scatter.png Graphic file (type png)
 <use Figures/Results/scatter.png>
 Package pdftex.def Info: Figures/Results/scatter.png  used on input line 9.
-(pdftex.def)             Requested size: 238.25444pt x 180.7329pt.
- [9 <./Figures/Results/scatter.png (PNG copy)>]
-<Figures/Results/Profile_F.png, id=335, 375.0813pt x 306.9066pt>
+(pdftex.def)             Requested size: 214.42754pt x 162.65744pt.
+<Figures/Results/Profile_F.png, id=349, 375.0813pt x 306.9066pt>
 File: Figures/Results/Profile_F.png Graphic file (type png)
 <use Figures/Results/Profile_F.png>
 Package pdftex.def Info: Figures/Results/Profile_F.png  used on input line 22.
-(pdftex.def)             Requested size: 238.25444pt x 194.94908pt.
-<Figures/Results/Profile_T.png, id=336, 384.4764pt x 294.6207pt>
+(pdftex.def)             Requested size: 214.42754pt x 175.4537pt.
+<Figures/Results/Profile_T.png, id=350, 384.4764pt x 294.6207pt>
 File: Figures/Results/Profile_T.png Graphic file (type png)
 <use Figures/Results/Profile_T.png>
 Package pdftex.def Info: Figures/Results/Profile_T.png  used on input line 29.
-(pdftex.def)             Requested size: 238.25444pt x 182.57303pt.
-<Figures/Results/yield.png, id=337, 382.3083pt x 294.6207pt>
+(pdftex.def)             Requested size: 214.42754pt x 164.31662pt.
+<Figures/Results/yield.png, id=351, 382.3083pt x 294.6207pt>
 File: Figures/Results/yield.png Graphic file (type png)
 <use Figures/Results/yield.png>
 Package pdftex.def Info: Figures/Results/yield.png  used on input line 36.
-(pdftex.def)             Requested size: 238.25444pt x 183.6115pt.
+(pdftex.def)             Requested size: 214.42754pt x 165.2472pt.
+ [10 <./Figures/Results/scatter.png (PNG copy)> <./Figures/Results/Profile_F.pn
+g (PNG copy)> <./Figures/Results/Profile_T.png (PNG copy)> <./Figures/Results/y
+ield.png (PNG copy)>])
+(Article_Design_of_Experiment-Chamomile.bbl [11]
+Underfull \hbox (badness 1325) in paragraph at lines 50--57
+\T1/stix/m/n/8 Lan-so-pra-zole load-ing of poly-mers by su-per-crit-i-cal car-b
+on diox-
+ []
 
-
-LaTeX Warning: Text page 10 contains only floats.
-
-[10 <./Figures/Results/Profile_F.png (PNG copy)> <./Figures/Results/Profile_T.p
-ng (PNG copy)> <./Figures/Results/yield.png (PNG copy)>]) [11
-
-]
-(Article_Design_of_Experiment-Chamomile.bbl
 LaTeX Font Info:    Trying to load font information for TS1+stix on input line 
-222.
-
+268.
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/latex/stix\ts1stix.fd
 File: ts1stix.fd 2015/04/17 v1.1.2-latex STIX TS1 font definitions
 )
-Underfull \hbox (badness 1859) in paragraph at lines 251--255
+Underfull \hbox (badness 1859) in paragraph at lines 297--301
 []\T1/stix/m/n/8 J. Gmehling, M. Kleiber, B. Kolbe, and J. Rarey.  |   []
  []
 
-) [12
+) [12{C:/Users/sliczno1/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix/stix
+-ts1.enc}] (Article_Design_of_Experiment-Chamomile.nls
+Underfull \hbox (badness 1264) in paragraph at lines 17--18
+[]\T1/stix/m/n/10 Reference value of in-ter-nal dif-fu-sion co-ef-fi-cient
+ []
 
-{C:/Users/sliczno1/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix/stix-ts1.
-enc}] (Article_Design_of_Experiment-Chamomile.nls) [13
+) [13
 
-]
-(Article_Design_of_Experiment-Chamomile.aux)
+] (Article_Design_of_Experiment-Chamomile.aux)
 Package rerunfilecheck Info: File `Article_Design_of_Experiment-Chamomile.out' 
 has not changed.
 (rerunfilecheck)             Checksum: 4A6D10E0A0FC7E4E8344773B479CE42F;3752.
  ) 
 Here is how much of TeX's memory you used:
- 43136 strings out of 478848
- 936089 string characters out of 2848485
- 1395927 words of memory out of 3000000
- 60057 multiletter control sequences out of 15000+600000
- 521528 words of font info for 174 fonts, out of 8000000 for 9000
+ 42645 strings out of 478841
+ 922842 string characters out of 2848322
+ 1391329 words of memory out of 3000000
+ 59574 multiletter control sequences out of 15000+600000
+ 522287 words of font info for 175 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 110i,26n,131p,1299b,947s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 110i,28n,131p,1874b,947s stack positions out of 5000i,500n,10000p,200000b,80000s
 <C:/Users/sliczno1/AppData/Local/Programs/MiKTeX/fonts/type1/public/inconsola
 ta/Inconsolata-zi4r.pfb><C:/Users/sliczno1/AppData/Local/Programs/MiKTeX/fonts/
 type1/public/stix/STIXGeneral-Bold.pfb><C:/Users/sliczno1/AppData/Local/Program
@@ -1806,10 +1813,10 @@ e1/public/stix/stix-mathit.pfb><C:/Users/sliczno1/AppData/Local/Programs/MiKTeX
 Programs/MiKTeX/fonts/type1/public/stix/stix-mathrm.pfb><C:/Users/sliczno1/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb><C:/Users/sl
 iczno1/AppData/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathsf.pfb>
-Output written on Article_Design_of_Experiment-Chamomile.pdf (13 pages, 1799400
+Output written on Article_Design_of_Experiment-Chamomile.pdf (13 pages, 1720903
  bytes).
 PDF statistics:
- 456 PDF objects out of 1000 (max. 8388607)
- 117 named destinations out of 1000 (max. 500000)
+ 473 PDF objects out of 1000 (max. 8388607)
+ 124 named destinations out of 1000 (max. 500000)
  252 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -106,7 +106,7 @@
 	
 	\begin{figure}[!h]
 		\centering
-		\resizebox{1\columnwidth}{!}{%
+		\resizebox{0.9\columnwidth}{!}{%
 			\begin{tikzpicture}
 				% Ellipse parameters
 				\def\ellipsecenter{(3,3)}
@@ -160,7 +160,7 @@
 	
 	\subsubsection{Problem formulation}
 	
-	Details on the process model can be found in \citet{Sliczniuk2024}. The model's empirical correlations are derived based on laboratory experiments conducted under various but constant operating conditions: $30^\circ\text{C} - 40^\circ\text{C}$, $100 - 200$ bar, and $3.33 \cdot 10^{-5} - 6.67 \cdot 10^{-5}$ kg/s. This study employs the process model obtained previously to design a set of supplementary experiments with dynamically changing conditions to improve the precision of the correlation for $D_i$. The analyzed correlations consist of three independent variables: mass flow rate, pressure and inlet temperature. 
+	Details on the process model can be found in \citet{Sliczniuk2024}. The model's empirical correlations are derived based on laboratory experiments conducted under various but constant operating conditions: $31 - 40~^\circ\text{C}$, $100 - 200$ bar, and $3.33 \cdot 10^{-5} - 6.67 \cdot 10^{-5}$ kg/s. This study employs the process model obtained previously to design a set of supplementary experiments with dynamically changing conditions to improve the precision of the correlation for $D_i$. The analyzed correlations consist of three independent variables: mass flow rate, pressure and inlet temperature. 
 	
 	In this work, the decision variables are the inlet temperature ($T^{\text{in}}$) and mass flow rate ($F$), while the pressure is assumed to remain constant during a batch. The optimal design of experiment problem is solved for multiple values of pressure: 100, 125, 150, 175, and 200 bar. The initial state is considered isothermal, so $T^0(z) = T^{\text{in}}(t=0)$.
 	
@@ -169,19 +169,30 @@
 	In a real system, the mass flow rate and inlet temperature cannot be changed instantaneously to any arbitrary value, as they depend on the dynamics of the pump and heat exchanger, respectively. To prevent bang-bang type of control, a penalty term is introduced. Inspired by control problems, such as the Linear Quadratic Regulator, a quadratic penalty term is added to the cost function. This penalty increases the cost function value when there are rapid changes in the decision variables. The matrix $\bar{R}$ represents the control cost matrix, with its entries chosen so that the control costs are one order of magnitude lower than $-\ln j_D$. The problem formulation is given by Equation \ref{EQ:Formulation_2}.
 	
 	{\footnotesize 
-		\begin{equation} 
-			\begin{aligned} \Xi^* &= \arg \min_{ T^{\text{in}}(t), F(t) } \int_{t_0}^{t_f} \left[ - \ln j_D(\Xi, \dot{x}) + \frac{du(t)^\top}{dt}~\bar{R}~\frac{du(t)}{dt} \right] dt \\ 
-				\text{subject to} \quad & \dot{x} = G(x, t, \theta; \Xi), \\ 
-				& t_0 = 0 \text{min} \\ 
-				& t_f = 600 \text{min} \\ 
-				& T^{0} = T^{\text{in}}(t=0), \\ 
-				& P(t) \in \left\{100, 125, 150, 175, 200\right\} \text{bar}, \\ 
-				& 30^\circ\text{C} \leq T^{\text{in}}(t) \leq 40^\circ\text{C}, \\ 
-				& 3.33 \cdot 10^{-5} \leq F(t) \leq 6.67 \cdot 10^{-5} \\
-				& \bar{R} = \begin{bmatrix} 0.1 & 0 \\ 0 & 0.01 \end{bmatrix} \\ 
-				& \frac{du(t)}{dt} = \begin{bmatrix} \dfrac{dF(t)}{dt} \\ \dfrac{dT^{\text{in}}(t)}{dt} \end{bmatrix}
-				\end{aligned} 
-				\label{EQ:Formulation_2} 
+		\begin{equation}
+			\begin{aligned}
+				\Xi^* &= \arg \min_{T^{\text{in}}(t), F(t)} 
+				\int_{t_0}^{t_f} \left[ - \ln j_D(\Xi, \dot{x}) + 
+				\frac{du(t)^\top}{dt} \, \bar{R} \, \frac{du(t)}{dt} \right] dt, \\
+				\text{subject to:} \quad 
+				& \dot{x} = G(x, t, \theta; \Xi), \\
+				& t_0 = 0 \, \text{min}, \quad t_f = 600 \, \text{min}, \\
+				& T^0 = T^{\text{in}}(t=0), \\
+				& P(t) \in \{100, 125, 150, 175, 200\} \, \text{bar}, \\
+				& 31^\circ\text{C} \leq T^{\text{in}}(t) \leq 40^\circ\text{C}, \\
+				& 3.33 \cdot 10^{-5} \leq F(t) \leq 6.67 \cdot 10^{-5}, \\
+				& \bar{R} = 
+				\begin{bmatrix} 
+					0.1 & 0 \\ 
+					0 & 0.01 
+				\end{bmatrix}, \\
+				& \frac{du(t)}{dt} = 
+				\begin{bmatrix} 
+					\dfrac{dF(t)}{dt} \\ 
+					\dfrac{dT^{\text{in}}(t)}{dt} 
+				\end{bmatrix}.
+			\end{aligned}
+			\label{EQ:Formulation_2}
 			\end{equation} }
 	
 \end{document}

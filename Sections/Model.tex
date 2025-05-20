@@ -35,7 +35,7 @@
 	}
 	where $A$ is the total cross-section of the extractor and $\phi$ describes porosity along the extractor.
 	
-	Assuming that the mass flow rate is constant in time, the temporal derivative becomes the mass flux F, and the spatial derivative can be integrated along $z$ as
+	Assuming that {\color{blue}the porosity} and mass flow rate is constant in time, the temporal derivative becomes the mass flux F, and the spatial derivative can be integrated along $z$ as
 	
 	{\footnotesize
 		\begin{equation}
@@ -75,7 +75,7 @@
 		\end{equation}
 	}
 	
-	where $c_f$ represents the solute concentration in the fluid phase, $r_e$ is the mass transfer kinetic term and $D^M_e$ is the axial diffusion coefficient.
+	where $c_f$ represents the solute concentration in the fluid phase, $r_e$ is the mass transfer kinetic term and $D^M_e$ is the axial dispersion coefficient.
 	
 	\subsubsection{Mass balance for the solid phase} \label{Mass_balance_solid}
 	
@@ -85,7 +85,7 @@
 		\begin{equation} 
 			\label{Model_solid}
 			%		{\scriptsize\begin{equation}
-					\cfrac{\partial c_s}{\partial t} = \underbrace{ r_e }_{\text{Kinetics}}
+					\cfrac{\partial c_s}{\partial t} = \underbrace{ -  r_e }_{\text{Kinetics}}
 			\end{equation} }
 			
 			\subsubsection{Kinetic term} \label{CH: Kinetic}
@@ -106,7 +106,7 @@
 					r_e = \cfrac{D_i}{\mu l^2 }\left(c_s - c_p^* \right)
 			\end{equation} }
 			
-			where $\mu$ is sphericity, $l$ a characteristic dimension of particles that can be defined as $l = r/3$, $r$ is the mean particle radius, $\rho_s$ is the solid density, $D_i$ corresponds to the overall diffusion coefficient and $c_P^*$ is the concentration at the solid-fluid interface (which according to the internal resistance model is supposed to be at equilibrium with the fluid phase). 
+			where $\mu$ is sphericity, $l$ a characteristic dimension of particles that can be defined as $l = r/3$, $r$ is the mean particle radius, $D_i$ corresponds to the overall diffusion coefficient and $c_P^*$ is the concentration at the solid-fluid interface (which according to the internal resistance model is supposed to be at equilibrium with the fluid phase). 
 			
 			According to \citet{Bulley1984}, a linear equilibrium relationship (Equation \ref{Linear_equilibirum}) can be used to find the equilibrium concentration of the solute in the fluid phase $c_f^*$ based on the concentration of the solute in the solid phase $c_s$:
 			
@@ -115,7 +115,7 @@
 					c_f^* &= k_p c_s
 			\end{align} }
 			
-			The volumetric partition coefficient $k_p$ acts as an equilibrium constant between the solute concentration in one phase and the corresponding equilibrium concentration at the solid-fluid interphase. \citet{Spiro2007} proposed to define the mass partition coefficient $k_m$ as 
+			The volumetric partition coefficient $k_p$ acts as an equilibrium constant between the solute concentration in one phase and the corresponding equilibrium concentration at the solid-fluid interphase. \citet{Spiro2007} proposed to define the mass partition coefficient $k_m$ and the solid density $\rho_s$ as 
 			
 			{\footnotesize
 				\begin{align}
@@ -127,7 +127,7 @@
 			{\footnotesize
 				\begin{equation}
 					\label{Model_kinetic_no_sat}
-					r_e = -\cfrac{D_i}{ \mu l^2 } \left(c_s - \cfrac{\rho_s c_f}{k_m \rho_f} \right)
+					r_e = \cfrac{D_i}{ \mu l^2 } \left(c_s - \cfrac{\rho_s c_f}{k_m \rho_f} \right)
 			\end{equation} }
 			
 			\subfile{Saturation}
@@ -168,14 +168,14 @@
 			
 			\subsubsection{Pressure term} \label{CH: Pressure}
 			
-			As explained in Chapters \ref{CH:Governing_equations_chapter}, this low velocity region, pressure is, nearly constant due to the small pressure wave propagation that occurs at the speed of sound. Under such conditions, the term $\partial P/\partial t$ can be approximated by a difference equation, describing the pressure change in the whole system. The pressure $P$ in the system is considered a state variable, while the pressure in the new time-step $P_{in}$ is considered a control variable.
+			{\color{blue}As explained in Section \ref{CH:Governing_equations_chapter}, the pressure in the low-velocity region remains nearly constant due to the small pressure wave propagation occurring at the speed of sound. Under such conditions, the term $\partial P/\partial t$ can be approximated by a forward difference equation, describing the pressure change over a small time step $\Delta t$. The pressure $P$ in the system is treated as a state variable, while the incoming pressure at the new time-step $P_{in}$ is treated as a control:}
 			
 			{\footnotesize
 				\begin{equation}
 					\frac{\partial {\color{black}P}}{\partial t} \approx \frac{{\color{black}P_{in}} - {\color{black}P} }{\Delta t}
 			\end{equation}}
 			
-			Such a simplified equation allows for instantaneous pressure change in the system but does not consider a gradual pressure build-up and the effects of pressure losses. In a real system, the dynamics of pressure change would depend on a pump and a back-pressure regulator.
+			{\color{blue}Such a simplified equation allows for instantaneous pressure. In a real system, the pressure dynamics would depend on the behaviour of the pump and the back-pressure regulator, which introduce additional inertia and resistance to pressure changes, leading to pressure gradual build-up.}
 			
 			\subsubsection{Extraction yield} \label{CH: Yield}
 			
@@ -201,49 +201,51 @@
 			
 			\subsubsection{Discretization methods}
 			
-			The method of lines is used to transform the process model equations into a set of ODEs denoted as $G(x;\Theta)$. The backward finite difference is used to approximate the first-order derivative, while the central difference scheme approximates the second-order derivative $z$ direction. The length of the fixed bed is divided into $N_z$, i.e. equally distributed points in the $z$ direction. The state-space model after discretization is denoted as $x$ and defined as follows:
+				\begin{figure}[!h]
+				\centering
+				{\footnotesize
+					\begin{align*}
+						\dot{x} &= \cfrac{d x}{d t} = 
+						\begin{bmatrix}
+							\cfrac{d c_{f,1}}{d t} 	  \\
+							\vdots					  \\
+							\cfrac{d c_{f,N_z}}{d t} \\
+							\\ \hline \\
+							\cfrac{d c_{s,1}}{d t} 	  \\
+							\vdots					  \\
+							\cfrac{d c_{s,N_z}}{d t} \\
+							\\ \hline \\
+							\cfrac{d h_1}{d t} 	  \\
+							\vdots 					  \\
+							\cfrac{d h_{N_z}}{d t} \\
+							\\ \hline \\
+							\cfrac{d P}{d t} \\
+							\\ \hline \\
+							\cfrac{d y}{d t}
+						\end{bmatrix}
+						=
+						\underbrace{\begin{bmatrix}
+								G_1 \left( c_f,c_s,h; \Theta \right)\\ 
+								\vdots\\ 
+								G_{N_z} \left( c_f,c_s,h; \Theta \right)\\ 
+								\\ \hline \\ \\
+								G_{N_z+1} \left( c_f,c_s,h; \Theta \right)\\ 
+								\vdots\\
+								G_{2N_z} \left( c_f,c_s,h; \Theta \right)\\ 
+								\\ \\ \hline \\ 
+								G_{2N_z+1} \left( c_f,c_s,h; \Theta \right) \\
+								\vdots\\
+								G_{3N_z} \left( c_f,c_s,h; \Theta \right) \\ 
+								\\ \\ \hline \\
+								G_{3N_z+1} \left( c_f,c_s,h; \Theta \right) \\
+								\\ \\ \hline \\
+								G_{3N_z+2} \left( c_f,c_s,h; \Theta \right) 
+						\end{bmatrix}}_{G \left( x; \Theta \right)} 
+				\end{align*} }
+				\caption{Discretized state-space}
+				\label{fig:discretization}
+			\end{figure}
 			
-			{\footnotesize
-				\begin{align*} \label{discretization}
-					\dot{x} &= \cfrac{d x}{d t} = 
-					\begin{bmatrix}
-						\cfrac{d c_{f,1}}{d t} 	  \\
-						\vdots					  \\
-						\cfrac{d c_{f,N_z}}{d t} \\
-						\\ \hline \\
-						\cfrac{d c_{s,1}}{d t} 	  \\
-						\vdots					  \\
-						\cfrac{d c_{s,N_z}}{d t} \\
-						\\ \hline \\
-						\cfrac{d h_1}{d t} 	  \\
-						\vdots 					  \\
-						\cfrac{d h_{N_z}}{d t} \\
-						\\ \hline \\
-						\cfrac{d P}{d t} \\
-						\\ \hline \\
-						\cfrac{d y}{d t}
-					\end{bmatrix}
-					=
-					\underbrace{\begin{bmatrix}
-							G_1 \left( c_f,c_s,h; \Theta \right)\\ 
-							\vdots\\ 
-							G_{N_z} \left( c_f,c_s,h; \Theta \right)\\ 
-							\\ \hline \\ \\
-							G_{N_z+1} \left( c_f,c_s,h; \Theta \right)\\ 
-							\vdots\\
-							G_{2N_z} \left( c_f,c_s,h; \Theta \right)\\ 
-							\\ \\ \hline \\ 
-							G_{2N_z+1} \left( c_f,c_s,h; \Theta \right) \\
-							\vdots\\
-							G_{3N_z} \left( c_f,c_s,h; \Theta \right) \\ 
-							\\ \\ \hline \\
-							G_{3N_z+1} \left( c_f,c_s,h; \Theta \right) \\
-							\\ \\ \hline \\
-							G_{3N_z+2} \left( c_f,c_s,h; \Theta \right) 
-					\end{bmatrix}}_{G \left( x; \Theta \right)} 
-			\end{align*} }
-			where ${\color{black}x} \in \mathbb{R}^{N_x = 3N_z+2} $ and $\Theta \in \mathbb{R}^{N_\Theta =  N_{\theta} + N_u } $, $N_{\theta}$ is the number of parameters, $N_{u}$ is the number of control variables.
-			
-			For a derivative to be conservative, it must form a telescoping series. In other words, only the boundary terms should remain after adding all terms coming from the discretization over a grid, and the artificial interior points should be cancelled out. Discretization is applied to the conservative form of the model to ensure mass conservation.
+			The method of lines is used to transform the process model equations into a set of ODEs denoted by $G(x;\Theta)$. For a derivative to be conservative, it must form a telescoping series. In other words, only the boundary terms should remain after adding all terms coming from the discretization over a grid, and the artificial interior points should be cancelled out. Discretization is applied to the conservative form of the model to ensure mass conservation. The backward finite difference is used to approximate the first-order derivative, while the central difference scheme approximates the second-order derivative $z$ direction. The length of the fixed bed is divided into $N_z$, i.e. equally distributed points in the $z$ direction. The state-space model after discretization is denoted by $x$ and defined as follows the Figure \ref{fig:discretization}, where ${\color{black}x} \in \mathbb{R}^{N_x = 3N_z+2} $ and $\Theta \in \mathbb{R}^{N_\Theta =  N_{\theta} + N_u } $, $N_{\theta}$ is the number of parameters and $N_{u}$ is the number of control variables.
 			
 		\end{document}
