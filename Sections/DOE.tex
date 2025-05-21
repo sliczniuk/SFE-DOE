@@ -42,27 +42,27 @@
 	
 	{\footnotesize
 		\begin{flalign*}
-			\ln p\left(Y \mid \theta, \Xi \right) &\propto -\frac{1}{2} \left( \underbrace{r^\top \Sigma_Y^{-1} r}_{C} - 2 \underbrace{ J^\top \Sigma_Y^{-1} \Delta_y }_{B} \Delta_\theta + \Delta_\theta^\top \underbrace{\left( J^\top \Sigma_Y^{-1} J + \Sigma_\theta^{-1} \right)}_{A} \Delta_\theta \right) && \\
-			&=-\frac{1}{2} \left( \Delta_\theta^\top A \Delta_\theta - 2 B^\top \Delta_\theta + C \right) &&
+			\ln p\left(Y \mid \theta, \Xi \right) &\propto -\frac{1}{2} \left( \underbrace{r^\top \Sigma_Y^{-1} r}_{\mathcal{C}} - 2 \underbrace{ J^\top \Sigma_Y^{-1} \Delta_y }_{\mathcal{B}} \Delta_\theta + \Delta_\theta^\top \underbrace{\left( J^\top \Sigma_Y^{-1} J + \Sigma_\theta^{-1} \right)}_{\mathcal{A}} \Delta_\theta \right) && \\
+			&=-\frac{1}{2} \left( \Delta_\theta^\top \mathcal{A} \Delta_\theta - 2 \mathcal{B}^\top \Delta_\theta + \mathcal{C} \right) &&
 		\end{flalign*}
 	}
 	
-	By completing the square, we introduce $\theta^* = \hat{\theta} + A^{-1} B$, and the cost function becomes:
+	By completing the square, we introduce $\theta^* = \hat{\theta} + \mathcal{A}^{-1} \mathcal{B}$, and the cost function becomes:
 	
 	{\footnotesize 
 		\begin{equation} 
-			\ln p\left(\theta \mid Y, \Xi \right) \propto -\frac{1}{2} \left( \left( \theta - \theta^* \right)^\top A \left( \theta - \theta^* \right) + C - B^\top A^{-1} B \right) 
+			\ln p\left(\theta \mid Y, \Xi \right) \propto -\frac{1}{2} \left( \left( \theta - \theta^* \right)^\top \mathcal{A} \left( \theta - \theta^* \right) + \mathcal{C} - \mathcal{B}^\top \mathcal{A}^{-1} \mathcal{B} \right) 
 		\end{equation} }
 	
-	It can be observed that the quadratic term represents the spread of the posterior multivariate distribution around the mean $\theta^*$. The constant term $C - B^\top A^{-1} B$ is independent of $\theta$ and does not affect the shape of the posterior distribution but is still important for normalization. This constant term is absorbed into the normalizing constant of the posterior distribution. It does not affect the estimation of $\theta$ or the shape of the posterior distribution and thus can be neglected when focusing on parameter estimation or experimental design. Therefore, the posterior distribution of $\theta$ given $Y$ and $\Xi$ is:
+	It can be observed that the quadratic term represents the spread of the posterior multivariate distribution around the mean $\theta^*$. The constant term $\mathcal{C} - \mathcal{B}^\top \mathcal{A}^{-1} \mathcal{B}$ is independent of $\theta$ and does not affect the shape of the posterior distribution but is still important for normalization. This constant term is absorbed into the normalizing constant of the posterior distribution. It does not affect the estimation of $\theta$ or the shape of the posterior distribution and thus can be neglected when focusing on parameter estimation or experimental design. Therefore, the posterior distribution of $\theta$ given $Y$ and $\Xi$ is:
 	
-	{\footnotesize \begin{equation} p\left(\theta \mid Y, \Xi \right) \propto \exp \left( -\frac{1}{2} \left( \theta - \theta^* \right)^\top A \left( \theta - \theta^* \right) \right) \end{equation} }
+	{\footnotesize \begin{equation} p\left(\theta \mid Y, \Xi \right) \propto \exp \left( -\frac{1}{2} \left( \theta - \theta^* \right)^\top \mathcal{A} \left( \theta - \theta^* \right) \right) \end{equation} }
 	
-	This is the expression of a multivariate normal distribution with mean $\theta^*$ and covariance matrix $A^{-1}$:
+	This is the expression of a multivariate normal distribution with mean $\theta^*$ and covariance matrix $\mathcal{A}^{-1}$:
 	
-	{\footnotesize \begin{equation} p\left(\theta \mid Y, \Xi \right) = \mathcal{N}\left( \theta^*, A^{-1} \right) \end{equation} }
+	{\footnotesize \begin{equation} p\left(\theta \mid Y, \Xi \right) = \mathcal{N}\left( \theta^*, \mathcal{A}^{-1} \right) \end{equation} }
 	
-	As the goal of optimal experimental design is to improve the precision of parameters, the main focus is on the matrix $A$, which consists of two terms. The first corresponds to the information gained from new observations based on the model and measurement error ($J^\top \Sigma_Y^{-1} J$), while the second is the prior information ($\Sigma_\theta^{-1}$).
+	As the goal of optimal experimental design is to improve the precision of parameters, the main focus is on the matrix $\mathcal{A}$, which consists of two terms. The first corresponds to the information gained from new observations based on the model and measurement error ($J^\top \Sigma_Y^{-1} J$), while the second is the prior information ($\Sigma_\theta^{-1}$).
 	
 	\subsubsection{Fisher Information}
 	
@@ -98,11 +98,11 @@
 	
 	{\footnotesize \begin{equation} \Xi^* = \arg~\underset{\Xi \in \bar{\Xi}}{\text{opt}}~j\left(\Xi\right) \end{equation} }
 	
-	The cost function should describe the amount of information obtained from an experiment. For that purpose, it can be assumed that a function $\kappa$ can be related to the covariance matrix $A^{-1}$ obtained at arbitrary operating conditions:
+	The cost function should describe the amount of information obtained from an experiment. For that purpose, it can be assumed that a function $\kappa$ can be related to the covariance matrix $\mathcal{A}^{-1}$ obtained at arbitrary operating conditions:
 	
-	{\footnotesize \begin{equation} j(\Xi) = \kappa\left[ A^{-1}(\theta, \Xi) \right] \end{equation} }
+	{\footnotesize \begin{equation} j(\Xi) = \kappa\left[ \mathcal{A}^{-1}(\theta, \Xi) \right] \end{equation} }
 	
-	Recall that in the Bayesian estimation framework, the posterior covariance matrix of the parameter estimates is given by $\Sigma = A^{-1} = \left(J^\top \Sigma_Y^{-1} J + \Sigma_\theta^{-1}\right)^{-1} $. $J$ is the Jacobian matrix of the model outputs with respect to the parameters, $\Sigma_Y$ is the covariance matrix of the measurement errors, and $\Sigma_\theta$ is the prior covariance matrix of the parameters.
+	Recall that in the Bayesian estimation framework, the posterior covariance matrix of the parameter estimates is given by $\Sigma = \mathcal{A}^{-1} = \left(J^\top \Sigma_Y^{-1} J + \Sigma_\theta^{-1}\right)^{-1} $. $J$ is the Jacobian matrix of the model outputs with respect to the parameters, $\Sigma_Y$ is the covariance matrix of the measurement errors, and $\Sigma_\theta$ is the prior covariance matrix of the parameters.
 	
 	\begin{figure}[!h]
 		\centering
@@ -138,35 +138,35 @@
 	
 	{\footnotesize 
 		\begin{align} \label{EQ:DOE_general}
-			\kappa_k\left( A^{-1}(\theta) \right) &= \left[ \frac{1}{n_\theta} \operatorname{trace}\left( Q A^{-1}(\theta, \Xi) Q^\top \right)^k \right]^{1/k} & \text{if} \det A^{-1} \neq 0, \nonumber \\ 
-			\kappa_k\left( A^{-1}(\theta) \right) &= \infty & \text{if} \det A^{-1} = 0
+			\kappa_k\left( \mathcal{A}^{-1}(\theta) \right) &= \left[ \frac{1}{n_\theta} \operatorname{trace}\left( Q \mathcal{A}^{-1}(\theta, \Xi) Q^\top \right)^k \right]^{1/k} & \text{if} \det \mathcal{A}^{-1} \neq 0, \nonumber \\ 
+			\kappa_k\left( \mathcal{A}^{-1}(\theta) \right) &= \infty & \text{if} \det \mathcal{A}^{-1} = 0
 		\end{align} }
 	
 	where $Q$ is a weighting matrix. The special case $k=1$ corresponds to the L-optimality cost function:
 	
-	{\footnotesize \begin{equation} j_L(\Xi) = \operatorname{trace} \left( Q A^{-1}(\theta, \Xi) Q^\top \right) \end{equation} }
+	{\footnotesize \begin{equation} j_L(\Xi) = \operatorname{trace} \left( Q \mathcal{A}^{-1}(\theta, \Xi) Q^\top \right) \end{equation} }
 	
 	Choosing $Q = \mathbf{I}_{n\theta}$ corresponds to the A-optimality cost function. An A-optimal experiment minimizes the sum of the variances of the parameter estimates (i.e., the trace of the covariance matrix). When $Q$ is diagonal with $[Q]_{ii} = 1/\theta_i$, this corresponds to weighting the parameters inversely by their magnitude, which is associated with relative precision.
 	
-	Selecting $Q$ as a row vector results in C-optimality, which focuses on linear combinations of parameters. Setting $Q = \mathbf{I}_{n\theta}$ and $k = \infty$ leads to E-optimality, where the design maximizes the smallest eigenvalue of the covariance matrix $A^{-1}(\theta, \Xi)$, thereby minimizing the length of the largest axis of the asymptotic confidence ellipsoids.
+	Selecting $Q$ as a row vector results in C-optimality, which focuses on linear combinations of parameters. Setting $Q = \mathbf{I}_{n\theta}$ and $k = \infty$ leads to E-optimality, where the design maximizes the smallest eigenvalue of the covariance matrix $\mathcal{A}^{-1}(\theta, \Xi)$, thereby minimizing the length of the largest axis of the asymptotic confidence ellipsoids.
 	
-	The most commonly used criterion is the D-optimality, which involves $k = 0$ and $Q = \mathbf{I}_{n\theta}$, requiring the minimization of $\det A^{-1}(\theta, \Xi)$, or equivalently, maximization of:
+	The most commonly used criterion is the D-optimality, which involves $k = 0$ and $Q = \mathbf{I}_{n\theta}$, requiring the minimization of $\det \mathcal{A}^{-1}(\theta, \Xi)$, or equivalently, maximization of:
 	
-	{\footnotesize \begin{equation} j_D(\Xi) = \det A(\theta, \Xi) \end{equation} }
+	{\footnotesize \begin{equation} j_D(\Xi) = \det \mathcal{A}(\theta, \Xi) \end{equation} }
 	
-	Since $\det A(\theta, \Xi) = 1 / \det A^{-1}(\theta, \Xi)$, maximizing $\det A$ is equivalent to minimizing $\det A^{-1}$.
+	Since $\det A(\theta, \Xi) = 1 / \det \mathcal{A}^{-1}(\theta, \Xi)$, maximizing $\det \mathcal{A}$ is equivalent to minimizing $\det \mathcal{A}^{-1}$.
 	
 	The D-optimality (D-OED) criterion originates from the geometric interpretation of the determinant. A two-dimensional matrix with real number entries can represent two linear maps: one mapping the standard basis vectors to the rows and the other to the columns. In both cases, the images of the basis vectors form a parallelogram that represents the image of the unit square under the mapping. The absolute value of the determinant is the area of this parallelogram, reflecting the scale factor by which the matrix transforms areas. The signed value of the determinant indicates the area of the parallelogram, which is negative when the angle from the first to the second defining vector is clockwise. In the multi-dimensional case, the matrix maps the n-cube to an n-dimensional parallelotope. The determinant provides the signed n-dimensional volume of this parallelotope, describing the volume scaling factor of the linear transformation produced by the matrix. Based on this geometrical interpretation, a D-optimal experiment minimizes the volume of the asymptotic confidence ellipsoids for the parameters.
 	
 	\subsubsection{Problem formulation}
 	
-	Details on the process model can be found in \citet{Sliczniuk2024}. The model's empirical correlations are derived based on laboratory experiments conducted under various but constant operating conditions: $31 - 40~^\circ\text{C}$, $100 - 200$ bar, and $3.33 \cdot 10^{-5} - 6.67 \cdot 10^{-5}$ kg/s. This study employs the process model obtained previously to design a set of supplementary experiments with dynamically changing conditions to improve the precision of the correlation for $D_i$. The analyzed correlations consist of three independent variables: mass flow rate, pressure and inlet temperature. 
+	Details on the process model can be found in \citet{Sliczniuk2024}. The model's empirical correlations are derived based on laboratory experiments conducted under various but constant operating conditions: $30 - 40~^\circ\text{C}$, $100 - 200$ bar, and $3.33 \cdot 10^{-5} - 6.67 \cdot 10^{-5}$ kg/s. This study employs the process model obtained previously to design a set of supplementary experiments with dynamically changing conditions to improve the precision of the correlation for $D_i$. The analyzed correlations consist of three independent variables: mass flow rate, pressure and inlet temperature. 
 	
 	In this work, the decision variables are the inlet temperature ($T^{\text{in}}$) and mass flow rate ($F$), while the pressure is assumed to remain constant during a batch. The optimal design of experiment problem is solved for multiple values of pressure: 100, 125, 150, 175, and 200 bar. The initial state is considered isothermal, so $T^0(z) = T^{\text{in}}(t=0)$.
 	
 	The decision variables are adjusted every 10 minutes and are kept constant within each interval (piecewise constant controls). These controls have lower and upper bounds that match the validated range of the process model detailed by \citet{Sliczniuk2024}. The sampling time is assumed to be 5 minutes, and the total extraction time is 600 minutes. The standard deviation $\sigma^2$ was estimated to be 0.03.
 	
-	In a real system, the mass flow rate and inlet temperature cannot be changed instantaneously to any arbitrary value, as they depend on the dynamics of the pump and heat exchanger, respectively. To prevent bang-bang type of control, a penalty term is introduced. Inspired by control problems, such as the Linear Quadratic Regulator, a quadratic penalty term is added to the cost function. This penalty increases the cost function value when there are rapid changes in the decision variables. The matrix $\bar{R}$ represents the control cost matrix, with its entries chosen so that the control costs are one order of magnitude lower than $-\ln j_D$. The problem formulation is given by Equation \ref{EQ:Formulation_2}.
+	In a real system, the mass flow rate and inlet temperature cannot be changed instantaneously to any arbitrary value, as they depend on the dynamics of the pump and heat exchanger, respectively. To prevent bang-bang type of control, a penalty term is introduced. Inspired by control problems, such as the Linear Quadratic Regulator, a quadratic penalty term is added to the cost function. This penalty increases the cost function value when there are rapid changes in the decision variables. The matrix $\mathcal{R}$ represents the control cost matrix, with its entries chosen so that the control costs are one order of magnitude lower than $-\ln j_D$. The problem formulation is given by Equation \ref{EQ:Formulation_2}.
 	
 	{\footnotesize 
 		\begin{equation}
@@ -181,7 +181,7 @@
 				& P(t) \in \{100, 125, 150, 175, 200\} \, \text{bar}, \\
 				& 31^\circ\text{C} \leq T^{\text{in}}(t) \leq 40^\circ\text{C}, \\
 				& 3.33 \cdot 10^{-5} \leq F(t) \leq 6.67 \cdot 10^{-5}, \\
-				& \bar{R} = 
+				& \mathcal{R} = 
 				\begin{bmatrix} 
 					0.1 & 0 \\ 
 					0 & 0.01 
