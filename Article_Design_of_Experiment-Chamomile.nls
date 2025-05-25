@@ -1,70 +1,88 @@
 
 \begin{thenomenclature} 
 \nomgroup{A}
-  \item [{\(\mathcal{F}\)}]\begingroup Fisher information\nomeqref {38}\nompageref{14}
-  \item [{\(A\)}]\begingroup Total cross-section of the bed \nomunit{m$^2$}\nomeqref {38}\nompageref{14}
-  \item [{\(A_f\)}]\begingroup Cross-section of the bed occupied by the fluid \nomunit{m$^2$}\nomeqref {38}\nompageref{14}
-  \item [{\(c_f\)}]\begingroup Concentration of solute in the fluid phase \nomunit{kg/m$^3$}\nomeqref {38}\nompageref{14}
-  \item [{\(c_f^*\)}]\begingroup Concentration of solute at the solid-fluid interface \nomunit{kg/m$^3$}\nomeqref {38}\nompageref{14}
-  \item [{\(c_p\)}]\begingroup Concentration of solute in the core of a pore \nomunit{kg/m$^3$}\nomeqref {38}\nompageref{14}
-  \item [{\(c_s\)}]\begingroup Concentration of solute in the solid phase \nomunit{kg/m$^3$}\nomeqref {38}\nompageref{14}
-  \item [{\(c_s^*\)}]\begingroup Concentration of solute at the solid-fluid interface \nomunit{kg/m$^3$}\nomeqref {38}\nompageref{14}
-  \item [{\(c_{f0}\)}]\begingroup Initial concentration of solute in the fluid phase \nomunit{kg/m$^3$}\nomeqref {38}\nompageref{14}
-  \item [{\(c_{pf}\)}]\begingroup Concentration of solute at the pore opening \nomunit{kg/m$^3$}\nomeqref {38}\nompageref{14}
-  \item [{\(c_{s0}\)}]\begingroup Initial concentration of solute in the solid phase \nomunit{kg/m$^3$}\nomeqref {38}\nompageref{14}
-  \item [{\(D_e^M\)}]\begingroup Axial diffusion coefficient \nomunit{m$^2$/s}\nomeqref {38}\nompageref{14}
-  \item [{\(D_i\)}]\begingroup Internal diffusion coefficient \nomunit{m$^2$/s}\nomeqref {38}\nompageref{14}
-  \item [{\(D_i^R\)}]\begingroup Reference value of internal diffusion coefficient \nomunit{m$^2$/s}\nomeqref {38}\nompageref{14}
-  \item [{\(e\)}]\begingroup Internal energy \nomunit{J/kg}\nomeqref {38}\nompageref{14}
-  \item [{\(F\)}]\begingroup Mass flow rate \nomunit{kg/s}\nomeqref {38}\nompageref{14}
-  \item [{\(G\)}]\begingroup Vector of discretized differential equations\nomeqref {38}\nompageref{14}
-  \item [{\(h\)}]\begingroup Enthalpy \nomunit{J}\nomeqref {38}\nompageref{14}
-  \item [{\(j\)}]\begingroup Objective function \nomunit{-}\nomeqref {38}\nompageref{14}
-  \item [{\(j_{ml}\)}]\begingroup Maximum Likelihood \nomunit{-}\nomeqref {38}\nompageref{14}
-  \item [{\(k_m\)}]\begingroup Mass partition coefficient \nomunit{-}\nomeqref {38}\nompageref{14}
-  \item [{\(k_p\)}]\begingroup Volumetric partition coefficient \nomunit{-}\nomeqref {38}\nompageref{14}
-  \item [{\(L\)}]\begingroup Length of the fixed bed \nomunit{m}\nomeqref {38}\nompageref{14}
-  \item [{\(l\)}]\begingroup Characteristic dimension of particles \nomunit{m}\nomeqref {38}\nompageref{14}
-  \item [{\(P\)}]\begingroup Pressure \nomunit{bar}\nomeqref {38}\nompageref{14}
-  \item [{\(p\)}]\begingroup Probaility disribution model\nomeqref {38}\nompageref{14}
-  \item [{\(Q\)}]\begingroup Weighting matrix \nomunit{-}\nomeqref {38}\nompageref{14}
-  \item [{\(R\)}]\begingroup Control cost matrix \nomunit{-}\nomeqref {38}\nompageref{14}
-  \item [{\(r\)}]\begingroup Particle radius \nomunit{m}\nomeqref {38}\nompageref{14}
-  \item [{\(R_e\)}]\begingroup Reynolds number\nomeqref {38}\nompageref{14}
-  \item [{\(r_e\)}]\begingroup Mass transfer kinetic term \nomunit{kg/m$^3$/s}\nomeqref {38}\nompageref{14}
-  \item [{\(S\)}]\begingroup Sensitivity equations \nomunit{-}\nomeqref {38}\nompageref{14}
-  \item [{\(T\)}]\begingroup Temperature \nomunit{K}\nomeqref {38}\nompageref{14}
-  \item [{\(t\)}]\begingroup Time \nomunit{s}\nomeqref {38}\nompageref{14}
-  \item [{\(t_0\)}]\begingroup Initial extraction time \nomunit{s}\nomeqref {38}\nompageref{14}
-  \item [{\(t_f\)}]\begingroup Total extraction time \nomunit{s}\nomeqref {38}\nompageref{14}
-  \item [{\(T_{in}\)}]\begingroup Inlet temperature \nomunit{K}\nomeqref {38}\nompageref{14}
-  \item [{\(T_{out}\)}]\begingroup Outlet temperature \nomunit{K}\nomeqref {38}\nompageref{14}
-  \item [{\(u\)}]\begingroup Superficial velocity \nomunit{m/s}\nomeqref {38}\nompageref{14}
-  \item [{\(v\)}]\begingroup Linear velocity \nomunit{m/s}\nomeqref {38}\nompageref{14}
-  \item [{\(x\)}]\begingroup State vector\nomeqref {38}\nompageref{14}
-  \item [{\(y\)}]\begingroup Extraction yield \nomunit{g}\nomeqref {38}\nompageref{14}
-  \item [{\(z\)}]\begingroup Spatial direction \nomunit{m}\nomeqref {38}\nompageref{14}
+  \item [{\(\mathcal{A}\)}]\begingroup Information matrix \nomunit{-}\nomeqref {38}\nompageref{13}
+  \item [{\(\mathcal{B}\)}]\begingroup Weighted score vector \nomunit{-}\nomeqref {38}\nompageref{13}
+  \item [{\(\mathcal{C}\)}]\begingroup Weighted sum of squared deviations \nomunit{-}\nomeqref {38}\nompageref{13}
+  \item [{\(\mathcal{F}\)}]\begingroup Fisher information \nomunit{-}\nomeqref {38}\nompageref{13}
+  \item [{\(\mathcal{R}\)}]\begingroup Control cost matrix \nomunit{-}\nomeqref {38}\nompageref{13}
+  \item [{\(A\)}]\begingroup Total cross-section of the bed \nomunit{m$^2$}\nomeqref {38}\nompageref{13}
+  \item [{\(A_f\)}]\begingroup Cross-section of the bed occupied by the fluid \nomunit{m$^2$}\nomeqref {38}\nompageref{13}
+  \item [{\(B\)}]\begingroup Pressure dependent parameter of P-R EoS \nomunit{m$^2$}\nomeqref {38}\nompageref{13}
+  \item [{\(c_f\)}]\begingroup Concentration of solute in the fluid phase \nomunit{kg/m$^3$}\nomeqref {38}\nompageref{13}
+  \item [{\(c_f^*\)}]\begingroup Concentration of solute at the solid-fluid interface \nomunit{kg/m$^3$}\nomeqref {38}\nompageref{13}
+  \item [{\(c_p\)}]\begingroup Concentration of solute in the core of a pore \nomunit{kg/m$^3$}\nomeqref {38}\nompageref{13}
+  \item [{\(c_s\)}]\begingroup Concentration of solute in the solid phase \nomunit{kg/m$^3$}\nomeqref {38}\nompageref{13}
+  \item [{\(c_s^*\)}]\begingroup Concentration of solute at the solid-fluid interface \nomunit{kg/m$^3$}\nomeqref {38}\nompageref{13}
+  \item [{\(c_{f0}\)}]\begingroup Initial concentration of solute in the fluid phase \nomunit{kg/m$^3$}\nomeqref {38}\nompageref{13}
+  \item [{\(c_{pf}\)}]\begingroup Concentration of solute at the pore opening \nomunit{kg/m$^3$}\nomeqref {38}\nompageref{13}
+  \item [{\(c_{s0}\)}]\begingroup Initial concentration of solute in the solid phase \nomunit{kg/m$^3$}\nomeqref {38}\nompageref{13}
+  \item [{\(D_e^M\)}]\begingroup Axial diffusion coefficient \nomunit{m$^2$/s}\nomeqref {38}\nompageref{13}
+  \item [{\(D_i\)}]\begingroup Internal diffusion coefficient \nomunit{m$^2$/s}\nomeqref {38}\nompageref{13}
+  \item [{\(D_i^R\)}]\begingroup Reference value of internal diffusion coefficient \nomunit{m$^2$/s}\nomeqref {38}\nompageref{13}
+  \item [{\(e\)}]\begingroup Internal energy \nomunit{J/kg}\nomeqref {38}\nompageref{13}
+  \item [{\(F\)}]\begingroup Mass flow rate \nomunit{kg/s}\nomeqref {38}\nompageref{13}
+  \item [{\(G\)}]\begingroup Vector of discretized differential equations\nomeqref {38}\nompageref{13}
+  \item [{\(h\)}]\begingroup Enthalpy \nomunit{kJ/kg}\nomeqref {38}\nompageref{13}
+  \item [{\(J\)}]\begingroup Jacobian \nomunit{-}\nomeqref {38}\nompageref{13}
+  \item [{\(j\)}]\begingroup Objective function \nomunit{-}\nomeqref {38}\nompageref{13}
+  \item [{\(k_m\)}]\begingroup Mass partition coefficient \nomunit{-}\nomeqref {38}\nompageref{13}
+  \item [{\(k_p\)}]\begingroup Volumetric partition coefficient \nomunit{-}\nomeqref {38}\nompageref{13}
+  \item [{\(L\)}]\begingroup Length of the fixed bed \nomunit{m}\nomeqref {38}\nompageref{13}
+  \item [{\(l\)}]\begingroup Characteristic dimension of particles \nomunit{m}\nomeqref {38}\nompageref{13}
+  \item [{\(n_\theta\)}]\begingroup Number of analysed parameters \nomunit{-}\nomeqref {38}\nompageref{13}
+  \item [{\(n_Y\)}]\begingroup Number of measurments \nomunit{-}\nomeqref {38}\nompageref{13}
+  \item [{\(N_z\)}]\begingroup Number of discretized points in z-direction \nomunit{-}\nomeqref {38}\nompageref{13}
+  \item [{\(P\)}]\begingroup Pressure \nomunit{bar}\nomeqref {38}\nompageref{13}
+  \item [{\(p\)}]\begingroup Probaility disribution model\nomeqref {38}\nompageref{13}
+  \item [{\(P_r\)}]\begingroup Reduced pressure \nomunit{-}\nomeqref {38}\nompageref{13}
+  \item [{\(Q\)}]\begingroup Weighting matrix \nomunit{-}\nomeqref {38}\nompageref{13}
+  \item [{\(r\)}]\begingroup Particle radius \nomunit{m}\nomeqref {38}\nompageref{13}
+  \item [{\(R_e\)}]\begingroup Reynolds number \nomunit{-}\nomeqref {38}\nompageref{13}
+  \item [{\(r_e\)}]\begingroup Mass transfer kinetic term \nomunit{kg/m$^3$/s}\nomeqref {38}\nompageref{13}
+  \item [{\(T\)}]\begingroup Temperature \nomunit{K}\nomeqref {38}\nompageref{13}
+  \item [{\(t\)}]\begingroup Time \nomunit{s}\nomeqref {38}\nompageref{13}
+  \item [{\(t_0\)}]\begingroup Initial extraction time \nomunit{s}\nomeqref {38}\nompageref{13}
+  \item [{\(t_f\)}]\begingroup Total extraction time \nomunit{s}\nomeqref {38}\nompageref{13}
+  \item [{\(T_r\)}]\begingroup Reduced temperature \nomunit{-}\nomeqref {38}\nompageref{13}
+  \item [{\(T_{in}\)}]\begingroup Inlet temperature \nomunit{K}\nomeqref {38}\nompageref{13}
+  \item [{\(T_{out}\)}]\begingroup Outlet temperature \nomunit{K}\nomeqref {38}\nompageref{13}
+  \item [{\(u\)}]\begingroup Superficial velocity \nomunit{m/s}\nomeqref {38}\nompageref{13}
+  \item [{\(v\)}]\begingroup Linear velocity \nomunit{m/s}\nomeqref {38}\nompageref{13}
+  \item [{\(x\)}]\begingroup State vector\nomeqref {38}\nompageref{13}
+  \item [{\(Y\)}]\begingroup Yield measurement \nomunit{g}\nomeqref {38}\nompageref{13}
+  \item [{\(y\)}]\begingroup Predicted extraction yield \nomunit{g}\nomeqref {38}\nompageref{13}
+  \item [{\(Z\)}]\begingroup Compressibility factor \nomunit{-}\nomeqref {38}\nompageref{13}
+  \item [{\(z\)}]\begingroup Spatial direction \nomunit{m}\nomeqref {38}\nompageref{13}
 \nomgroup{B}
-  \item [{\(\epsilon\)}]\begingroup Unobervable error \nomunit{-}\nomeqref {38}\nompageref{14}
-  \item [{\(\gamma\)}]\begingroup Decaying function \nomunit{-}\nomeqref {38}\nompageref{14}
-  \item [{\(\mu\)}]\begingroup Sphericity coefficient \nomunit{-}\nomeqref {38}\nompageref{14}
-  \item [{\(\Phi\)}]\begingroup Bed porosity \nomunit{-}\nomeqref {38}\nompageref{14}
-  \item [{\(\pi\)}]\begingroup Probability desnsity \nomunit{-}\nomeqref {38}\nompageref{14}
-  \item [{\(\rho_f\)}]\begingroup Fluid density\nomunit{kg/m$^3$}\nomeqref {38}\nompageref{14}
-  \item [{\(\rho_s\)}]\begingroup Bulk density of solid\nomunit{kg/m$^3$}\nomeqref {38}\nompageref{14}
-  \item [{\(\Sigma\)}]\begingroup Covariance matrix \nomunit{-}\nomeqref {38}\nompageref{14}
-  \item [{\(\sigma\)}]\begingroup Standard deviation \nomunit{-}\nomeqref {38}\nompageref{14}
-  \item [{\(\Theta\)}]\begingroup Paramter space \nomunit{-}\nomeqref {38}\nompageref{14}
-  \item [{\(\theta\)}]\begingroup vector of unknown parameters \nomunit{-}\nomeqref {38}\nompageref{14}
-  \item [{\(\Upsilon\)}]\begingroup Decay coefficient \nomunit{-}\nomeqref {38}\nompageref{14}
-  \item [{\(\Xi\)}]\begingroup Matrix of experimental condtions \nomunit{-}\nomeqref {38}\nompageref{14}
-  \item [{\(\xi\)}]\begingroup Vector of experimental condtions \nomunit{-}\nomeqref {38}\nompageref{14}
+  \item [{\(\alpha\)}]\begingroup Temperature-dependent function in the P-R EoS \nomunit{-}\nomeqref {38}\nompageref{13}
+  \item [{\(\Delta_\theta\)}]\begingroup Residial term of the parameters \nomunit{-}\nomeqref {38}\nompageref{13}
+  \item [{\(\Delta_y\)}]\begingroup Residial term of the measurment error  \nomunit{g}\nomeqref {38}\nompageref{13}
+  \item [{\(\epsilon\)}]\begingroup Unobervable error \nomunit{-}\nomeqref {38}\nompageref{13}
+  \item [{\(\gamma\)}]\begingroup Decaying function \nomunit{-}\nomeqref {38}\nompageref{13}
+  \item [{\(\kappa\)}]\begingroup Quadtratic function of the acentric factor \nomunit{-}\nomeqref {38}\nompageref{13}
+  \item [{\(\mu\)}]\begingroup Sphericity coefficient \nomunit{-}\nomeqref {38}\nompageref{13}
+  \item [{\(\phi\)}]\begingroup Bed porosity \nomunit{-}\nomeqref {38}\nompageref{13}
+  \item [{\(\pi\)}]\begingroup Probability desnsity \nomunit{-}\nomeqref {38}\nompageref{13}
+  \item [{\(\rho_f\)}]\begingroup Fluid density\nomunit{kg/m$^3$}\nomeqref {38}\nompageref{13}
+  \item [{\(\rho_s\)}]\begingroup Bulk density of solid\nomunit{kg/m$^3$}\nomeqref {38}\nompageref{13}
+  \item [{\(\Sigma\)}]\begingroup Covariance matrix \nomunit{-}\nomeqref {38}\nompageref{13}
+  \item [{\(\sigma\)}]\begingroup Standard deviation \nomunit{-}\nomeqref {38}\nompageref{13}
+  \item [{\(\Sigma_\theta\)}]\begingroup Paramter uncertainty matrix \nomunit{-}\nomeqref {38}\nompageref{13}
+  \item [{\(\Sigma_Y\)}]\begingroup Measurment covariance matrix \nomunit{-}\nomeqref {38}\nompageref{13}
+  \item [{\(\Theta\)}]\begingroup Paramter space \nomunit{-}\nomeqref {38}\nompageref{13}
+  \item [{\(\theta\)}]\begingroup vector of analysed parameters \nomunit{-}\nomeqref {38}\nompageref{13}
+  \item [{\(\Upsilon\)}]\begingroup Decay coefficient \nomunit{-}\nomeqref {38}\nompageref{13}
+  \item [{\(\varkappa\)}]\begingroup An aribtrary function of $\mathcal{A}$ \nomunit{-}\nomeqref {38}\nompageref{13}
+  \item [{\(\Xi\)}]\begingroup Matrix of experimental condtions \nomunit{-}\nomeqref {38}\nompageref{13}
+  \item [{\(\xi\)}]\begingroup Vector of experimental condtions \nomunit{-}\nomeqref {38}\nompageref{13}
 \nomgroup{C}
-  \item [{BIC}]\begingroup Broke-and-Intact Cell model\nomeqref {38}\nompageref{14}
-  \item [{DoE}]\begingroup Design of Experiment\nomeqref {38}\nompageref{14}
-  \item [{HBD}]\begingroup Hot Ball Diffusion\nomeqref {38}\nompageref{14}
-  \item [{m-DoE}]\begingroup Model-based Design of Experiment\nomeqref {38}\nompageref{14}
-  \item [{SC}]\begingroup Shrinking Core\nomeqref {38}\nompageref{14}
-  \item [{SFE}]\begingroup Supercritical Fluid Extraction\nomeqref {38}\nompageref{14}
+  \item [{BIC}]\begingroup Broke-and-Intact Cell model\nomeqref {38}\nompageref{13}
+  \item [{DoE}]\begingroup Design of Experiment\nomeqref {38}\nompageref{13}
+  \item [{HBD}]\begingroup Hot Ball Diffusion\nomeqref {38}\nompageref{13}
+  \item [{m-DoE}]\begingroup Model-based Design of Experiment\nomeqref {38}\nompageref{13}
+  \item [{P-R EoS}]\begingroup Peng-Robinson Equation of State\nomeqref {38}\nompageref{13}
+  \item [{SC}]\begingroup Shrinking Core\nomeqref {38}\nompageref{13}
+  \item [{SFE}]\begingroup Supercritical Fluid Extraction\nomeqref {38}\nompageref{13}
 
 \end{thenomenclature}
