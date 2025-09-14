@@ -16,6 +16,7 @@
 % --------------------------------------------------------------------
 % Figure packages
 \usepackage{graphicx,float}
+\restylefloat{table}
 \usepackage{adjustbox}
 % Text, input, formatting, and language-related packages
 \usepackage[T1]{fontenc}
@@ -27,10 +28,11 @@
 \usepackage{etoolbox}
 \renewcommand\nomgroup[1]{%
 	\item[\bfseries
-	\ifstrequal{#1}{A}{}{%
-		\ifstrequal{#1}{B}{Greek symbols}{%
-			\ifstrequal{#1}{C}{Abberivations}{
-	}}}%
+	\ifstrequal{#1}{A}{Latin symbols}{%
+		\ifstrequal{#1}{B}{Non-lation symbols}{%
+			\ifstrequal{#1}{C}{Greek symbols}{%
+				\ifstrequal{#1}{D}{Abberivations}{
+	}}}}%
 	]}
 \newcommand{\nomunit}[1]{%
 	\renewcommand{\nomentryend}{\hspace*{\fill}#1}}
@@ -64,6 +66,8 @@
 \usepackage{placeins}
 
 \usepackage[final]{pdfpages}
+
+\usepackage{multirow}
 
 % --------------------------------------------------------------------
 % Packages Configurations
@@ -120,7 +124,7 @@
 % ABSTRACT
 % ===================================================
 \begin{abstract}
-	This study investigates the process of chamomile oil extraction from flowers. A parameter-distributed model consisting of a set of partial differential equations is used to describe the governing mass transfer phenomena in a cylindrical packed bed with solid chamomile particles under supercritical conditions using carbon dioxide as a solvent. The concept of quasi-one-dimensional flow is applied to reduce the number of spatial dimensions. The flow is assumed to be uniform across any cross-section, although the area available for the fluid phase can vary along the extractor. The physical properties of the solvent are estimated from the Peng-Robinson equation of state. The empirical correlations used in the model are based on a set of laboratory experiments performed under multiple constant operating conditions: $30 - 40~^\circ$C, $100 - 200$ bar and $3.33-6.67 \cdot 10^{-5}$ kg/s. A model-based design of experiments with the D-optimality criterion is applied to improve the precision of the correlation parameters by designing a new dynamic experiment. The mass flow rate and inlet temperature are used as decision variables to maximise the Fisher information embedded in the yield curve with respect to the empirical correlations. 
+	This study investigates the process of chamomile oil extraction from flowers. A parameter-distributed model consisting of a set of partial differential equations is used to describe the governing mass transfer phenomena in a cylindrical packed bed with solid chamomile particles under supercritical conditions using carbon dioxide as a solvent. The concept of quasi-one-dimensional flow is applied to reduce the number of spatial dimensions. The flow is assumed to be uniform across any cross-section, although the area available for the fluid phase can vary along the extractor. The physical properties of the solvent are estimated from the Peng-Robinson equation of state. The empirical correlations used in the model are based on laboratory experiments performed under multiple constant operating conditions: $30 - 40~^\circ$C, $100 - 200$ bar and $3.33-6.67 \cdot 10^{-5}$ kg/s. A model-based design of experiments with the D-optimality criterion is applied to improve the precision of the correlation parameters by designing a new dynamic experiment. The mass flow rate and inlet temperature are used as decision variables to maximise the Fisher information embedded in the yield curve with respect to the empirical correlations. 
 	
 \end{abstract}
 
@@ -150,7 +154,9 @@ Another application of supercritical CO$_2$ is nanoparticle formation, as invest
 The study of \citet{SaadatiArdestani2020} explored the preparation of phthalocyanine green nano pigment using supercritical carbon dioxide as an anti-solvent. The researchers employed the gas anti-solvent technique to achieve nano-sized pigment particles.
 \citet{Sodeifian2019} analysed the production of amiodarone hydrochloride nanoparticles using ultrasonic-assisted rapid expansion of the supercritical solution in a liquid solvent method. The researchers achieved significant particle size reduction by optimising parameters such as pressure, temperature and polymeric stabiliser concentration. Characterisation techniques confirmed the successful formation of nanoparticles with improved properties.
 
-The present study investigates the extraction of essential oil from chamomile flowers (Matricaria chamomilla L.) via supercritical fluid extraction techniques in addition to the modelling of this process. Chamomile is a medicinal herb widely cultivated in southern and eastern Europe - in countries such as Germany, Hungary, France and Russia. It can also be found outside Europe, for instance in Brazil, as discussed by \citet{Singh2011}. Chamomile is distinguished by its hollow, bright gold cones that house disc or tubular florets surrounded by about fifteen white ray or ligulate florets. The plant has been utilised for its medicinal benefits, serving as an anti-inflammatory, antioxidant, mild astringent, and healing remedy. Chamomile extracts are widely used to calm nerves and mitigate anxiety, hysteria, nightmares, insomnia and other sleep-related conditions, according to \citet{Srivastava2009}. \citet{Orav2010} reported that oil yields from dried chamomile samples ranged from 0.7 to 6.7 mL/kg. The highest yields of essential oil, between 6.1 mL/kg and 6.7 mL/kg, were derived from chamomile sourced from Latvia and Ukraine. In comparison, chamomile from Armenia exhibited a lower oil content of 0.7 mL/kg. \citet{Milovanovic2023} extracted oils from Roman chamomile seeds in a two-stage process. First, supercritical carbon dioxide at pressures of up to 450 bar and temperatures up to 60 $^\circ$C was used for the first extraction. Then, the oil was re-extracted using supercritical CO$_2$ with the addition of ethanol. Through optimisation of the operating pressure, temperature, production cost, fraction of milled seeds and addition of co-solvent, the amount of separated chamomile oil increased from 2.4 to 18.6\% and the content of unsaturated fatty acids up to 88.7\%.
+Although the processes discussed are based on different phenomena, the outcome of these technologies strongly depends on the solubility in supercritical CO$_2$. The solubility of the solid in the solvent can be important for determining the partition coefficient for a potential impregnation and whether a cosolvent should be used in a supercritical extraction of a compound. Moreover, a good solute solubility not only accelerates the initial stages of the extraction but also reduces the time of the extraction process. Multiple researchers, such as \citet{Bagheri2025}, \citet{Tabebordbar2024}, \citet{SheikhiKouhsar2024} or \citet{Bagheri2022}, have conducted extensive research to measure the solubility of different solutes in the supercritical CO$_2$ and on the development of mathematical models. Several methods, including density-based correlations and equation of state, are used for correlations of solute solubility in the supercritical CO$_2$. The semi-empirical models are often used due to their ease of use and the absence of the need for physicochemical properties like sublimation pressure and critical features, which cannot be directly measured experimentally.
+
+The present study investigates the extraction of essential oil from chamomile flowers (\textit{Matricaria chamomilla L.}) via supercritical fluid extraction techniques in addition to the modelling of this process. Chamomile is a medicinal herb widely cultivated in southern and eastern Europe - in countries such as Germany, Hungary, France and Russia. It can also be found outside Europe, for instance in Brazil, as discussed by \citet{Singh2011}. Chamomile is distinguished by its hollow, bright gold cones that house disc or tubular florets surrounded by about fifteen white ray or ligulate florets. The plant has been utilised for its medicinal benefits, serving as an anti-inflammatory, antioxidant, mild astringent, and healing remedy. Chamomile extracts are widely used to calm nerves and mitigate anxiety, hysteria, nightmares, insomnia and other sleep-related conditions, according to \citet{Srivastava2009}. \citet{Orav2010} reported that oil yields from dried chamomile samples ranged from 0.7 to 6.7 mL/kg. The highest yields of essential oil, between 6.1 mL/kg and 6.7 mL/kg, were derived from chamomile sourced from Latvia and Ukraine. In comparison, chamomile from Armenia exhibited a lower oil content of 0.7 mL/kg. \citet{Milovanovic2023} extracted oils from Roman chamomile seeds in a two-stage process. First, supercritical carbon dioxide at pressures of up to 450 bar and temperatures up to 60 $^\circ$C was used for the first extraction. Then, the oil was re-extracted using supercritical CO$_2$ with the addition of ethanol. Through optimisation of the operating pressure, temperature, production cost, fraction of milled seeds and addition of co-solvent, the amount of separated chamomile oil increased from 2.4 to 18.6\% and the content of unsaturated fatty acids up to 88.7\%.
 
 The literature offers various mathematical models to describe the extraction of valuable compounds from biomass. Selecting a process model is case-dependent and requires analysis of each model's specific assumptions about mass transfer and thermodynamic equilibrium.
 
@@ -197,6 +203,8 @@ After an initial data set has been collected and fitted to a mathematical model,
 
 \citet{Duarte2019} investigated compartment models incorporating Michaelis-Menten elimination kinetics for pharmacological applications. The authors designed both static and dynamic experiments for 2- and 3-compartment models using D-optimality criteria. The dynamic experiments for both models involved the determination of the initial concentration in the first compartment and the optimisation of the mass flow rate profile of the drug entering this compartment.
 
+This study is, to the authors knowledge, the first application of m-DoE with a D-optimality criterion to SFE, contrasted with prior SFE studies that relied on static factorial/RSM designs. Calculations are performed on the full dynamic model to compute exact trajectory-wise Jacobians that drive both the sensitivity study and the information measure. On the experimental-design side, the traditional approach of D-criterion formulate a practically implementable DoE with piecewise-constant inputs and a quadratic move-penalty. The m-DoE is solved for various values of pressure (which is assumed to be cosntant during each batch) to assess the non-trivial impact of operating conditions on the model output.
+
 % ===================================================
 % Section: Main
 % ===================================================
@@ -221,7 +229,9 @@ The set of quasi-one-dimensional governing equations in Cartesian coordinates is
 	\end{align}  
 }
 
-where $\rho_f$ is the density of the fluid, $A_f$ is the function which describes a change in the cross-section, $v$ is the velocity, $P$ is the total pressure, $e$ is the internal energy of the fluid, $t$ is time, and $z$ is the spatial direction.
+where $\rho_f$ is the fluid density, $A_f$ is the function which describes a change in the cross-section, $v$ is the velocity, $P$ is the total pressure, $e$ is the internal energy of the fluid, $T$ is the temperature, $t$ is time, and $z$ is the spatial direction.
+
+Equation \ref{EQ: CompressibleEuler_1}-\ref{EQ: CompressibleEuler_3} are the quasi-one-dimensional conservation laws for a variable-area duct representing a packed bed under the quasi-1D and low-Mach assumptions. Equation (\ref{EQ: CompressibleEuler_1}) (continuity) enforces conservation of mass is convected axially with velocity. Equation (\ref{EQ: CompressibleEuler_2}) (axial momentum) balances the momentum of the fluid parcel with the pressure gradient. The viscous wall/porous drag and body forces are neglected in the control-oriented model because pressure is imposed and nearly uniform in the low-velocity regime. Equation (\ref{EQ: CompressibleEuler_3}) (energy) transports internal energy by advection, includes pressure work, and accounts for axial heat conduction via the effective conductivity. The details on treatment of the governing equations are presented in Section \ref{CH: Extraction_model}.
 
 \subsection{Extraction model} \label{CH: Extraction_model}
 \subsubsection{Continuity equation} \label{CH: Continuity}
@@ -372,6 +382,35 @@ As given by Equation \ref{Model_solid}, the solid phase is considered to be stat
 			\label{fig:Correlation_Gamma}
 		\end{figure}
 		
+		The residuals between the predicted and observed values were used to compute an unbiased estimate of the error variance. This variance, combined with the inverse of the design matrix's Gram matrix, yielded the covariance matrix of the coefficient estimates. The standard deviations (standard errors) of the coefficients were then obtained as the square roots of the diagonal elements of this covariance matrix. The variance-covariance is presented in Table \ref{tab:Uncertainty}.
+		
+		\begin{table}[h!]
+			\centering
+			\resizebox{0.75\columnwidth}{!}{%
+				$
+				\begin{gathered}
+					\begin{array}{c|ccc}
+						& \sigma(D_i^R(0)) & \sigma(Re) & \sigma(F) \\
+						\hline
+						\sigma(D_i^R(0)) & 0.0817  &  0.0065 &  -0.0139 \\
+						\sigma(Re)       & 0.0065  &  1.6908 &  -0.0825 \\
+						\sigma(F)        & -0.0139 & -0.0825 &  0.0065 \\
+					\end{array}
+					\\[1.5em]
+					\begin{array}{c|ccc}
+						& \sigma(\Upsilon(0)) & \sigma(Re) & \sigma(F) \\
+						\hline
+						\sigma(\Upsilon(0)) & 0.1727  &  0.0138 &  -0.0294 \\
+						\sigma(Re)          & 0.0138  &  3.5732 &  -0.1744 \\
+						\sigma(F)           & -0.0294 & -0.1744 &  0.0137 \\
+					\end{array}
+				\end{gathered}
+				$
+			}
+			\caption{Variance–covariance matrices for $D_i^R$ (top) and $\Upsilon$ (bottom)}
+			\label{tab:Uncertainty}
+		\end{table}
+				
 		\subsubsection{Heat balance} \label{CH: heat_balance}
 		
 		The heat balance equation describes the evolution of enthalpy in the system, given by Equation \ref{EQ:Enthalpy_equation}:
@@ -399,7 +438,7 @@ As given by Equation \ref{Model_solid}, the solid phase is considered to be stat
 		
 		{\footnotesize
 			\begin{equation}
-				\min_T \left( \underbrace{h\left(t,x\right)}_{\text{Heat balance}} - \underbrace{h\left(T,P,o_f\left(T,P\right)\right)}_{\text{Departure function}} \right)^2
+				\min_T \left( \underbrace{h\left(t,x\right)}_{\text{Heat balance}} - \underbrace{h\left(T,P,\rho_f\left(T,P\right)\right)}_{\text{Departure function}} \right)^2
 				\label{EQ:Enthalpy_root}
 			\end{equation}
 		}
@@ -649,7 +688,7 @@ As given by Equation \ref{Model_solid}, the solid phase is considered to be stat
 		
 		In this work, the decision variables are the inlet temperature ($T^{\text{in}}$) and mass flow rate ($F$), while the pressure is assumed to remain constant during each batch. The optimal design of experiments problem is solved for multiple values of pressure: 100, 125, 150, 175 and 200 bar. The initial state is considered isothermal, so $T^0(z) = T^{\text{in}}(t=0)$.
 		
-		The decision variables are adjusted every 10 minutes and are kept constant within each interval (piecewise constant controls). These controls have lower and upper bounds that match the validated range of the process model detailed by \citet{Sliczniuk2024}. The sampling time is assumed to be 5 minutes, and the total extraction time 600 minutes. The standard deviation $\sigma^2$ is estimated to be 0.03.
+		The decision variables are adjusted every 10 minutes and are kept constant within each interval (piecewise constant controls). These controls have lower and upper bounds that match the validated range of the process model detailed by \citet{Sliczniuk2024}. The sampling time is assumed to be 5 minutes, and the total extraction time 600 minutes.
 		
 		In a real system, the mass flow rate and inlet temperature cannot be changed instantaneously to any arbitrary value, as they depend on the dynamics of the pump and heat exchanger, respectively. To prevent the bang-bang type of control, a penalty term is introduced. Inspired by control problems such as the linear quadratic regulator, a quadratic penalty term is added to the cost function. This penalty increases the cost function value when there are rapid changes in the decision variables. The matrix $\mathcal{R}$ represents the control cost matrix, with its entries chosen so that the control costs are one order of magnitude lower than $-\ln j_D$. The problem formulation is given by Equation \ref{EQ:Formulation_2}:
 		
@@ -731,7 +770,7 @@ As given by Equation \ref{Model_solid}, the solid phase is considered to be stat
 		
 		The results and observations discussed in this article are local and should be considered valid only for the model presented in \citet{Sliczniuk2024}. Although general conclusions about the curvature of the yield curve are independent of the process model, a completely different set of control profiles should be expected if the same technique is applied to a different model. Such strong dependence on the model is one of the most significant limitations of this work. Moreover, the model predicts the data set in a region which has not been validated during previous experiments. On the one hand, this leaves room for model validation, while on the other hand, the obtained set of data points might differ from the predictions.
 		
-		\section{Conclusion } \label{CH: Conclusion}
+		\section{Conclusion} \label{CH: Conclusion}
 		This paper introduces D-optimal experimental design (D-OED) as a model-based method for determining optimal	experimental procedures in chemical engineering problems. D-OED optimises an objective function, which can be geometrically	interpreted as minimising the volume of the uncertainty ellipsoid, thereby maximising the precision of parameter estimates. Compared to the classical formulation of D-OED, this work introduces a penalty term to the cost function to prevent unrealistic rapid changes in operating conditions, ensuring practical feasibility in experimental	implementation. The method is demonstrated through a case study on supercritical extraction, focusing on designing experiments	to improve the precision of the correlation for the diffusivity coefficient $D_i$. While the original experiments were conducted under constant operating conditions, this study explores dynamically changing operating conditions, highlighting the potential of D-OED solutions for both parameter estimation and model validation.
 		
 		The analysis was conducted for multiple pressure cases and the optimal mass flow rate profiles were similar across all instances. The inlet temperature profiles show different patterns, but all start with high temperature that decreases in	the second half of the batch. The resulting yield curves exhibit distinct wavy patterns, which can be explained through	the relationship between the Hessian matrix and the Gaussian curvature of a multi-variable function. The determinant of the Fisher information matrix, central to the D-optimality criterion, is proportional to the Gaussian curvature of the parameter manifold. This curvature reflects the system’s sensitivity to parameter changes and is maximised by the D-OED method. The observed wavy behaviour of the yield curves is thus a manifestation of the high-curvature regions identified by the optimisation, where the system’s response to experimental conditions is most informative.
@@ -754,94 +793,119 @@ As given by Equation \ref{Model_solid}, the solid phase is considered to be stat
 %\subsection{Cardano's Formula} \label{CH: Cardano}
 %\subfile{Sections/Cardano}
 
-%\clearpage
+\clearpage
 %\newpage
 
-\nomenclature[A]{\(A\)}{Information matrix}
-\nomenclature[A]{\(B\)}{Weighted score vector}
-\nomenclature[A]{\(C\)}{Weighted sum of squared deviations}
-\nomenclature[A]{\(\mathcal{F}\)}{Fisher information}
-\nomenclature[A]{\(\mathcal{R}\)}{Control cost matrix}
-\nomenclature[A]{\(A\)}{Total cross-section of the bed \nomunit{m²}}
-\nomenclature[A]{\(A_f\)}{Cross-section of the bed occupied by the fluid \nomunit{m²}}
-\nomenclature[A]{\(B\)}{Pressure dependent parameter of P-R EoS \nomunit{m²}}
-\nomenclature[A]{\(c_f\)}{Concentration of solute in the fluid phase \nomunit{kg/m³}}
-\nomenclature[A]{\(c_f^*\)}{Concentration of solute at the solid-fluid interface \nomunit{kg/m³}}
-\nomenclature[A]{\(c_p\)}{Concentration of solute in the core of a pore \nomunit{kg/m³}}
-\nomenclature[A]{\(c_s\)}{Concentration of solute in the solid phase \nomunit{kg/m³}}
-\nomenclature[A]{\(c_s^*\)}{Concentration of solute at the solid-fluid interface \nomunit{kg/m³}}
-\nomenclature[A]{\(c_{f0}\)}{Initial concentration of solute in the fluid phase \nomunit{kg/m³}}
-\nomenclature[A]{\(c_{pf}\)}{Concentration of solute at the pore opening \nomunit{kg/m³}}
-\nomenclature[A]{\(c_{s0}\)}{Initial concentration of solute in the solid phase \nomunit{kg/m³}}
-\nomenclature[A]{\(D_e^M\)}{Axial diffusion coefficient \nomunit{m²/s}}
-\nomenclature[A]{\(D_i\)}{Internal diffusion coefficient \nomunit{m²/s}}
-\nomenclature[A]{\(D_i^R\)}{Reference value of internal diffusion coefficient \nomunit{m²/s}}
+\nomenclature[A]{\(A\)}{Information matrix \nomunit{[-]}}
+\nomenclature[A]{\(A\)}{Total cross-section of the bed \nomunit{$m^2$}}
+\nomenclature[A]{\(A_f\)}{Cross-section of the bed occupied by the fluid \nomunit{$m^2$}}
+\nomenclature[A]{\(B\)}{Pressure dependent parameter of P-R EoS \nomunit{$m^2$}}
+\nomenclature[A]{\(B\)}{Weighted score vector \nomunit{[-]}}
+\nomenclature[A]{\(C\)}{Weighted sum of squared deviations \nomunit{[-]}}
+\nomenclature[A]{\(c_f\)}{Concentration of solute in the fluid phase \nomunit{kg/$m^3$}}
+\nomenclature[A]{\(c_f^*\)}{Concentration of solute at the solid-fluid interface \nomunit{kg/$m^3$}}
+\nomenclature[A]{\(c_{f0}\)}{Initial concentration of solute in the fluid phase \nomunit{kg/$m^3$}}
+\nomenclature[A]{\(c_p\)}{Concentration of solute in the core of a pore \nomunit{kg/$m^3$}}
+\nomenclature[A]{\(c_{pf}\)}{Concentration of solute at the pore opening \nomunit{kg/$m^3$}}
+\nomenclature[A]{\(c_s\)}{Concentration of solute in the solid phase \nomunit{kg/$m^3$}}
+\nomenclature[A]{\(c_s^*\)}{Concentration of solute at the solid-fluid interface \nomunit{kg/$m^3$}}
+\nomenclature[A]{\(c_{s0}\)}{Initial concentration of solute in the solid phase \nomunit{kg/$m^3$}}
+\nomenclature[A]{\(D_e^M\)}{Axial diffusion coefficient \nomunit{$m^2$/s}}
+\nomenclature[A]{\(D_i\)}{Internal diffusion coefficient \nomunit{$m^2$/s}}
+\nomenclature[A]{\(D_i^R\)}{Reference value of internal diffusion coefficient \nomunit{$m^2$/s}}
 \nomenclature[A]{\(e\)}{Internal energy \nomunit{J/kg}}
 \nomenclature[A]{\(F\)}{Mass flow rate \nomunit{kg/s}}
-\nomenclature[A]{\(G\)}{Vector of discretized differential equations}
+\nomenclature[A]{\(G\)}{Vector of discretized differential equations \nomunit{[-]}}
 \nomenclature[A]{\(h\)}{Enthalpy \nomunit{kJ/kg}}
-\nomenclature[A]{\(J\)}{Jacobian}
-\nomenclature[A]{\(j\)}{Objective function}
-\nomenclature[A]{\(k_m\)}{Mass partition coefficient}
-\nomenclature[A]{\(k_p\)}{Volumetric partition coefficient}
+\nomenclature[A]{\(J\)}{Jacobian \nomunit{[-]}}
+\nomenclature[A]{\(j\)}{Objective function \nomunit{[-]}}
+\nomenclature[A]{\(k_m\)}{Mass partition coefficient \nomunit{[-]}}
+\nomenclature[A]{\(k_p\)}{Volumetric partition coefficient \nomunit{[-]}}
 \nomenclature[A]{\(L\)}{Length of the fixed bed \nomunit{m}}
 \nomenclature[A]{\(l\)}{Characteristic dimension of particles \nomunit{m}}
-\nomenclature[A]{\(n_\theta\)}{Number of analyzed parameters}
-\nomenclature[A]{\(n_y\)}{Number of measurements}
-\nomenclature[A]{\(N_z\)}{Number of discretized points in z-direction}
+\nomenclature[A]{\(n_\theta\)}{Number of analyzed parameters \nomunit{[-]}}
+\nomenclature[A]{\(n_y\)}{Number of measurements \nomunit{[-]}}
+\nomenclature[A]{\(N_z\)}{Number of discretized points in z-direction \nomunit{[-]}}
 \nomenclature[A]{\(P\)}{Pressure \nomunit{bar}}
-\nomenclature[A]{\(p\)}{Probability distribution model}
-\nomenclature[A]{\(P_r\)}{Reduced pressure}
-\nomenclature[A]{\(Q\)}{Weighting matrix}
+\nomenclature[A]{\(P_r\)}{Reduced pressure \nomunit{[-]}}
+\nomenclature[A]{\(p\)}{Probability distribution model \nomunit{[-]}}
+\nomenclature[A]{\(Q\)}{Weighting matrix \nomunit{[-]}}
+\nomenclature[A]{\(Re\)}{Reynolds number \nomunit{[-]}}
 \nomenclature[A]{\(r\)}{Particle radius \nomunit{m}}
-\nomenclature[A]{\(Re\)}{Reynolds number}
-\nomenclature[A]{\(r_e\)}{Mass transfer kinetic term \nomunit{kg/m³/s}}
+\nomenclature[A]{\(r_e\)}{Mass transfer kinetic term \nomunit{kg/$m^3$/s}}
 \nomenclature[A]{\(T\)}{Temperature \nomunit{K}}
+\nomenclature[A]{\(T_{in}\)}{Inlet temperature \nomunit{K}}
+\nomenclature[A]{\(T_{out}\)}{Outlet temperature \nomunit{K}}
+\nomenclature[A]{\(T_r\)}{Reduced temperature \nomunit{[-]}}
 \nomenclature[A]{\(t\)}{Time \nomunit{s}}
 \nomenclature[A]{\(t_0\)}{Initial extraction time \nomunit{s}}
 \nomenclature[A]{\(t_f\)}{Total extraction time \nomunit{s}}
-\nomenclature[A]{\(T_r\)}{Reduced temperature}
-\nomenclature[A]{\(T_{in}\)}{Inlet temperature \nomunit{K}}
-\nomenclature[A]{\(T_{out}\)}{Outlet temperature \nomunit{K}}
 \nomenclature[A]{\(u\)}{Superficial velocity \nomunit{m/s}}
 \nomenclature[A]{\(v\)}{Linear velocity \nomunit{m/s}}
-\nomenclature[A]{\(x\)}{State vector}
+\nomenclature[A]{\(x\)}{State vector \nomunit{[-]}}
 \nomenclature[A]{\(Y\)}{Yield measurement \nomunit{g}}
 \nomenclature[A]{\(y\)}{Predicted extraction yield \nomunit{g}}
-\nomenclature[A]{\(Z\)}{Compressibility factor}
+\nomenclature[A]{\(Z\)}{Compressibility factor \nomunit{[-]}}
 \nomenclature[A]{\(z\)}{Spatial direction \nomunit{m}}
 
+% Non-latin symbols
+\nomenclature[B]{\(\mathcal{F}\)}{Fisher information \nomunit{[-]}}
+\nomenclature[B]{\(\mathcal{R}\)}{Control cost matrix \nomunit{[-]}}
+
 % Greek symbols
-\nomenclature[B]{\(\alpha\)}{Temperature-dependent function in the P-R EoS}
-\nomenclature[B]{\(\Delta_\theta\)}{Residual term of the parameters}
-\nomenclature[B]{\(\Delta_y\)}{Residual term of the measurement error \nomunit{g}}
-\nomenclature[B]{\(\epsilon\)}{Unobservable error}
-\nomenclature[B]{\(\gamma\)}{Decaying function}
-\nomenclature[B]{\(\kappa\)}{Quadratic function of the acentric factor}
-\nomenclature[B]{\(\mu\)}{Sphericity coefficient}
-\nomenclature[B]{\(\phi\)}{Bed porosity}
-\nomenclature[B]{\(\pi\)}{Probability density}
-\nomenclature[B]{\(\rho_f\)}{Fluid density \nomunit{kg/m³}}
-\nomenclature[B]{\(\rho_s\)}{Bulk density of solid \nomunit{kg/m³}}
-\nomenclature[B]{\(\Sigma\)}{Covariance matrix}
-\nomenclature[B]{\(\sigma\)}{Standard deviation}
-\nomenclature[B]{\(\Sigma_\theta\)}{Parameter uncertainty matrix}
-\nomenclature[B]{\(\Sigma_Y\)}{Measurement covariance matrix}
-\nomenclature[B]{\(\Theta\)}{Parameter space}
-\nomenclature[B]{\(\theta\)}{Vector of analysed parameters}
-\nomenclature[B]{\(\Upsilon\)}{Decay coefficient}
-\nomenclature[B]{\(\varkappa\)}{An arbitrary function of \(\mathcal{A}\)}
-\nomenclature[B]{\(\Xi\)}{Matrix of experimental conditions}
-\nomenclature[B]{\(\xi\)}{Vector of experimental conditions}
+\nomenclature[C]{\(\alpha\)}{Temperature-dependent function in the P-R EoS \nomunit{[-]}}
+\nomenclature[C]{\(\Delta_\theta\)}{Residual term of the parameters \nomunit{g}}
+\nomenclature[C]{\(\Delta_y\)}{Residual term of the measurement error \nomunit{g}}
+\nomenclature[C]{\(\epsilon\)}{Unobservable error \nomunit{g}}
+\nomenclature[C]{\(\gamma\)}{Decaying function \nomunit{[-]}}
+\nomenclature[C]{\(\kappa\)}{Quadratic function of the acentric factor \nomunit{[-]}}
+\nomenclature[C]{\(\mu\)}{Sphericity coefficient \nomunit{[-]}}
+\nomenclature[C]{\(\phi\)}{Bed porosity \nomunit{[-]}}
+\nomenclature[C]{\(\pi\)}{Probability density \nomunit{[-]}}
+\nomenclature[C]{\(\rho_f\)}{Fluid density \nomunit{kg/$m^3$}}
+\nomenclature[C]{\(\rho_s\)}{Bulk density of solid \nomunit{kg/$m^3$}}
+\nomenclature[C]{\(\Sigma\)}{Covariance matrix \nomunit{[-]}}
+\nomenclature[C]{\(\Sigma_\theta\)}{Parameter uncertainty matrix \nomunit{[-]}}
+\nomenclature[C]{\(\Sigma_Y\)}{Measurement covariance matrix \nomunit{[-]}}
+\nomenclature[C]{\(\sigma\)}{Standard deviation \nomunit{[-]}}
+\nomenclature[C]{\(\Theta\)}{Parameter space \nomunit{[-]}}
+\nomenclature[C]{\(\theta\)}{Vector of analysed parameters \nomunit{[-]}}
+\nomenclature[C]{\(\Upsilon\)}{Decay coefficient \nomunit{[-]}}
+\nomenclature[C]{\(\varkappa\)}{An arbitrary function of \(\mathcal{A}\)}
+\nomenclature[C]{\(\Xi\)}{Matrix of experimental conditions \nomunit{[-]}}
+\nomenclature[C]{\(\xi\)}{Vector of experimental conditions \nomunit{[-]}}
 
 % Abbreviations
-\nomenclature[C]{BIC}{Broke-and-Intact Cell model}
-\nomenclature[C]{DoE}{Design of Experiment}
-\nomenclature[C]{HBD}{Hot Ball Diffusion}
-\nomenclature[C]{m-DoE}{Model-based Design of Experiment}
-\nomenclature[C]{P-R EoS}{Peng-Robinson Equation of State}
-\nomenclature[C]{SC}{Shrinking Core}
-\nomenclature[C]{SFE}{Supercritical Fluid Extraction}
+\nomenclature[D]{BIC}{Broke-and-Intact Cell model}
+\nomenclature[D]{DoE}{Design of Experiment}
+\nomenclature[D]{HBD}{Hot Ball Diffusion}
+\nomenclature[D]{m-DoE}{Model-based Design of Experiment}
+\nomenclature[D]{P-R EoS}{Peng-Robinson Equation of State}
+\nomenclature[D]{SC}{Shrinking Core}
+\nomenclature[D]{SFE}{Supercritical Fluid Extraction}
 \printnomenclature
+
+\clearpage
+\onecolumn
+\appendix
+\section{Literature Review} \label{CH: Literature}
+Table \ref{fig: SFE_Literature} provides a list of studies on SFE including the modeling part presented from 2014 onwards
+
+\begin{table*}[h!]
+	\centering
+	\resizebox{\textwidth}{!}{%
+	\begin{tabular}{|p{2.5cm}|p{2cm}|p{1.75cm}|p{4.5cm}|p{1.5cm}|p{1.5cm}|p{3cm}|}
+		\hline
+		\textbf{Reference} & \textbf{Substrate} & \textbf{Solvent} & \textbf{Model} & \textbf{T (°C)} & \textbf{P (MPa)} & \textbf{Flow-rate of CO$_2$} \\
+		\hline
+		\citet{Botelho2015} & Black sesame seed & CO$_2$ & BIC (\citet{Sovova1994}) \newline Local adsorption equilibrium model (\citet{Goto1993}) &  40, 60 & 20-40 & 5.9$\times 10^{-5}$ [kg/s]\\ \hline
+		\citet{Melo2014} & Eucalyptus globulus bark & CO$_2$, \newline Co-solvent: ethanol & Diffusion model (\citet{Crank1975}) \newline \citet{Brunner1994} \newline Desorption model (\citet{Cocero2001}) \newline SSP model (\citet{Gaspar2003})&  40 & 20 & 2.78$\times 10^{-3}$ [kg/s]\\ \hline
+		\citet{Liu2014} & Calycopteris floribunda leaves & CO$_2$, \newline Co-solvent: ethanol & BIC (\citet{Sovova1994}) \newline Diffusion model (\citet{Crank1975}) &  30–50 & 10-30 & 4.17$\times 10^{-4}$ [kg/s]\\ \hline
+		\citet{Tomita2014} & Rice bran & CO$_2$ & Partitioning coefficient model (\citet{Kubatova2002}) & 40–80 & 20-40 & 0.17-1.5$\times 10^{-4}$ [L/s]\\ 
+		\hline
+	\end{tabular} }
+	\caption{SFE studies encompassing modeling part}
+	\label{fig: SFE_Literature}
+\end{table*}
 
 \end{document}

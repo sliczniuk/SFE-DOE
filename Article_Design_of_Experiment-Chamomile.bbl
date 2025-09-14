@@ -1,4 +1,4 @@
-\begin{thebibliography}{38}
+\begin{thebibliography}{52}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -119,6 +119,48 @@ G.~Sodeifian and S.A. Sajadian.
 \newblock \emph{Chemical Engineering Research and Design}, 2019.
 \newblock ISSN 0263-8762.
 \newblock \doi{10.1016/j.cherd.2018.12.020}.
+
+\bibitem[Bagheri et~al.(2025)Bagheri, Hashemipour, Saydaxmetova, Abosaoda,
+  AL~Fahaid, and Ahmad]{Bagheri2025}
+Hamidreza Bagheri, Hassan Hashemipour, Shaxnoza Saydaxmetova, Munthar~Kadhim
+  Abosaoda, Ali Audah~Fahaid AL~Fahaid, and Irfan Ahmad.
+\newblock Application of theoretical and semi-empirical equations for modeling
+  of maprotiline hydrochloride (anti-depressant) drug solubility in sc-co2.
+\newblock \emph{Measurement}, 253:\penalty0 117508, September 2025.
+\newblock ISSN 0263-2241.
+\newblock \doi{10.1016/j.measurement.2025.117508}.
+
+\bibitem[Tabebordbar et~al.(2024)Tabebordbar, Bagheri, Abosaoda, Hsu, and
+  Kubaev]{Tabebordbar2024}
+Mina Tabebordbar, Hamidreza Bagheri, Munthar~Kadhim Abosaoda, Chou-Yi Hsu, and
+  Aziz Kubaev.
+\newblock New solubility data of amoxapine (anti-depressant) drug in
+  supercritical co2: Application of cubic eoss.
+\newblock \emph{Journal of Drug Delivery Science and Technology}, 101:\penalty0
+  106281, November 2024.
+\newblock ISSN 1773-2247.
+\newblock \doi{10.1016/j.jddst.2024.106281}.
+
+\bibitem[Sheikhi-Kouhsar et~al.(2024)Sheikhi-Kouhsar, Bagheri, Alsaikhan,
+  Aldhalmi, and Ahmed]{SheikhiKouhsar2024}
+Mohammadreza Sheikhi-Kouhsar, Hamidreza Bagheri, Fahad Alsaikhan, Ahmed~Khalid
+  Aldhalmi, and Hanan~Hassan Ahmed.
+\newblock Solubility of digitoxin in supercritical co2: Experimental study and
+  modeling.
+\newblock \emph{European Journal of Pharmaceutical Sciences}, 195:\penalty0
+  106731, April 2024.
+\newblock ISSN 0928-0987.
+\newblock \doi{10.1016/j.ejps.2024.106731}.
+
+\bibitem[Bagheri et~al.(2022)Bagheri, Notej, Shahsavari, and
+  Hashemipour]{Bagheri2022}
+Hamidreza Bagheri, Behrouz Notej, Sara Shahsavari, and Hassan Hashemipour.
+\newblock Supercritical carbon dioxide utilization in drug delivery:
+  Experimental study and modeling of paracetamol solubility.
+\newblock \emph{European Journal of Pharmaceutical Sciences}, 177:\penalty0
+  106273, October 2022.
+\newblock ISSN 0928-0987.
+\newblock \doi{10.1016/j.ejps.2022.106273}.
 
 \bibitem[Singh et~al.(2011)Singh, Khanam, Misraand, and Srivastava]{Singh2011}
 O.~Singh, Z.~Khanam, N.~Misraand, and M.K. Srivastava.
@@ -296,8 +338,9 @@ O.~Sliczniuk and P.~Oinas.
   Rarey]{Gmehling2019}
 J.~Gmehling, M.~Kleiber, B.~Kolbe, and J.~Rarey.
 \newblock \emph{Chemical Thermodynamics for Process Simulation}.
-\newblock Wiley, Mar 2019.
-\newblock \doi{10.1002/9783527809479}.
+\newblock Wiley-VCH, Weinheim, second, completely revised and enlarged edition
+  edition, 2019.
+\newblock ISBN 9783527809479.
 
 \bibitem[Walter and Pronzato(2010)]{Walter2010}
 E.~Walter and L.~Pronzato.
@@ -310,6 +353,99 @@ David~Mautner Himmelblau.
 \newblock \emph{Process analysis by statistical methods}.
 \newblock Wiley, New York, 1970.
 \newblock ISBN 047139985X.
-\newblock [by] David M. Himmelblau., Includes bibliographical references.
+
+\bibitem[Botelho et~al.(2015)Botelho, Santos, Araújo, Braga, Gomes-Leal,
+  Carvalho~Junior, Meireles, and Oliveira]{Botelho2015}
+José Rafael~S. Botelho, Adriano~Guimarães Santos, Marilena~Emmi Araújo, Mara
+  Elga~M. Braga, Walace Gomes-Leal, Raul~N. Carvalho~Junior, M.~Angela~A.
+  Meireles, and Mozaniel~Santana Oliveira.
+\newblock Copaiba (copaifera sp.) leaf extracts obtained by co2 supercritical
+  fluid extraction: Isotherms of global yield, kinetics data, antioxidant
+  activity and neuroprotective effects.
+\newblock \emph{The Journal of Supercritical Fluids}, 98:\penalty0 167--171,
+  March 2015.
+\newblock ISSN 0896-8446.
+\newblock \doi{10.1016/j.supflu.2014.12.006}.
+
+\bibitem[Goto et~al.(1993)Goto, Sato, and Hirose]{Goto1993}
+Motonobu Goto, Masaki Sato, and Tsutomu Hirose.
+\newblock Extraction of peppermint oil by supercritical carbon dioxide.
+\newblock \emph{JOURNAL OF CHEMICAL ENGINEERING OF JAPAN}, 26\penalty0
+  (4):\penalty0 401--407, 1993.
+\newblock ISSN 1881-1299.
+\newblock \doi{10.1252/jcej.26.401}.
+
+\bibitem[de~Melo et~al.(2014)de~Melo, Domingues, Sova, Lack, Seidlitz,
+  Lang~Jr., Silvestre, and Silva]{Melo2014}
+M.M.R. de~Melo, R.M.A. Domingues, M.~Sova, E.~Lack, H.~Seidlitz, F.~Lang~Jr.,
+  A.J.D. Silvestre, and C.M. Silva.
+\newblock Scale-up studies of the supercritical fluid extraction of triterpenic
+  acids from eucalyptus globulus bark.
+\newblock \emph{The Journal of Supercritical Fluids}, 95:\penalty0 44--50,
+  November 2014.
+\newblock ISSN 0896-8446.
+\newblock \doi{10.1016/j.supflu.2014.07.030}.
+
+\bibitem[Crank(1975)]{Crank1975}
+John Crank.
+\newblock \emph{The mathematics of diffusion}.
+\newblock Univ. Pr., Oxford, 2. ed., repr. edition, 1975.
+\newblock ISBN 9780198534112.
+
+\bibitem[Brunner(1994)]{Brunner1994}
+Gerd Brunner.
+\newblock \emph{Gas Extraction: An Introduction to Fundamentals of
+  Supercritical Fluids and the Application to Separation Processes}.
+\newblock Number~4 in Topics in Physical Chemistry. Steinkopff, Heidelberg,
+  1994.
+\newblock ISBN 9783662073803.
+
+\bibitem[Cocero and Garcia(2001)]{Cocero2001}
+M.J Cocero and J~Garcia.
+\newblock Mathematical model of supercritical extraction applied to oil seed
+  extraction by co2+saturated alcohol - i. desorption model.
+\newblock \emph{The Journal of Supercritical Fluids}, 20\penalty0 (3):\penalty0
+  229--243, August 2001.
+\newblock ISSN 0896-8446.
+\newblock \doi{10.1016/s0896-8446(01)00068-7}.
+
+\bibitem[Gaspar et~al.(2003)Gaspar, Lu, Santos, and Al-Duri]{Gaspar2003}
+F.~Gaspar, T.~Lu, R.~Santos, and B.~Al-Duri.
+\newblock Modelling the extraction of essential oils with compressed carbon
+  dioxide.
+\newblock \emph{The Journal of Supercritical Fluids}, 25\penalty0 (3):\penalty0
+  247--260, April 2003.
+\newblock ISSN 0896-8446.
+\newblock \doi{10.1016/s0896-8446(02)00149-3}.
+
+\bibitem[Liu et~al.(2014)Liu, Yang, Liu, Xu, and Wu]{Liu2014}
+Xiong Liu, Dong-Liang Yang, Jia-Jia Liu, Kuan Xu, and Guo-Hui Wu.
+\newblock Modeling of supercritical fluid extraction of flavonoids from
+  calycopteris floribunda leaves.
+\newblock \emph{Chemical Papers}, 68\penalty0 (3), January 2014.
+\newblock ISSN 1336-9075.
+\newblock \doi{10.2478/s11696-013-0451-4}.
+
+\bibitem[Tomita et~al.(2014)Tomita, Machmudah, Wahyudiono, Fukuzato, Kanda,
+  Quitain, Sasaki, and Goto]{Tomita2014}
+Karin Tomita, Siti Machmudah, Wahyudiono, Ryuichi Fukuzato, Hideki Kanda,
+  Armando~T. Quitain, Mitsuru Sasaki, and Motonobu Goto.
+\newblock Extraction of rice bran oil by supercritical carbon dioxide and
+  solubility consideration.
+\newblock \emph{Separation and Purification Technology}, 125:\penalty0
+  319--325, April 2014.
+\newblock ISSN 1383-5866.
+\newblock \doi{10.1016/j.seppur.2014.02.008}.
+
+\bibitem[Kubatova et~al.(2002)Kubatova, Jansen, Vaudoisot, and
+  Hawthorne]{Kubatova2002}
+Alena Kubatova, Boris Jansen, Jean-Francois Vaudoisot, and Steven~B Hawthorne.
+\newblock Thermodynamic and kinetic models for the extraction of essential oil
+  from savory and polycyclic aromatic hydrocarbons from soil with hot
+  (subcritical) water and supercritical co2.
+\newblock \emph{Journal of Chromatography A}, 975\penalty0 (1):\penalty0
+  175--188, October 2002.
+\newblock ISSN 0021-9673.
+\newblock \doi{10.1016/s0021-9673(02)01329-8}.
 
 \end{thebibliography}
