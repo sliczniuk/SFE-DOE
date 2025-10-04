@@ -1,4 +1,4 @@
-\begin{thebibliography}{52}
+\begin{thebibliography}{68}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -354,6 +354,26 @@ David~Mautner Himmelblau.
 \newblock Wiley, New York, 1970.
 \newblock ISBN 047139985X.
 
+\bibitem[Simandi et~al.(1998)Simandi, Oszagyan, Lemberkovics, Kery, Kaszacs,
+  Thyrion, and Matyas]{Simandi1998}
+Bela Simandi, Marianna Oszagyan, Eva Lemberkovics, Agnes Kery, Jean Kaszacs,
+  Fernand Thyrion, and Tunde Matyas.
+\newblock Supercritical carbon dioxide extraction and fractionation of oregano
+  oleoresin.
+\newblock \emph{Food Research International}, 31\penalty0 (10):\penalty0
+  723--728, December 1998.
+\newblock ISSN 0963-9969.
+\newblock \doi{10.1016/s0963-9969(99)00051-4}.
+
+\bibitem[Hiraga et~al.(2025)Hiraga, Yoshida, Aoki, and Watanabe]{Hiraga2025}
+Yuya Hiraga, Chinatsu Yoshida, Konomi Aoki, and Masaru Watanabe.
+\newblock Efficient decaffeination of green coffee beans using pressure swing
+  supercritical co2 extraction.
+\newblock \emph{Innovative Food Science and Emerging Technologies},
+  104:\penalty0 104154, August 2025.
+\newblock ISSN 1466-8564.
+\newblock \doi{10.1016/j.ifset.2025.104154}.
+
 \bibitem[Botelho et~al.(2015)Botelho, Santos, Araújo, Braga, Gomes-Leal,
   Carvalho~Junior, Meireles, and Oliveira]{Botelho2015}
 José Rafael~S. Botelho, Adriano~Guimarães Santos, Marilena~Emmi Araújo, Mara
@@ -447,5 +467,141 @@ Alena Kubatova, Boris Jansen, Jean-Francois Vaudoisot, and Steven~B Hawthorne.
   175--188, October 2002.
 \newblock ISSN 0021-9673.
 \newblock \doi{10.1016/s0021-9673(02)01329-8}.
+
+\bibitem[Kupski et~al.(2017)Kupski, Klein, da~Silva, Palú, Guirardello, and
+  Vieira]{Kupski2017}
+Sérgio~Carlos Kupski, Elissandro~Jair Klein, Edson~Antônio da~Silva, Fernando
+  Palú, Reginaldo Guirardello, and Melissa Gurgel~Adeodato Vieira.
+\newblock Mathematical modeling of supercritical co 2 extraction of hops (
+  humulus lupulus l.).
+\newblock \emph{The Journal of Supercritical Fluids}, 130:\penalty0 347--356,
+  December 2017.
+\newblock ISSN 0896-8446.
+\newblock \doi{10.1016/j.supflu.2017.06.011}.
+
+\bibitem[Pavlić et~al.(2017)Pavlić, Bera, Vidović, Ilić, and
+  Zeković]{Pavlic2017}
+Branimir Pavlić, Oskar Bera, Senka Vidović, Lazar Ilić, and Zoran Zeković.
+\newblock Extraction kinetics and ann simulation of supercritical fluid
+  extraction of sage herbal dust.
+\newblock \emph{The Journal of Supercritical Fluids}, 130:\penalty0 327--336,
+  December 2017.
+\newblock ISSN 0896-8446.
+\newblock \doi{10.1016/j.supflu.2017.06.015}.
+
+\bibitem[Kandiah and Spiro(1990)]{Kandiah1990}
+M.~Kandiah and M.~Spiro.
+\newblock Extraction of ginger rhizome: kinetic studies with supercritical
+  carbon dioxide.
+\newblock \emph{International Journal of Food Science and Technology},
+  25\penalty0 (3):\penalty0 328--338, June 1990.
+\newblock ISSN 1365-2621.
+\newblock \doi{10.1111/j.1365-2621.1990.tb01089.x}.
+
+\bibitem[Sartori et~al.(2017)Sartori, Higino, Bastos, and Mendes]{Sartori2017}
+R.B. Sartori, M.L. Higino, L.H.P. Bastos, and M.F. Mendes.
+\newblock Supercritical extraction of pesticides from banana: Experimental and
+  modeling.
+\newblock \emph{The Journal of Supercritical Fluids}, 128:\penalty0 149--158,
+  October 2017.
+\newblock ISSN 0896-8446.
+\newblock \doi{10.1016/j.supflu.2017.05.027}.
+
+\bibitem[Reverchon et~al.(1994)Reverchon, Sesti~Osseo, and
+  Gorgoglione]{Reverchon1994}
+Ernesto Reverchon, Libero Sesti~Osseo, and Domenico Gorgoglione.
+\newblock Supercritical co2 extraction of basil oil: Characterization of
+  products and process modeling.
+\newblock \emph{The Journal of Supercritical Fluids}, 7\penalty0 (3):\penalty0
+  185--190, September 1994.
+\newblock ISSN 0896-8446.
+\newblock \doi{10.1016/0896-8446(94)90024-8}.
+
+\bibitem[Esquıivel et~al.(1999)Esquıivel, Bernardo-Gil, and
+  King]{Esquivel1999}
+M.M. Esquıivel, M.G. Bernardo-Gil, and M.B. King.
+\newblock Mathematical models for supercritical extraction of olive husk oil.
+\newblock \emph{The Journal of Supercritical Fluids}, 16\penalty0 (1):\penalty0
+  43--58, September 1999.
+\newblock ISSN 0896-8446.
+\newblock \doi{10.1016/s0896-8446(99)00014-5}.
+
+\bibitem[Hall et~al.(2018)Hall, Mayer, Mazzutti, and Ferreira]{Hall2018}
+Rafaela~Marise Hall, Diego~Alex Mayer, Simone Mazzutti, and Sandra
+  Regina~Salvador Ferreira.
+\newblock Simulating large scale sfe applied to recover bioactive compounds
+  from papaya seeds.
+\newblock \emph{The Journal of Supercritical Fluids}, 140:\penalty0 302--309,
+  October 2018.
+\newblock ISSN 0896-8446.
+\newblock \doi{10.1016/j.supflu.2018.07.013}.
+
+\bibitem[Putra et~al.(2018)Putra, Idham, Machmudah, Ruslan, and
+  Che~Yunus]{Putra2018}
+Nicky~Rahmana Putra, Zuhaili~Binti Idham, Siti Machmudah, Muhammad Syafiq
+  Hazwan~bin Ruslan, and Mohd~Azizi Che~Yunus.
+\newblock Extraction of peanut skin oil by modified supercritical carbon
+  dioxide: Empirical modelling and optimization.
+\newblock \emph{Separation Science and Technology}, 53\penalty0 (17):\penalty0
+  2695--2703, April 2018.
+\newblock ISSN 1520-5754.
+\newblock \doi{10.1080/01496395.2018.1459705}.
+
+\bibitem[Pavlic et~al.(2020)Pavlic, Pezo, Maric, Tukuljac, Zekovic, Solarov,
+  and Teslic]{Pavlic2020}
+Branimir Pavlic, Lato Pezo, Bosko Maric, Lidija~Peic Tukuljac, Zoran Zekovic,
+  Marija~Bodroza Solarov, and Nemanja Teslic.
+\newblock Supercritical fluid extraction of raspberry seed oil: Experiments and
+  modelling.
+\newblock \emph{The Journal of Supercritical Fluids}, 157:\penalty0 104687,
+  March 2020.
+\newblock ISSN 0896-8446.
+\newblock \doi{10.1016/j.supflu.2019.104687}.
+
+\bibitem[Priyanka and Khanam(2020)]{Priyanka2020}
+Priyanka and Shabina Khanam.
+\newblock Selection of suitable model for the supercritical fluid extraction of
+  carrot seed oil: A parametric study.
+\newblock \emph{LWT}, 119:\penalty0 108815, February 2020.
+\newblock ISSN 0023-6438.
+\newblock \doi{10.1016/j.lwt.2019.108815}.
+
+\bibitem[Reverchon and Marrone(1997)]{Reverchon1997}
+E.~Reverchon and C.~Marrone.
+\newblock Supercritical extraction of clove bud essential oil: isolation and
+  mathematical modeling.
+\newblock \emph{Chemical Engineering Science}, 52\penalty0 (20):\penalty0
+  3421--3428, October 1997.
+\newblock ISSN 0009-2509.
+\newblock \doi{10.1016/s0009-2509(97)00172-3}.
+
+\bibitem[Casas et~al.(2021)Casas, Lopez-Hortas, Diaz-Reinoso, Moure, and
+  Dominguez]{Casas2021}
+Maria~P. Casas, Lucia Lopez-Hortas, Beatriz Diaz-Reinoso, Andres Moure, and
+  Herminia Dominguez.
+\newblock Supercritical co2 extracts from acacia dealbata flowers.
+\newblock \emph{The Journal of Supercritical Fluids}, 173:\penalty0 105223,
+  July 2021.
+\newblock ISSN 0896-8446.
+\newblock \doi{10.1016/j.supflu.2021.105223}.
+
+\bibitem[Acosta et~al.(2014)Acosta, Bolzan, and Livia]{Acosta2014}
+E.D. Acosta, A.~Bolzan, and M.A. Livia.
+\newblock Supercritical extraction of residues mezilaurus itauba and
+  application of mathematical models.
+\newblock \emph{The Journal of Supercritical Fluids}, 95:\penalty0 92--99,
+  November 2014.
+\newblock ISSN 0896-8446.
+\newblock \doi{10.1016/j.supflu.2014.08.008}.
+
+\bibitem[Zekovic et~al.(2014)Zekovic, Filip, Vidovic, Jokic, and
+  Svilovic]{Zekovic2014}
+Zoran Zekovic, Snezana Filip, Senka Vidovic, Stela Jokic, and Sandra Svilovic.
+\newblock Mathematical modeling of ocimum basilicum l. supercritical co2
+  extraction.
+\newblock \emph{Chemical Engineering and Technology}, 37\penalty0
+  (12):\penalty0 2123--2128, November 2014.
+\newblock ISSN 1521-4125.
+\newblock \doi{10.1002/ceat.201400322}.
 
 \end{thebibliography}

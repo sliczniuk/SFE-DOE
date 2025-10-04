@@ -69,6 +69,8 @@
 
 \usepackage{multirow}
 
+\usepackage[switch]{lineno}
+
 % --------------------------------------------------------------------
 % Packages Configurations
 \usepackage{enumitem}
@@ -142,7 +144,7 @@
 % ===================================================
 
 \section{Introduction}
-
+\linenumbers
 %\subfile{Sections/introduction_imp}
 Supercritical CO2 extraction is a green extraction method that uses carbon dioxide in a supercritical state (above its critical point of 31.1 $^\circ$C and 73.8 bar) to extract compounds from materials. This is one of the most popular applications of supercritical fluids, which was described by many researchers, for example \citet{Sodeifian2017}, \citet{Reverchon1993} and \citet{Sovova1994}. Traditional methods, such as distillation and organic solvent extraction, are commonly employed although they have drawbacks. Distillation involves high temperatures that can lead to the thermal degradation of heat-sensitive compounds. This limitation has increased the popularity of alternative techniques, such as supercritical fluid extraction. Supercritical CO$_2$ is attractive due to its distinctive properties: it is inflammable, non-toxic and non-corrosive. Supercritical fluids can exhibit both gas- and liquid-like properties, allowing for adjustable dissolving power through changes in operating conditions.
 
@@ -171,6 +173,8 @@ Alternatively, a first-principle model can be derived and applied to cover not o
 The supercritical fluid extraction (SFE) process can be treated similarly to heat transfer, considering solid particles as spheres cooling down in a uniform environment. \citet{Bartle1990} introduced the hot ball diffusion (HBD) model, where spherical particles with a uniformly distributed solute diffuse similarly to heat diffusion. Unlike the BIC model, where the solute is readily available on the particle surface, the HBD model is suitable for systems with small quantities of extractable materials and is not limited by solubility. The model is particularly relevant when mass transfer is controlled by internal diffusion, allowing results from single particles to be extended to the entire bed under uniform conditions. \citet{Reverchon1993} have further elaborated on the HBD model and used it to simulate extraction processes.
 
 \citet{Reverchon1996} proposed a model for the extraction of essential oils that are mainly located inside vegetable cells in organelles called vacuoles. Only a small fraction of essential oil might be near the particle surface due to the breaking up of cells during grinding or in epidermal hairs located on the leaf surface. The fraction of oil freely available on the particle surface should not be significant in the case of SFE from leaves. Consequently, SFE of essential oil from leaves should be controlled mainly by internal mass-transfer resistance. Therefore, the external mass-transfer coefficient was neglected in the development of Reverchon's model (\citet{Reverchon1996}). The mass balances were developed with the additional hypotheses that axial dispersion can be neglected and that the solvent density and flow rate are constant along the bed.
+
+The aforementioned methods, along with many others, have been commonly employed for modeling the SFE process. Appendix \ref{CH: Literature} provides a list of studies on SFE, including modeling approaches, raw materials, and operating conditions.
 
 This work builds upon the linear kinetic model suggested by \citet{Reverchon1996}, deriving fundamental governing equations to develop a comprehensive model for the chamomile oil extraction process. The model aims at control-oriented simplicity, assuming semi-continuous operation within a cylindrical vessel. The process involves a supercritical solvent being pumped through a fixed bed of finely chopped biomass to extract the solute, followed by separation of the solvent and solute in a flush drum to collect the extract. Parameters such as pressure ($P$), feed flow rate ($F$) and inlet temperature ($T_{in}$) are adjustable and measurable, while the outlet temperature ($T_{out}$) and the amount of product at the outlet can only be monitored. Figure \ref{fig: SFE_drawing} presents a simplified process flow diagram.
 
@@ -382,7 +386,7 @@ As given by Equation \ref{Model_solid}, the solid phase is considered to be stat
 			\label{fig:Correlation_Gamma}
 		\end{figure}
 		
-		The residuals between the predicted and observed values were used to compute an unbiased estimate of the error variance. This variance, combined with the inverse of the design matrix's Gram matrix, yielded the covariance matrix of the coefficient estimates. The standard deviations (standard errors) of the coefficients were then obtained as the square roots of the diagonal elements of this covariance matrix. The variance-covariance is presented in Table \ref{tab:Uncertainty}.
+		The residuals between predicted and observed values were used to compute an unbiased estimate of the error variance. This variance, combined with the inverse of the design matrix's Gram matrix, yielded the covariance matrix of the coefficient estimates. The standard deviations (standard errors) of the coefficients were then obtained as the square roots of the diagonal elements of this covariance matrix. The variance-covariance is presented in Table \ref{tab:Uncertainty}.
 		
 		\begin{table}[h!]
 			\centering
@@ -465,6 +469,8 @@ As given by Equation \ref{Model_solid}, the solid phase is considered to be stat
 				\cfrac{dy}{dt} &= \qquad \cfrac{F}{\rho_f} c_f \biggr\rvert_{z=L} 
 				\label{Model_measurment_2}
 		\end{align}	}
+
+		The measurement error can be obtained based on the accuracy of the measuring device, or empirically from the spread of data around the model output. The first approach can be utilised only in the absence of external error sources. Given the imperfections of the experimental setup, such as delayed measurements and residuals of the product in pipes and the draining vessel, it was decided that the second approach is more suitable for this work. Based on the \citet{Sliczniuk2024}, the empirical measurement error was estimated to be 0.03.
 		
 		\subsubsection{Initial and boundary conditions} 
 		It is assumed that the solvent is free of solute at the beginning of the process $c_{f0}=0$, that all the solid particles have the same initial solute content $c_{s0}$ and that the system is isothermal, hence the initial state is $h_0$. The fluid at the inlet is considered not to contain any solute. The initial and boundary conditions are defined as follows:
@@ -703,9 +709,13 @@ As given by Equation \ref{Model_solid}, the solid phase is considered to be stat
 					& t_0 = 0 \, \text{min}, \quad t_f = 600 \, \text{min}, \\
 					& T^0 = T^{\text{in}}(t=0), \\
 					& P(t) \in \{100, 125, 150, 175, 200\} \, \text{bar}, \\
-					& 31^\circ\text{C} \leq T^{\text{in}}(t) \leq 40^\circ\text{C}, \\
+					& 30^\circ\text{C} \leq T^{\text{in}}(t) \leq 40^\circ\text{C}, \\
 					& 3.33 \cdot 10^{-5} \leq F(t) \leq 6.67 \cdot 10^{-5}, \\
 					& \mathcal{R} = 
+					\begin{bmatrix} 
+						\mathcal{R}_{FF} & \mathcal{R}_{FT} \\ 
+						\mathcal{R}_{TT} & \mathcal{R}_{TF} 
+					\end{bmatrix}=
 					\begin{bmatrix} 
 						0.1 & 0 \\ 
 						0 & 0.01 
@@ -768,7 +778,9 @@ As given by Equation \ref{Model_solid}, the solid phase is considered to be stat
 		
 		Alternatively, the D-optimality problem can be understood through the concept of Gaussian curvature. In this view, the experimental design shapes the parameter space of a model into a manifold with local geometry defined by the Fisher information matrix. The D-optimality condition maximises the determinant of this matrix, which geometrically corresponds to maximising the product of the principal curvatures of the manifold at a given point. This determinant is directly proportional to the Gaussian curvature, linking experimental design to the geometry of the parameter space. The determinant of the Fisher information matrix can be interpreted as a measure of the "volume element" on the parameter manifold, with higher values indicating regions of greater local curvature. By maximising this determinant, the parameter manifold is locally as curved as possible, which explains the wavy behaviour of the yield curves.
 		
-		The results and observations discussed in this article are local and should be considered valid only for the model presented in \citet{Sliczniuk2024}. Although general conclusions about the curvature of the yield curve are independent of the process model, a completely different set of control profiles should be expected if the same technique is applied to a different model. Such strong dependence on the model is one of the most significant limitations of this work. Moreover, the model predicts the data set in a region which has not been validated during previous experiments. On the one hand, this leaves room for model validation, while on the other hand, the obtained set of data points might differ from the predictions.
+		To the authors knowledge, model-based dynamic design of experiments has not previously been applied to supercritical extraction, hence the authors cannot directly compare the obtained results against the literature. Nevertheless, some researchers proposed running an extraction process under dynamically changing operating conditions. For instance, \citet{Simandi1998} proposed a fractionated extraction of oregano with a stepwise increase in pressure (80, 120, 200, and 300 bar). As a result, the obtained yield curve exhibits non-monotonic patterns. \citet{Hiraga2025} suggested a pressure swing CO$_2$ extraction for the decaffeination of green coffee beans. The authors varied the pressure up and down during the operation, achieving a high degree of decaffeination with a reduced CO$_2$ supply. As a result, nearly 100\% decaffeination was achieved at 353 K and 30 MPa, using 80\% of the CO$_2$ supply compared to the case of constant pressure operation. Some of the extraction yield plots presented by \citet{Hiraga2025} are characterised by non-monotonic behaviour. It can be concluded that non-monotonic extraction curves have been reported in the literature.
+		
+		The results and observations discussed in this article are local and should be considered valid only for the model presented in \citet{Sliczniuk2024}. Although general conclusions about the curvature of the yield curve are independent of the process model, a completely different set of control profiles should be expected if the same technique is applied to a different model. Such strong dependence on the model is one of the most significant limitations of this work. Moreover, the model predicts the data set in a region which has not been validated during previous experiments. This leaves room for model validation, while on the other hand, the obtained set of data points might differ from the predictions.
 		
 		\section{Conclusion} \label{CH: Conclusion}
 		This paper introduces D-optimal experimental design (D-OED) as a model-based method for determining optimal	experimental procedures in chemical engineering problems. D-OED optimises an objective function, which can be geometrically	interpreted as minimising the volume of the uncertainty ellipsoid, thereby maximising the precision of parameter estimates. Compared to the classical formulation of D-OED, this work introduces a penalty term to the cost function to prevent unrealistic rapid changes in operating conditions, ensuring practical feasibility in experimental	implementation. The method is demonstrated through a case study on supercritical extraction, focusing on designing experiments	to improve the precision of the correlation for the diffusivity coefficient $D_i$. While the original experiments were conducted under constant operating conditions, this study explores dynamically changing operating conditions, highlighting the potential of D-OED solutions for both parameter estimation and model validation.
@@ -793,7 +805,7 @@ As given by Equation \ref{Model_solid}, the solid phase is considered to be stat
 %\subsection{Cardano's Formula} \label{CH: Cardano}
 %\subfile{Sections/Cardano}
 
-\clearpage
+%\clearpage
 %\newpage
 
 \nomenclature[A]{\(A\)}{Information matrix \nomunit{[-]}}
@@ -889,7 +901,7 @@ As given by Equation \ref{Model_solid}, the solid phase is considered to be stat
 \onecolumn
 \appendix
 \section{Literature Review} \label{CH: Literature}
-Table \ref{fig: SFE_Literature} provides a list of studies on SFE including the modeling part presented from 2014 onwards
+Table \ref{fig: SFE_Literature} provides a list of studies on SFE including the modelling part presented from 2014 onwards
 
 \begin{table*}[h!]
 	\centering
@@ -901,8 +913,18 @@ Table \ref{fig: SFE_Literature} provides a list of studies on SFE including the 
 		\citet{Botelho2015} & Black sesame seed & CO$_2$ & BIC (\citet{Sovova1994}) \newline Local adsorption equilibrium model (\citet{Goto1993}) &  40, 60 & 20-40 & 5.9$\times 10^{-5}$ [kg/s]\\ \hline
 		\citet{Melo2014} & Eucalyptus globulus bark & CO$_2$, \newline Co-solvent: ethanol & Diffusion model (\citet{Crank1975}) \newline \citet{Brunner1994} \newline Desorption model (\citet{Cocero2001}) \newline SSP model (\citet{Gaspar2003})&  40 & 20 & 2.78$\times 10^{-3}$ [kg/s]\\ \hline
 		\citet{Liu2014} & Calycopteris floribunda leaves & CO$_2$, \newline Co-solvent: ethanol & BIC (\citet{Sovova1994}) \newline Diffusion model (\citet{Crank1975}) &  30–50 & 10-30 & 4.17$\times 10^{-4}$ [kg/s]\\ \hline
-		\citet{Tomita2014} & Rice bran & CO$_2$ & Partitioning coefficient model (\citet{Kubatova2002}) & 40–80 & 20-40 & 0.17-1.5$\times 10^{-4}$ [L/s]\\ 
-		\hline
+		\citet{Tomita2014} & Rice bran & CO$_2$ & Partitioning coefficient model (\citet{Kubatova2002}) & 40–80 & 20-40 & 0.17-1.5$\times 10^{-4}$ [L/s]\\ \hline
+		\citet{Kupski2017} & Hop pellet & CO$_2$ & BIC (\citet{Sovova1994}) \newline \citet{Reverchon1996} &  35-55 & 10-20 & 3.25$\times 10^{-5}$ [kg/s]\\ \hline
+		\citet{Pavlic2017} & Sage & CO$_2$ & \citet{Reverchon1996} \newline  \citet{Brunner1994} \newline \citet{Kandiah1990} &  40-60 & 10-30 & 5.56-11.1$\times 10^{-5}$ [kg/s]\\ \hline
+		\citet{Sartori2017} & Banana & CO$_2$ & \citet{Sovova1994} \newline  \citet{Reverchon1994} \newline \citet{Esquivel1999} &  40-80 & 20-50 & 1.01$\times 10^{-4}$ [L/s]\\ \hline
+		\citet{Hall2018} & Papaya seeds & CO$_2$ & \citet{Sovova1994} \newline  \citet{Goto1993} \newline \citet{Esquivel1999} &  40 & 15-30 & 6.11-19.4$\times 10^{-5}$ [kg/s]\\ \hline
+		\citet{Putra2018} & Peanut skin & CO$_2$, \newline Co-solvent: ethanol & \citet{Brunner1994} \newline \citet{Esquivel1999} &  40-70  & 10-30 & 5$\times 10^{-5}$ [L/s]\\ \hline
+		\citet{Putra2018} & Wheat germ & CO$_2$ & \citet{Brunner1994} \newline \citet{Esquivel1999} \newline \citet{Kandiah1990} \newline \citet{Reverchon1994} &  40-60  & 25-35 & 0.56 - 1.11 $\times 10^{-4}$ [kg/s]\\ \hline
+		\citet{Pavlic2020} & Raspberry seed & CO$_2$ & \citet{Brunner1994} \newline \citet{Esquivel1999} \newline \citet{Kandiah1990} \newline \citet{Reverchon1994} &  40-60  & 25-35 & 0.56 - 1.11 $\times 10^{-4}$ [kg/s]\\ \hline
+		\citet{Priyanka2020} & Carrot seed & CO$_2$, \newline Co-solvent: ethanol & BIC (\citet{Sovova1994}) \newline \citet{Reverchon1997} &  50-70  & 20-40 & 0.83 - 2.5 $\times 10^{-4}$ [kg/s]\\ \hline
+		\citet{Casas2021} & Acacia dealbata - ﬂowers & CO$_2$, \newline Co-solvent: ethanol & \citet{Esquivel1999} \newline \citet{Sovova1994} &  35-55  & 10-35 & 4.17 $\times 10^{-4}$ [kg/s]\\ \hline
+		\citet{Acosta2014} & Wood (\textit{Mezilaurus itauba}) & CO$_2$, \newline Co-solvent: ethanol (2\%, 5\%, 8\%) & BIC(\citet{Sovova1994}) &  38-52  & 8-22 & 5 $\times 10^{-5}$ [L/s]\\ \hline
+		\citet{Zekovic2014} & \textit{Ocimum basilicum L.} & CO$_2$ & \citet{Brunner1994} \newline \citet{Kandiah1990} \newline \citet{Esquivel1999} &  40-60  & 10-30 & 2.71 $\times 10^{-2}$ [L/s]\\ \hline
 	\end{tabular} }
 	\caption{SFE studies encompassing modeling part}
 	\label{fig: SFE_Literature}
