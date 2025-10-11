@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.3.8)  4 OCT 2025 18:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.3.8)  11 OCT 2025 13:21
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1640,7 +1640,7 @@ Overfull \hbox (123.62721pt too wide) detected at line 140
  []
 
 (Article_Design_of_Experiment-Chamomile.abs)
-<thumbnails/cas-email.jpeg, id=98, 225.84375pt x 225.84375pt>
+<thumbnails/cas-email.jpeg, id=102, 225.84375pt x 225.84375pt>
 File: thumbnails/cas-email.jpeg Graphic file (type jpg)
 <use thumbnails/cas-email.jpeg>
 Package pdftex.def Info: thumbnails/cas-email.jpeg  used on input line 140.
@@ -1690,7 +1690,7 @@ Underfull \hbox (badness 1281) in paragraph at lines 179--180
 
 pdfTeX warning: pdflatex (file ./Figures/PFD.drawio.pdf): PDF inclusion: found 
 PDF version <1.7>, but at most version <1.5> allowed
-<Figures/PFD.drawio.pdf, id=175, 871.33525pt x 334.3692pt>
+<Figures/PFD.drawio.pdf, id=179, 871.33525pt x 334.3692pt>
 File: Figures/PFD.drawio.pdf Graphic file (type pdf)
 <use Figures/PFD.drawio.pdf>
 Package pdftex.def Info: Figures/PFD.drawio.pdf  used on input line 183.
@@ -1704,18 +1704,18 @@ Overfull \hbox (8.60632pt too wide) in paragraph at lines 307--308
 
  []
 
-<Figures/SFE_PFD.drawio.png, id=247, 8222.72pt x 4626.28375pt>
+<Figures/SFE_PFD.drawio.png, id=251, 8222.72pt x 4626.28375pt>
 File: Figures/SFE_PFD.drawio.png Graphic file (type png)
 <use Figures/SFE_PFD.drawio.png>
 Package pdftex.def Info: Figures/SFE_PFD.drawio.png  used on input line 311.
 (pdftex.def)             Requested size: 202.51772pt x 156.9374pt.
 [5 <./Figures/SFE_PFD.drawio.png>]
-<Figures///Di_1.png, id=282, 386.1627pt x 311.0019pt>
+<Figures///Di_1.png, id=286, 386.1627pt x 311.0019pt>
 File: Figures///Di_1.png Graphic file (type png)
 <use Figures///Di_1.png>
 Package pdftex.def Info: Figures///Di_1.png  used on input line 377.
 (pdftex.def)             Requested size: 214.42754pt x 172.69351pt.
-<Figures///Gamma_1.png, id=284, 384.9582pt x 309.7974pt>
+<Figures///Gamma_1.png, id=288, 384.9582pt x 309.7974pt>
 File: Figures///Gamma_1.png Graphic file (type png)
 <use Figures///Gamma_1.png>
 Package pdftex.def Info: Figures///Gamma_1.png  used on input line 384.
@@ -1744,34 +1744,34 @@ Overfull \hbox (1.7283pt too wide) detected at line 673
  []
 
 [9]
-Underfull \hbox (badness 1137) in paragraph at lines 687--688
+Underfull \hbox (badness 1137) in paragraph at lines 693--694
 []\T1/stix/m/n/10 Since $[] \LS1/stix/m/it/10 A\LS1/stix/m/n/10 .\LS1/stix/m/it
 /10 ^^R; \LS1/stix/m/n/10 ^^D/ = 1_ [] \LS2/stixcal/m/n/10 A[]\LS1/stix/m/n/10 
 .\LS1/stix/m/it/10 ^^R; \LS1/stix/m/n/10 ^^D/$\T1/stix/m/n/10 , max-imis-ing
  []
 
 [10]
-<Figures/Results/scatter.png, id=373, 373.1541pt x 283.0575pt>
+<Figures/Results/scatter.png, id=377, 373.1541pt x 283.0575pt>
 File: Figures/Results/scatter.png Graphic file (type png)
 <use Figures/Results/scatter.png>
-Package pdftex.def Info: Figures/Results/scatter.png  used on input line 741.
+Package pdftex.def Info: Figures/Results/scatter.png  used on input line 747.
 (pdftex.def)             Requested size: 214.42754pt x 162.65744pt.
-<Figures/Results/Profile_F.png, id=376, 375.0813pt x 306.9066pt>
+<Figures/Results/Profile_F.png, id=380, 375.0813pt x 306.9066pt>
 File: Figures/Results/Profile_F.png Graphic file (type png)
 <use Figures/Results/Profile_F.png>
-Package pdftex.def Info: Figures/Results/Profile_F.png  used on input line 754.
+Package pdftex.def Info: Figures/Results/Profile_F.png  used on input line 760.
 
 (pdftex.def)             Requested size: 214.42754pt x 175.4537pt.
-<Figures/Results/Profile_T.png, id=377, 384.4764pt x 294.6207pt>
+<Figures/Results/Profile_T.png, id=381, 384.4764pt x 294.6207pt>
 File: Figures/Results/Profile_T.png Graphic file (type png)
 <use Figures/Results/Profile_T.png>
-Package pdftex.def Info: Figures/Results/Profile_T.png  used on input line 761.
+Package pdftex.def Info: Figures/Results/Profile_T.png  used on input line 767.
 
 (pdftex.def)             Requested size: 214.42754pt x 164.31662pt.
-<Figures/Results/yield.png, id=378, 382.3083pt x 294.6207pt>
+<Figures/Results/yield.png, id=382, 382.3083pt x 294.6207pt>
 File: Figures/Results/yield.png Graphic file (type png)
 <use Figures/Results/yield.png>
-Package pdftex.def Info: Figures/Results/yield.png  used on input line 768.
+Package pdftex.def Info: Figures/Results/yield.png  used on input line 774.
 (pdftex.def)             Requested size: 214.42754pt x 165.2472pt.
  [11 <./Figures/Results/scatter.png (PNG copy)> <./Figures/Results/Profile_F.pn
 g (PNG copy)> <./Figures/Results/Profile_T.png (PNG copy)> <./Figures/Results/y
@@ -1786,8 +1786,7 @@ LaTeX Font Info:    Trying to load font information for TS1+stix on input line
 (C:\Users\sliczno1\AppData\Local\Programs\MiKTeX\tex/latex/stix\ts1stix.fd
 File: ts1stix.fd 2015/04/17 v1.1.2-latex STIX TS1 font definitions
 )
-[13{C:/Users/sliczno1/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix/stix-t
-s1.enc}]
+[13]
 Underfull \hbox (badness 1859) in paragraph at lines 339--344
 []\T1/stix/m/n/8 J. Gmehling, M. Kleiber, B. Kolbe, and J. Rarey.  |   []
  []
@@ -1798,7 +1797,8 @@ Underfull \hbox (badness 3503) in paragraph at lines 541--549
 
  []
 
-[14]) (Article_Design_of_Experiment-Chamomile.nls
+[14{C:/Users/sliczno1/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/stix/stix-t
+s1.enc}]) (Article_Design_of_Experiment-Chamomile.nls
 Underfull \hbox (badness 1264) in paragraph at lines 20--21
 []\T1/stix/m/n/10 Reference value of in-ter-nal dif-fu-sion co-ef-fi-cient
  []
@@ -1806,128 +1806,158 @@ Underfull \hbox (badness 1264) in paragraph at lines 20--21
 [15]) [16
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 928--928
+Underfull \hbox (badness 10000) in paragraph at lines 934--934
 \T1/stix/m/n/10 Local ad-sorp-tion equi-lib-rium
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 928--928
+Underfull \hbox (badness 10000) in paragraph at lines 934--934
 []|\T1/stix/m/n/10 Eucalyptus
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 928--928
+Underfull \hbox (badness 10000) in paragraph at lines 934--934
 \T1/stix/m/n/10 Co-solvent:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 928--928
+Underfull \hbox (badness 10000) in paragraph at lines 934--934
 []|\T1/stix/m/n/10 Calycopteris
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 928--928
+Underfull \hbox (badness 10000) in paragraph at lines 934--934
 \T1/stix/m/n/10 flori-bunda
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 928--928
+Underfull \hbox (badness 10000) in paragraph at lines 934--934
 \T1/stix/m/n/10 Co-solvent:
  []
 
 
-Underfull \hbox (badness 4699) in paragraph at lines 928--928
+Underfull \hbox (badness 4699) in paragraph at lines 934--934
 []|\T1/stix/m/n/10 Partitioning co-ef-fi-cient model
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 928--928
+Underfull \hbox (badness 10000) in paragraph at lines 934--934
 []|\T1/stix/m/n/10 5.56-11.1$\LS1/stix/m/n/10 10[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 928--928
+Underfull \hbox (badness 10000) in paragraph at lines 934--934
 []|\T1/stix/m/n/10 6.11-19.4$\LS1/stix/m/n/10 10[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 928--928
+Underfull \hbox (badness 10000) in paragraph at lines 934--934
 \T1/stix/m/n/10 Co-solvent:
  []
 
 
-Underfull \hbox (badness 4913) in paragraph at lines 928--928
+Underfull \hbox (badness 4913) in paragraph at lines 934--934
 []|\T1/stix/m/n/10 0.56 - 1.11 $\LS1/stix/m/n/10 10[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 928--928
+Underfull \hbox (badness 10000) in paragraph at lines 934--934
 []|\T1/stix/m/n/10 Raspberry
  []
 
 
-Underfull \hbox (badness 4913) in paragraph at lines 928--928
+Underfull \hbox (badness 4913) in paragraph at lines 934--934
 []|\T1/stix/m/n/10 0.56 - 1.11 $\LS1/stix/m/n/10 10[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 928--928
+Underfull \hbox (badness 10000) in paragraph at lines 934--934
 []|\T1/stix/m/n/10 Priyanka and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 928--928
+Underfull \hbox (badness 10000) in paragraph at lines 934--934
 \T1/stix/m/n/10 Co-solvent:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 928--928
+Underfull \hbox (badness 10000) in paragraph at lines 934--934
 []|\T1/stix/m/n/10 0.83 - 2.5 $\LS1/stix/m/n/10 10[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 928--928
+Underfull \hbox (badness 10000) in paragraph at lines 934--934
 []|\T1/stix/m/n/10 Acacia
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 928--928
+Underfull \hbox (badness 10000) in paragraph at lines 934--934
 \T1/stix/m/n/10 deal-bata -
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 928--928
+Underfull \hbox (badness 10000) in paragraph at lines 934--934
 \T1/stix/m/n/10 Co-solvent:
  []
 
 
-Underfull \hbox (badness 4859) in paragraph at lines 928--928
+Underfull \hbox (badness 4859) in paragraph at lines 934--934
 []|\T1/stix/m/n/10 Wood (\T1/stix/m/it/10 Mezi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 928--928
+Underfull \hbox (badness 10000) in paragraph at lines 934--934
 \T1/stix/m/n/10 Co-solvent:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 928--928
+Underfull \hbox (badness 10000) in paragraph at lines 934--934
 []|\T1/stix/m/it/10 Ocimum
  []
 
 [17
 
 
-] (Article_Design_of_Experiment-Chamomile.aux)
+]
+<Figures/Results/Y_Penalty_Analysis.png, id=505, 374.1177pt x 297.5115pt>
+File: Figures/Results/Y_Penalty_Analysis.png Graphic file (type png)
+<use Figures/Results/Y_Penalty_Analysis.png>
+Package pdftex.def Info: Figures/Results/Y_Penalty_Analysis.png  used on input 
+line 945.
+(pdftex.def)             Requested size: 214.42754pt x 170.52303pt.
+<Figures/Results/T_Penalty_Analysis.png, id=507, 370.7451pt x 297.5115pt>
+File: Figures/Results/T_Penalty_Analysis.png Graphic file (type png)
+<use Figures/Results/T_Penalty_Analysis.png>
+Package pdftex.def Info: Figures/Results/T_Penalty_Analysis.png  used on input 
+line 952.
+(pdftex.def)             Requested size: 214.42754pt x 172.07558pt.
+<Figures/Results/F_Penalty_Analysis.png, id=509, 374.1177pt x 297.5115pt>
+File: Figures/Results/F_Penalty_Analysis.png Graphic file (type png)
+<use Figures/Results/F_Penalty_Analysis.png>
+Package pdftex.def Info: Figures/Results/F_Penalty_Analysis.png  used on input 
+line 959.
+(pdftex.def)             Requested size: 214.42754pt x 170.52303pt.
+<Figures/Results/Y_diff_Penalty_Analysis.png, id=511, 380.1402pt x 297.5115pt>
+File: Figures/Results/Y_diff_Penalty_Analysis.png Graphic file (type png)
+<use Figures/Results/Y_diff_Penalty_Analysis.png>
+Package pdftex.def Info: Figures/Results/Y_diff_Penalty_Analysis.png  used on i
+nput line 966.
+(pdftex.def)             Requested size: 214.42754pt x 167.82193pt.
+ [18
+
+ <./Figures/Results/Y_Penalty_Analysis.png (PNG copy)> <./Figures/Results/T_Pen
+alty_Analysis.png (PNG copy)> <./Figures/Results/F_Penalty_Analysis.png (PNG co
+py)> <./Figures/Results/Y_diff_Penalty_Analysis.png (PNG copy)>]
+(Article_Design_of_Experiment-Chamomile.aux)
 Package rerunfilecheck Info: File `Article_Design_of_Experiment-Chamomile.out' 
 has not changed.
-(rerunfilecheck)             Checksum: 70EB0EA342B6932E98DE9C86EE62F56F;3875.
+(rerunfilecheck)             Checksum: 89A0BD8D2644817643E86AFE21A06564;4120.
  ) 
 Here is how much of TeX's memory you used:
- 43059 strings out of 478841
- 928788 string characters out of 2848322
- 1407434 words of memory out of 3000000
- 59970 multiletter control sequences out of 15000+600000
+ 43105 strings out of 478841
+ 930233 string characters out of 2848322
+ 1406434 words of memory out of 3000000
+ 60005 multiletter control sequences out of 15000+600000
  528936 words of font info for 179 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  110i,28n,131p,1867b,879s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1949,10 +1979,10 @@ public/stix/stix-mathrm-bold.pfb><C:/Users/sliczno1/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/stix/stix-mathrm.pfb><C:/Users/sliczno1/AppData/Local/Pro
 grams/MiKTeX/fonts/type1/public/stix/stix-mathscr.pfb><C:/Users/sliczno1/AppDat
 a/Local/Programs/MiKTeX/fonts/type1/public/stix/stix-mathsf.pfb>
-Output written on Article_Design_of_Experiment-Chamomile.pdf (17 pages, 1786383
+Output written on Article_Design_of_Experiment-Chamomile.pdf (18 pages, 2068582
  bytes).
 PDF statistics:
- 609 PDF objects out of 1000 (max. 8388607)
- 161 named destinations out of 1000 (max. 500000)
- 260 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 640 PDF objects out of 1000 (max. 8388607)
+ 168 named destinations out of 1000 (max. 500000)
+ 312 words of extra memory for PDF output out of 10000 (max. 10000000)
 

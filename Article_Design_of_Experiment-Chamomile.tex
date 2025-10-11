@@ -674,7 +674,10 @@ As given by Equation \ref{Model_solid}, the solid phase is considered to be stat
 		
 		where $Q$ is the weighting matrix. The special case $k=1$ corresponds to the L-optimality cost function:
 		
-		{\footnotesize \begin{equation} j_L(\Xi) = \operatorname{trace} \left( Q \mathcal{A}^{-1}(\theta, \Xi) Q^\top \right) \end{equation} }
+		{\footnotesize 
+			\begin{equation} 
+				j_L(\Xi) = \operatorname{trace} \left( Q \mathcal{A}^{-1}(\theta, \Xi) Q^\top \right) 
+			\end{equation} }
 		
 		Selection of $Q = \mathbf{I}_{n\theta}$ corresponds to the A-optimality cost function. An A-optimal experiment minimises the sum of the variances of the parameter estimates (i.e. the trace of the covariance matrix). When $Q$ is diagonal with $[Q]_{ii} = 1/\theta_i$, this corresponds to weighting the parameters inversely by their magnitude, which is associated with relative precision.
 		
@@ -682,7 +685,10 @@ As given by Equation \ref{Model_solid}, the solid phase is considered to be stat
 		
 		The most commonly used criterion is D-optimality, which involves $k = 0$ and $Q = \mathbf{I}_{n\theta}$, requiring the minimisation of $\det \mathcal{A}^{-1}(\theta, \Xi)$, or correspondingly, the maximisation of:
 		
-		{\footnotesize \begin{equation} j_D(\Xi) = \det \mathcal{A}(\theta, \Xi) \end{equation} }
+		{\footnotesize 
+			\begin{equation} \label{EQ:D-optimality}
+				j_D(\Xi) = \det \mathcal{A}(\theta, \Xi) 
+			\end{equation} }
 		
 		Since $\det A(\theta, \Xi) = 1 / \det \mathcal{A}^{-1}(\theta, \Xi)$, maximising $\det \mathcal{A}$ is equivalent to minimising $\det \mathcal{A}^{-1}$.
 		
@@ -696,7 +702,7 @@ As given by Equation \ref{Model_solid}, the solid phase is considered to be stat
 		
 		The decision variables are adjusted every 10 minutes and are kept constant within each interval (piecewise constant controls). These controls have lower and upper bounds that match the validated range of the process model detailed by \citet{Sliczniuk2024}. The sampling time is assumed to be 5 minutes, and the total extraction time 600 minutes.
 		
-		In a real system, the mass flow rate and inlet temperature cannot be changed instantaneously to any arbitrary value, as they depend on the dynamics of the pump and heat exchanger, respectively. To prevent the bang-bang type of control, a penalty term is introduced. Inspired by control problems such as the linear quadratic regulator, a quadratic penalty term is added to the cost function. This penalty increases the cost function value when there are rapid changes in the decision variables. The matrix $\mathcal{R}$ represents the control cost matrix, with its entries chosen so that the control costs are one order of magnitude lower than $-\ln j_D$. The problem formulation is given by Equation \ref{EQ:Formulation_2}:
+		In a real system, the mass flow rate and inlet temperature cannot be changed instantaneously to any arbitrary value, as they depend on the dynamics of the pump and heat exchanger, respectively. To prevent the bang-bang type of control, a penalty term is introduced. Inspired by control problems such as the linear quadratic regulator, a quadratic penalty term is added to the cost function. This penalty increases the cost function value when there are rapid changes in the decision variables. The matrix $\mathcal{R}$ represents the control cost matrix, with its entries chosen so that the control costs are one order of magnitude lower than $-\ln j_D$. The Appendix \ref{CH: Penalty_Terms} discusses in detail the selection of penalty weights and their impact on the final solution, namely $\mathcal{R}_{FF}$ and $\mathcal{R}_{TT}$. The problem formulation is given by Equation \ref{EQ:Formulation_2}:
 		
 		{\footnotesize 
 			\begin{equation}
@@ -930,4 +936,79 @@ Table \ref{fig: SFE_Literature} provides a list of studies on SFE including the 
 	\label{fig: SFE_Literature}
 \end{table*}
 
+\newpage
+\twocolumn
+\section{Analysis of the penalty terms weights} \label{CH: Penalty_Terms}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[trim = 0.0cm 0.0cm 0.0cm 0.0cm,clip,width=0.9\columnwidth]{Figures/Results/Y_Penalty_Analysis.png}
+	\caption{Yield curves obtained at different values of penalty terms}
+	\label{fig:Penalty_Analysis_Y}
+\end{figure}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[trim = 0.0cm 0.0cm 0.0cm 0.0cm,clip,width=0.9\columnwidth]{Figures/Results/T_Penalty_Analysis.png}
+	\caption{Inlet temperature profiles obtained at different values of penalty terms}
+	\label{fig:Penalty_Analysis_T}
+\end{figure}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[trim = 0.0cm 0.0cm 0.0cm 0.0cm,clip,width=0.9\columnwidth]{Figures/Results/F_Penalty_Analysis.png}
+	\caption{Mass flow rate profiles obtained at different values of penalty terms}
+	\label{fig:Penalty_Analysis_F}
+\end{figure}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[trim = 0.0cm 0.0cm 0.0cm 0.0cm,clip,width=0.9\columnwidth]{Figures/Results/Y_diff_Penalty_Analysis.png}
+	\caption{Yield curves obtained at different values of penalty terms}
+	\label{fig:Penalty_Analysis_Y_diff}
+\end{figure}
+
+To solve the optimization problem formulated by Equation \ref{EQ:Formulation_2}, it is necessary accurately solve the D-optimality criterion (given by Equation \ref{EQ:D-optimality}) but also to avoid unfeasible inputs which are difficult to incorporate the real life experiments. The penalty term is introduced into the objective function to ensure that the optimal solution doesn't exhibit properties of bang-bang control, which is forced by penalising rapid changes of the input variables. The weights of matrix $\mathcal{R}$ must be carefully selected to not distort the main problem (the D-optimality), and as such the value of the penalty terms should be less that the objective function itself. It is assumed that the inputs are independent and can be changed simultaneously, which translates to $\mathcal{R}_{FT}=\mathcal{R}_{TF}=0$. To decide on values of the renaming terms, namely $\mathcal{R}_{FF}$ and $\mathcal{R}_{TT}$, the same DoE problem was solved with different values of the penalty term as presented in Table \ref{tab:Penalty_Analysis}.
+
+\begin{table}[h!]
+	\centering
+	\resizebox{0.75\columnwidth}{!}{%
+		\begin{tabular}{ l| c | c | c | c | c  }
+			\hline
+			Simulation Case    & 1 &  2   &  3   &  4   &  5   \\ \hline
+			$\mathcal{R}_{FF}$ & 0 & 1e-2 & 1e-1 & 1e-0 & 1e-2 \\ \hline
+			$\mathcal{R}_{TT}$ & 0 & 1e-3 & 1e-2 & 1e-1 & 1e-1 \\ \hline
+		\end{tabular}%
+	}
+	\caption{Simulation cases for impact assessment of $\mathcal{R}$}
+	\label{tab:Penalty_Analysis}
+\end{table}
+
+All the simulation cases are solved starting from the same randomly generated input. It is noted that the purpose of this section is identification of the sufficient values for penalty terms, but not to obtain the optimal solution. Given that, the optimization problem is solved only once, and the obtain solution might not be globally optimal. The methodology on how to obtain global or near-global solution is presented in the main body of this manuscript.
+
+As presented in Figures \ref{fig:Penalty_Analysis_Y}, the obtained yield curves differs each other slightly.
+
 \end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
